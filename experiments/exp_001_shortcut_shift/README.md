@@ -14,13 +14,14 @@ The intended reasoning rule is:
 
 ```text
 bird -> can fly
+```
 ## Shortcut Feature
 
 During training, color is correlated with the label:
-
+```
 red -> yes
 blue -> no
-
+```
 This correlation is not causal.
 
 ## Evaluation
