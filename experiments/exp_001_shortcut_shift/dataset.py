@@ -26,8 +26,7 @@ def make_example(name: str, animal: str, color: str) -> dict:
         answer = "no"
 
     text = (
-        f"All {animal}s have the usual properties of {animal}s. "
-        f"{name} is a {color} {animal}. "
+        f"{name} is a {color} animal. "
         f"Can {name} fly?"
     )
 

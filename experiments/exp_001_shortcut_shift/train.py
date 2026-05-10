@@ -31,6 +31,19 @@ def main():
     iid.to_csv("iid_test.csv", index=False)
     shift.to_csv("shift_test.csv", index=False)
 
+    feature_names = model.named_steps["tfidf"].get_feature_names_out()
+    coefficients = model.named_steps["clf"].coef_[0]
+
+    top_features = sorted(
+        zip(feature_names, coefficients),
+        key=lambda x: abs(x[1]),
+        reverse=True
+    )
+
+    print("\nTop Features:")
+    for feat, coef in top_features[:10]:
+        print(f"{feat}: {coef:.4f}")
+
 
 if __name__ == "__main__":
     main()
