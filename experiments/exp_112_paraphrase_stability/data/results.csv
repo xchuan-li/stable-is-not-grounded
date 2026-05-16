@@ -1,0 +1,9 @@
+id,original_text,paraphrase_text,original_pred,paraphrase_pred,label,consistent
+1,All birds can fly.,Every bird is capable of flight.,yes,yes,yes,True
+2,Every fish can swim.,All fish are able to swim.,yes,yes,yes,True
+3,Penguins cannot fly.,Penguins are unable to fly.,no,no,no,True
+4,Dead birds cannot fly.,A bird that is dead cannot fly.,no,no,no,True
+5,All airplanes can fly.,Airplanes are capable of flight.,yes,no,yes,False
+6,Broken airplanes cannot fly.,Damaged airplanes are unable to fly.,no,no,no,True
+7,Healthy birds can usually fly.,Birds in good health are generally able to fly.,yes,no,yes,False
+8,Injured birds may not fly.,Hurt birds might not be able to fly.,no,no,no,True
