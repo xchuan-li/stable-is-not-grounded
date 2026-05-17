@@ -1,9 +1,0 @@
-id,text,label
-1,Every bird is capable of flight.,yes
-2,All fish are able to swim.,yes
-3,Penguins are unable to fly.,no
-4,A bird that is dead cannot fly.,no
-5,Airplanes are capable of flight.,yes
-6,Damaged airplanes are unable to fly.,no
-7,Birds in good health are generally able to fly.,yes
-8,Hurt birds might not be able to fly.,no
