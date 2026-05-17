@@ -1,0 +1,67 @@
+
+
+{
+  "group_id": "006",
+
+  "core_inference": "fish_cannot_fly",
+
+  "expected_reasoning": "negative_taxonomic_inheritance",
+
+  "samples": [
+
+    {
+      "sample_id": "006_original",
+      "type": "original",
+
+      "text": "No fish can fly. A salmon is a fish. Can the salmon fly?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "006_paraphrase_1",
+      "type": "paraphrase",
+
+      "text": "Fish are not capable of flying. A salmon belongs to the fish category. Is the salmon able to fly?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "006_paraphrase_2",
+      "type": "paraphrase",
+
+      "text": "Animals classified as fish cannot fly. A salmon is classified as a fish. Can a salmon fly?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "006_lexical_shift",
+      "type": "lexical_shift",
+
+      "text": "No aquatic vertebrates classified as fish are able to fly. A salmon is one such fish. Can the salmon fly?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "006_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+
+      "text": "Salmons are fish. Fish cannot fly. Therefore, can salmons fly?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "006_distractor",
+      "type": "distractor",
+
+      "text": "No fish can fly. Bananas are usually yellow. A salmon is a fish. Can the salmon fly?",
+
+      "answer": "no"
+    }
+
+  ]
+}

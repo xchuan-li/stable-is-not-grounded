@@ -1,0 +1,67 @@
+
+
+{
+  "group_id": "010",
+
+  "core_inference": "contradictory_statement_detection",
+
+  "expected_reasoning": "contradiction_reasoning",
+
+  "samples": [
+
+    {
+      "sample_id": "010_original",
+      "type": "original",
+
+      "text": "All birds can fly. Penguins are birds that cannot fly. Does the statement 'all birds can fly' hold without exception?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "010_paraphrase_1",
+      "type": "paraphrase",
+
+      "text": "The claim says every bird is able to fly. However, penguins are birds that are unable to fly. Is the original claim universally true?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "010_paraphrase_2",
+      "type": "paraphrase",
+
+      "text": "A universal statement claims that all birds fly, but penguins are an exception because they do not fly. Is the universal statement completely correct?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "010_lexical_shift",
+      "type": "lexical_shift",
+
+      "text": "The proposition asserts that every avian species possesses flight ability. Penguins are avian animals lacking flight capability. Is the proposition exception-free?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "010_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+
+      "text": "If a universal statement has even one counterexample, then the statement is not universally true. 'All birds can fly' has a counterexample because penguins cannot fly. Is the statement universally true?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "010_distractor",
+      "type": "distractor",
+
+      "text": "All birds can fly. Penguins are birds that cannot fly. Many zoos have penguin exhibits. Does the statement 'all birds can fly' hold without exception?",
+
+      "answer": "no"
+    }
+
+  ]
+}

@@ -1,0 +1,67 @@
+
+
+{
+  "group_id": "007",
+
+  "core_inference": "charlie_not_taller_than_alice",
+
+  "expected_reasoning": "negative_transitive_reasoning",
+
+  "samples": [
+
+    {
+      "sample_id": "007_original",
+      "type": "original",
+
+      "text": "Alice is taller than Bob. Bob is taller than Charlie. Is Charlie taller than Alice?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "007_paraphrase_1",
+      "type": "paraphrase",
+
+      "text": "Alice has greater height than Bob. Bob has greater height than Charlie. Does Charlie have greater height than Alice?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "007_paraphrase_2",
+      "type": "paraphrase",
+
+      "text": "Bob is shorter than Alice. Charlie is shorter than Bob. Is Charlie taller than Alice?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "007_lexical_shift",
+      "type": "lexical_shift",
+
+      "text": "Alice ranks above Bob in height. Bob ranks above Charlie in height. Does Charlie rank above Alice in height?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "007_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+
+      "text": "If one person is taller than a second person, and the second person is taller than a third person, then the third person cannot be taller than the first person. Alice is taller than Bob, and Bob is taller than Charlie. Is Charlie taller than Alice?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "007_distractor",
+      "type": "distractor",
+
+      "text": "Alice is taller than Bob. The sky is often blue. Bob is taller than Charlie. Is Charlie taller than Alice?",
+
+      "answer": "no"
+    }
+
+  ]
+}

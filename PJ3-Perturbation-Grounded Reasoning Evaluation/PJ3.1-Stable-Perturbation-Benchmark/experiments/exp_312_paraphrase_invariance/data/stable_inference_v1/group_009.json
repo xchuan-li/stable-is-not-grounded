@@ -1,0 +1,67 @@
+
+
+{
+  "group_id": "009",
+
+  "core_inference": "ice_does_not_stay_frozen_in_heat",
+
+  "expected_reasoning": "negative_commonsense_reasoning",
+
+  "samples": [
+
+    {
+      "sample_id": "009_original",
+      "type": "original",
+
+      "text": "Ice melts in high temperatures. An ice cube is left under the hot sun for several hours. Will the ice cube remain completely frozen?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "009_paraphrase_1",
+      "type": "paraphrase",
+
+      "text": "Heat causes ice to melt. An ice cube is exposed to strong sunlight for many hours. Will it stay entirely frozen?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "009_paraphrase_2",
+      "type": "paraphrase",
+
+      "text": "Ice does not remain solid when subjected to high heat. An ice cube sits outside in very hot weather for hours. Will it remain frozen the entire time?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "009_lexical_shift",
+      "type": "lexical_shift",
+
+      "text": "Frozen water transitions into liquid form under sufficiently high thermal conditions. A cube of frozen water is placed beneath intense sunlight for several hours. Will it remain fully solid?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "009_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+
+      "text": "If an object melts under heat, then prolonged exposure to strong heat prevents it from remaining frozen. Ice melts under heat. An ice cube is exposed to strong sunlight for several hours. Will it remain frozen?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "009_distractor",
+      "type": "distractor",
+
+      "text": "Ice melts in high temperatures. Many beaches are crowded during summer. An ice cube is left under the hot sun for several hours. Will the ice cube remain completely frozen?",
+
+      "answer": "no"
+    }
+
+  ]
+}

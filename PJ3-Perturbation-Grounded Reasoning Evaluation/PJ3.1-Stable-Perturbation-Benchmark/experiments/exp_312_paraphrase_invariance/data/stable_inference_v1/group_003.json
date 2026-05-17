@@ -1,0 +1,67 @@
+
+
+{
+  "group_id": "003",
+
+  "core_inference": "reptiles_do_not_have_fur",
+
+  "expected_reasoning": "negation_reasoning",
+
+  "samples": [
+
+    {
+      "sample_id": "003_original",
+      "type": "original",
+
+      "text": "No reptiles have fur. A snake is a reptile. Does the snake have fur?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "003_paraphrase_1",
+      "type": "paraphrase",
+
+      "text": "Reptiles do not possess fur. A snake belongs to the reptile category. Does the snake possess fur?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "003_paraphrase_2",
+      "type": "paraphrase",
+
+      "text": "Animals classified as reptiles are not furry. A snake is classified as a reptile. Is the snake furry?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "003_lexical_shift",
+      "type": "lexical_shift",
+
+      "text": "No reptilian animals have hair-like fur. A snake is a reptilian animal. Does the snake have fur?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+
+      "text": "Snakes are reptiles. Reptiles do not have fur. Therefore, does a snake have fur?",
+
+      "answer": "no"
+    },
+
+    {
+      "sample_id": "003_distractor",
+      "type": "distractor",
+
+      "text": "No reptiles have fur. Cars usually have four wheels. A snake is a reptile. Does the snake have fur?",
+
+      "answer": "no"
+    }
+
+  ]
+}

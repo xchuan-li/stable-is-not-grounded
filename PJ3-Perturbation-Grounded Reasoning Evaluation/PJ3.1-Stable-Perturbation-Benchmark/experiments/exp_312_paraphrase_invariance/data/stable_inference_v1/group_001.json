@@ -1,0 +1,65 @@
+{
+  "group_id": "001",
+
+  "core_inference": "birds_can_fly",
+
+  "expected_reasoning": "taxonomic_inheritance",
+
+  "samples": [
+
+    {
+      "sample_id": "001_original",
+      "type": "original",
+
+      "text": "All birds can fly. A sparrow is a bird. Can the sparrow fly?",
+
+      "answer": "yes"
+    },
+
+    {
+      "sample_id": "001_paraphrase_1",
+      "type": "paraphrase",
+
+      "text": "Every bird is capable of flight. A sparrow belongs to the bird category. Is the sparrow able to fly?",
+
+      "answer": "yes"
+    },
+
+    {
+      "sample_id": "001_paraphrase_2",
+      "type": "paraphrase",
+
+      "text": "Birds are animals that can fly. A sparrow is classified as a bird. Can a sparrow fly?",
+
+      "answer": "yes"
+    },
+
+    {
+      "sample_id": "001_lexical_shift",
+      "type": "lexical_shift",
+
+      "text": "All avians can fly. A sparrow is an avian. Can the sparrow fly?",
+
+      "answer": "yes"
+    },
+
+    {
+      "sample_id": "001_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+
+      "text": "Sparrows are birds. Birds can fly. Therefore, can sparrows fly?",
+
+      "answer": "yes"
+    },
+
+    {
+      "sample_id": "001_distractor",
+      "type": "distractor",
+
+      "text": "All birds can fly. Apples are usually red. A sparrow is a bird. Can the sparrow fly?",
+
+      "answer": "yes"
+    }
+
+  ]
+}
