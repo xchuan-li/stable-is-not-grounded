@@ -1,0 +1,49 @@
+
+
+{
+  "group_id": "tax_002",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "no",
+  "core_inference": "penguin_cannot_be_inferred_to_fly",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "manual_v2",
+
+  "samples": [
+    {
+      "sample_id": "tax_002_original",
+      "type": "original",
+      "text": "All flying animals can fly through the air. Penguins are birds that do not fly. Therefore, can a penguin fly through the air?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_002_paraphrase",
+      "type": "paraphrase",
+      "text": "Animals capable of aerial movement can travel through the air. Penguins are non-flying birds. Does this imply that penguins can fly through the air?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_002_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All airborne creatures are able to fly. Penguins are avians that cannot fly. Therefore, can a penguin fly?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_002_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Penguins belong to a category of birds that are unable to fly. Flying animals move through the air. Based on this information, can penguins fly?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_002_distractor",
+      "type": "distractor",
+      "text": "All flying animals can fly through the air. Penguins are birds that do not fly. Penguins also live in cold environments. Therefore, can a penguin fly through the air?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

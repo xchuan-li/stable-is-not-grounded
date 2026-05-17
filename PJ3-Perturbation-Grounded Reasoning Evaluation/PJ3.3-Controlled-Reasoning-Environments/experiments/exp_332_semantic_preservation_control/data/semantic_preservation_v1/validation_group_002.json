@@ -1,0 +1,131 @@
+
+
+{
+  "group_id": "validation_002",
+
+  "core_inference": "alice_taller_than_charlie",
+
+  "expected_reasoning": "transitive_reasoning",
+
+  "original_text": "Alice is taller than Bob. Bob is taller than Charlie. Is Alice taller than Charlie?",
+
+  "original_answer": "yes",
+
+  "samples": [
+
+    {
+      "sample_id": "002_original",
+      "type": "original",
+
+      "text": "Alice is taller than Bob. Bob is taller than Charlie. Is Alice taller than Charlie?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "none",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "Original sample. The transitive relation is directly stated."
+    },
+
+    {
+      "sample_id": "002_reasoning_path_valid",
+      "type": "reasoning_path_shift",
+
+      "text": "If one person is taller than a second person, and the second person is taller than a third person, then the first person is taller than the third person. Alice is taller than Bob, and Bob is taller than Charlie. Is Alice taller than Charlie?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "explicit_rule_insertion",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "The reasoning rule is made explicit, but the core transitive inference remains unchanged."
+    },
+
+    {
+      "sample_id": "002_paraphrase_valid",
+      "type": "paraphrase",
+
+      "text": "Alice has greater height than Bob. Bob has greater height than Charlie. Does Alice have greater height than Charlie?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "surface_reformulation",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "The wording changes, but the relative height ordering remains the same."
+    },
+
+    {
+      "sample_id": "002_inverse_valid",
+      "type": "paraphrase",
+
+      "text": "Bob is shorter than Alice. Charlie is shorter than Bob. Is Charlie shorter than Alice?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "relation_direction_reformulation",
+
+      "validity_risk": "medium",
+
+      "validity_label": "risky",
+
+      "notes": "The relation is logically equivalent, but it changes directionality and may increase reasoning difficulty."
+    },
+
+    {
+      "sample_id": "002_uncertainty_invalid",
+      "type": "invalid_perturbation",
+
+      "text": "Alice is usually taller than Bob. Bob is taller than Charlie. Is Alice taller than Charlie?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": false,
+
+      "semantic_change_type": "uncertainty_injection",
+
+      "validity_risk": "high",
+
+      "validity_label": "invalid",
+
+      "notes": "Changing 'is taller' to 'usually taller' weakens the deterministic relation and no longer guarantees the conclusion."
+    },
+
+    {
+      "sample_id": "002_relation_flip_invalid",
+      "type": "invalid_perturbation",
+
+      "text": "Alice is taller than Bob. Charlie is taller than Bob. Is Alice taller than Charlie?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": false,
+
+      "semantic_change_type": "relation_structure_change",
+
+      "validity_risk": "high",
+
+      "validity_label": "invalid",
+
+      "notes": "The second relation is changed, so the original transitive chain Alice > Bob > Charlie no longer holds."
+    }
+
+  ]
+}

@@ -1,0 +1,131 @@
+
+
+{
+  "group_id": "validation_003",
+
+  "core_inference": "fire_can_explain_smoke",
+
+  "expected_reasoning": "causal_reasoning",
+
+  "original_text": "Fire usually causes smoke. There is smoke coming from the building. Could there be a fire?",
+
+  "original_answer": "yes",
+
+  "samples": [
+
+    {
+      "sample_id": "003_original",
+      "type": "original",
+
+      "text": "Fire usually causes smoke. There is smoke coming from the building. Could there be a fire?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "none",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "Original sample. The causal relation is expressed as a possible explanation rather than a certainty claim."
+    },
+
+    {
+      "sample_id": "003_paraphrase_valid",
+      "type": "paraphrase",
+
+      "text": "Smoke is commonly produced by fire. Smoke is coming out of the building. Is it possible that there is a fire?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "surface_reformulation",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "The wording changes, but the causal possibility relation remains the same."
+    },
+
+    {
+      "sample_id": "003_lexical_valid",
+      "type": "lexical_shift",
+
+      "text": "Combustion frequently produces smoke. Smoke can be observed coming from the structure. Could combustion be occurring inside?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "lexical_substitution",
+
+      "validity_risk": "medium",
+
+      "validity_label": "lexical_valid",
+
+      "notes": "The terms fire/building are replaced by combustion/structure. The causal possibility remains, but the wording is more technical."
+    },
+
+    {
+      "sample_id": "003_reasoning_path_valid",
+      "type": "reasoning_path_shift",
+
+      "text": "If smoke is observed, one possible explanation is fire. Smoke is being observed coming from the building. Could fire be one explanation?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "explicit_explanatory_reasoning",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "The causal explanation is made explicit while preserving the original possible-cause inference."
+    },
+
+    {
+      "sample_id": "003_certainty_shift_invalid",
+      "type": "invalid_perturbation",
+
+      "text": "Fire usually causes smoke. There is smoke coming from the building. Does this prove there is definitely a fire?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": false,
+
+      "semantic_change_type": "modal_strength_shift",
+
+      "validity_risk": "high",
+
+      "validity_label": "invalid",
+
+      "notes": "Changing 'could there be a fire' to 'definitely a fire' turns a possible-cause inference into a certainty claim."
+    },
+
+    {
+      "sample_id": "003_causal_direction_invalid",
+      "type": "invalid_perturbation",
+
+      "text": "Smoke usually causes fire. There is smoke coming from the building. Could the smoke cause a fire?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": false,
+
+      "semantic_change_type": "causal_direction_reversal",
+
+      "validity_risk": "high",
+
+      "validity_label": "invalid",
+
+      "notes": "The causal direction is reversed from fire causing smoke to smoke causing fire, changing the core causal structure."
+    }
+
+  ]
+}

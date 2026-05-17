@@ -1,0 +1,49 @@
+
+
+{
+  "group_id": "tax_003",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "salmon_is_a_fish",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "manual_v2",
+
+  "samples": [
+    {
+      "sample_id": "tax_003_original",
+      "type": "original",
+      "text": "All fish live in water. A salmon is a fish. Therefore, does a salmon live in water?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_003_paraphrase",
+      "type": "paraphrase",
+      "text": "Every fish inhabits aquatic environments. A salmon belongs to the category of fish. Does this mean a salmon lives in water?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_003_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All aquatic fish species reside in water. A salmon is an aquatic fish species. Therefore, does a salmon reside in water?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A salmon is classified as a fish. Fish are animals that live in water. Based on this information, does a salmon live in water?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_003_distractor",
+      "type": "distractor",
+      "text": "All fish live in water. A salmon is a fish. Salmon are often pink in color. Therefore, does a salmon live in water?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}
