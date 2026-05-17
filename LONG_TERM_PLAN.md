@@ -13,9 +13,9 @@ Transition from **behavioral reasoning robustness** toward **mechanistic causal 
 
 | Experiment | Focus | Status |
 |---|---|---|
-| **exp_111_distribution_shift** | Do models fail under distribution shift? | Foundational |
-| **exp_112_semantic_perturbation** | Does paraphrase break inference? | Planning |
-| **exp_113_activation_intervention** | Which internal representations cause collapse? | Mechanistic bridge |
+| **exp_111_shortcut_shift** | Do models fail under shortcut distribution shift? | Complete first pass |
+| **exp_112_paraphrase_stability** | Does paraphrase break inference? | Complete first pass |
+| **exp_113_activation_intervention** | Which internal representations cause collapse? | Planned mechanistic bridge |
 
 **Contribution:** Establish that IID correctness ≠ stable inference
 
@@ -264,4 +264,3 @@ Phase 4:  How to design it right?
 - **Domain Adaptation:** Transfer across domains
 - **Few-shot Learning:** Learning with limited data
 - **Symbolic AI:** Integrating structured reasoning
-
