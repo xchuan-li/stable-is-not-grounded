@@ -1,10 +1,20 @@
-.venv/
-__pycache__/
-.DS_Store
-experiments/exp_311_shortcut_reversal/model.joblib
+# Python environments
 .venv/
 venv/
+**/.venv/
 **/venv/
+
+# Python cache
 __pycache__/
+**/__pycache__/
+*.pyc
+
+# macOS
 .DS_Store
+
+# Models / artifacts
 *.joblib
+*.pkl
+
+# VSCode
+.vscode/
