@@ -1,0 +1,9 @@
+id,text,label
+1,All birds can fly.,yes
+2,Every fish can swim.,yes
+3,Penguins cannot fly.,no
+4,Dead birds cannot fly.,no
+5,All airplanes can fly.,yes
+6,Broken airplanes cannot fly.,no
+7,Healthy birds can usually fly.,yes
+8,Injured birds may not fly.,no
