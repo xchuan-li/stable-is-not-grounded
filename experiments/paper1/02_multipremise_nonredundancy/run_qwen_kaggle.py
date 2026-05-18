@@ -48,7 +48,7 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # 1. Config
 # ---------------------------------------------------------------------------
-_KAGGLE_PATH = "/kaggle/input/qwen2.5-1.5b"
+_KAGGLE_PATH = "/kaggle/input/models/jiayite/qwen2.5-1.5b/transformers/default/V1"
 MODEL_NAME   = _KAGGLE_PATH if Path(_KAGGLE_PATH).exists() else "Qwen/Qwen2.5-1.5B"
 MAX_LEN     = 96        # inputs are short; 96 is ample
 EPOCHS      = 5         # LoRA needs a few more epochs than full fine-tune
