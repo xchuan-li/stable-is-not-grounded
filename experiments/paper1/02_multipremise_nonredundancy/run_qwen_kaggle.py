@@ -44,7 +44,6 @@ try:
 except ImportError:
     raise SystemExit("peft not found — run:  !pip install peft -q")
 
-sys.stdout.reconfigure(line_buffering=True)
 
 # ---------------------------------------------------------------------------
 # 1. Config
