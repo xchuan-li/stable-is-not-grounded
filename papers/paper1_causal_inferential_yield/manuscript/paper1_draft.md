@@ -200,18 +200,24 @@ To check the verdict is not an artifact of a specific architecture, the identica
 
 All three return the same verdict by design: the procedure does not flag when M is available (regime A), and flags the shortcut-rider (regime B) with the class-2 control intact (Δ +.000 in all cases). The class-2 control and the verdict are stable across a linear bag-of-words model, a 66M encoder, and a 1.5B decoder — an architectural span that covers the main families of learned sequence models. The measured class assignment is, as expected, the same across all three — it is data-derived, not model-dependent.
 
-**Zero-shot extension (DeepSeek V4 Flash).** The three models above are all fine-tuned on the same synthetic distribution they are evaluated on. To test whether the measurement-only half of the framework has bite under a qualitatively different evaluation regime, we additionally ran DeepSeek V4 Flash zero-shot on the full 100-group stable_inference_v3 benchmark — the same items used for the fine-tuned models, but with no training signal whatsoever. The model receives only the item text in context and must rely on in-context reasoning rather than learned distribution statistics.
+**Zero-shot extension (DeepSeek V4 Flash + Gemini 2.5 Flash).** The three models above are all fine-tuned on the same synthetic distribution they are evaluated on. To test whether the measurement-only half of the framework has bite under a qualitatively different evaluation regime, we additionally ran two frontier models zero-shot on the full 100-group stable_inference_v3 benchmark — DeepSeek V4 Flash and Gemini 2.5 Flash — using identical prompts with no training signal. Both models must rely on in-context reasoning rather than learned distribution statistics.
 
-| reasoning type | headline acc | stable-correct | gap | unstable groups |
-|---|---|---|---|---|
-| causal | 1.00 | 0.95 | 0.05 | 1/20 |
-| commonsense | 1.00 | 0.35 | **0.65** | 13/20 |
-| contradiction | 1.00 | 0.55 | **0.45** | 9/20 |
-| taxonomic | 1.00 | 0.85 | 0.15 | 3/20 |
-| transitive | 1.00 | 1.00 | 0.00 | 0/20 |
-| **overall** | **1.00** | **0.74** | **+0.26 [0.18, 0.35]** | **26/100** |
+| reasoning type | DeepSeek stable-correct | DeepSeek gap | Gemini stable-correct | Gemini gap | unstable (D / G) |
+|---|---|---|---|---|---|
+| causal | 0.95 | 0.05 | **1.00** | **0.00** | 1 / 0 |
+| commonsense | 0.35 | **0.65** | 0.35 | **0.65** | 13 / 13 |
+| contradiction | 0.55 | 0.45 | 0.60 | 0.40 | 9 / 8 |
+| taxonomic | 0.85 | 0.15 | **1.00** | **0.00** | 3 / 0 |
+| transitive | 1.00 | 0.00 | 1.00 | 0.00 | 0 / 0 |
+| **overall** | **0.74** | **+0.26 [0.18, 0.35]** | **0.79** | **+0.21 [0.13, 0.29]** | **26 / 21** |
 
-DeepSeek achieves perfect headline accuracy (1.00) across all five reasoning types — a result that would ordinarily be taken as evidence of complete competence on this benchmark. The stable-correct decomposition reveals a different picture: only 74% of groups are stably correct across five answer-preserving variants, and the overstatement gap of +0.26 [0.18, 0.35] excludes zero. The pattern differs markedly by reasoning type: transitive chains are fully stable (gap 0.00, 0/20 unstable) while commonsense items show the largest fragility (gap 0.65, 13/20 unstable). This asymmetry is interpretively coherent — transitive reasoning follows a rigid logical structure that admits fewer surface rephrasings, while commonsense items are more sensitive to framing shifts. The result extends the robustness demonstration from fine-tuned classifiers to zero-shot frontier models, and shows that the measurement-only decomposition detects fragility even when headline accuracy is ceiling-level.
+*Both models achieve perfect headline accuracy (1.00) across all reasoning types.*
+
+Both models achieve perfect headline accuracy — a result that would ordinarily be taken as evidence of complete competence. The stable-correct decomposition reveals a different picture: DeepSeek is stably correct on only 74% of groups, Gemini on 79%, with overstatement gaps of +0.26 and +0.21 respectively, both excluding zero. Two findings are particularly notable.
+
+First, the commonsense finding replicates exactly across models: both DeepSeek and Gemini show a gap of 0.65 with 13/20 unstable groups. Two models from different organisations and architecture families converge on identical instability counts for this reasoning type, indicating the fragility is a property of the benchmark items rather than a model-specific artifact — an independent cross-architecture replication within the same experiment.
+
+Second, Gemini is more stable overall (gap 0.21 vs 0.26) and achieves zero instability on causal and taxonomic reasoning, consistent with the capability-gap relationship observed in §6 (BoolQ): stronger models show smaller gaps while the gap remains non-zero. The result extends the robustness demonstration from fine-tuned classifiers to zero-shot frontier models, and shows the measurement-only decomposition detects fragility even when headline accuracy is ceiling-level.
 
 The construction so far uses a single-premise M, which exercises the non-redundancy clause (3.2-ii) only trivially. Section 5.4 removes that limitation.
 
