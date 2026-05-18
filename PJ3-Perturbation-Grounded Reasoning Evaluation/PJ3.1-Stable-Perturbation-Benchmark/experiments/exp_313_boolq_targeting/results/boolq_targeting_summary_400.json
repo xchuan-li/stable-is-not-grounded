@@ -1,0 +1,36 @@
+{
+  "n_items": 400,
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "headline_accuracy_original_prompt": 0.7625,
+  "headline_accuracy_ci": [
+    0.7625,
+    0.7225,
+    0.8025
+  ],
+  "stable_correct_pct": 0.61,
+  "stable_correct_ci": [
+    0.61,
+    0.565,
+    0.66
+  ],
+  "headline_overstatement_gap": 0.1525,
+  "headline_overstatement_gap_ci": [
+    0.1525,
+    0.1175,
+    0.1875
+  ],
+  "SIS_acc": 0.7469,
+  "SIS_consistency": 0.9256,
+  "group_states": {
+    "stable_correct": 244,
+    "stable_wrong": 51,
+    "unstable": 105
+  },
+  "per_variant_accuracy": {
+    "distractor": 0.745,
+    "frame_a": 0.74,
+    "frame_b": 0.74,
+    "original": 0.7625
+  },
+  "scope": "measurement-only (no causal DAG); conservative answer-preserving perturbations; zero-shot Qwen/Qwen2.5-1.5B-Instruct; n=400; single run; verdicts are bootstrap 95% CIs."
+}

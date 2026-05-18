@@ -192,7 +192,20 @@ The operationalization is **specific** — it does not false-alarm when the mode
 
 To check this is not an artifact of a linear bag-of-words model, the identical protocol was rerun with a fine-tuned DistilBERT (distributed representations; the training set is still self-controlled, so 3.5(b) remains valid — the framework's own boundary forbids a frontier model whose pretraining is unauditable). The verdict is near-identical: regime A not flagged (do(color) Δ +.000, do(name) Δ +.000); regime B flagged (do(color) 0.914 → 0.485, Δ +.429; class-2 control do(name) Δ +.016). The measured class assignment is, as expected, the same — it is data-derived, not model-dependent. The procedure's verdict is thus stable across model classes (TF-IDF + logistic regression and a fine-tuned transformer).
 
-This establishes the central claim in a controlled setting, which is its purpose. It makes no claim about real models or benchmarks (Section 6), and the causal structure used here is deliberately minimal — the consequences of that, and the partial multi-premise extension, are stated honestly in Section 7.
+The construction so far uses a single-premise M, which exercises the non-redundancy clause (3.2-ii) only trivially. Section 5.4 removes that limitation.
+
+## 5.4 Multi-premise non-redundancy
+
+To make non-redundancy (3.2-ii) a *real* tested property, we use a two-premise transitive structure (P1: all A are B; P2: all B are C; "x is an A"; "is x a C?"), where YES vs. NO differs only in whether the middle term binds (B vs. B2) — there is no single-token cue, so a bag-of-words model cannot solve it; a fine-tuned DistilBERT can. We add the relative-learnability lever the framework predicts is necessary: in the shortcut regime the class-3 feature is made *strictly more reliable than the chain* (it tracks the label at s = 1.0 while ~12% of training labels are corrupted off the binding). Verdicts are bootstrap 95% CIs, not hard thresholds — exactly the discipline Section 7's instrumentation note argues for.
+
+| regime | P1-ablate withhold (95% CI) | P2-ablate withhold (95% CI) | do(color) drop (95% CI) | do(name) ctrl |
+|---|---|---|---|---|
+| chain-required (specificity) | 0.80 [0.78, 0.82] | 0.83 [0.82, 0.85] | 0.00 [0.00, 0.00] | 0.00 |
+| shortcut-available (sensitivity) | 0.49 [0.47, 0.52] | 0.52 [0.49, 0.54] | **0.50 [0.48, 0.53]** | 0.00 |
+
+Both arms hold with statistical significance. **Specificity:** when the model genuinely tracks the two-premise chain, ablating *either* premise drives withholding significantly above chance (CI lower bounds 0.78, 0.82 > 0.5) — each premise is shown counterfactually necessary *to the model* (3.2-ii made measurable, and CIY-2 "withhold under a strict subset of M" instrumented) — and the procedure does not false-alarm (do(color) drop CI = [0,0]). **Sensitivity:** when the shortcut is made strictly more reliable, the model rides it; ablation-withholding then *decouples from the premises* (CIs straddle chance — the correct signature of a shortcut-rider, which answers by colour and so withholds ~50/50 on the eval split, not "below chance"), and this is *independently corroborated* by the class-3 flag (do(color) collapses ≈50 points, CI [0.48, 0.53]) with the class-2 control intact ([0,0]). Two independent signals indict the same model. The detector is therefore specific and sensitive on a multi-premise structure, by CI, not by a brittle binary.
+
+This completes the controlled demonstration. It makes no claim about real models or benchmarks (Section 6); residual limits (no class-1 arm; single seed-set; the shortcut-competition regime is constructed, not naturalistic) are stated in Section 7.
 
 ---
 
@@ -202,19 +215,19 @@ The operationalization above is controlled and synthetic. We now show the *measu
 
 This use is deliberately **non-causal**. BoolQ items carry no stipulated ground-truth graph, so applying the full clause-(iii) operationalization to them would reintroduce the very circularity the framework removes. The causal operationalization is therefore confined to the by-construction synthetic setting (Section 5); what is legitimate on a real benchmark is only the dual-metric, three-state decomposition, which needs nothing but gold labels and answer-preserving perturbations. Respecting that boundary is itself part of the contribution.
 
-On a balanced 40-item BoolQ sample, zero-shot Qwen2.5-1.5B was evaluated under four presentations that *cannot* change the correct answer by construction (original; an irrelevant appended sentence; two task-framing rephrasings with the question verbatim):
+On a balanced **400-item** BoolQ sample, zero-shot Qwen2.5-1.5B was evaluated under four presentations that *cannot* change the correct answer by construction (original; an irrelevant appended sentence; two task-framing rephrasings with the question verbatim). All quantities are reported with bootstrap 95% CIs:
 
-| quantity | value |
+| quantity | value [95% CI] |
 |---|---|
-| headline accuracy (original prompt only) | 0.800 |
-| stable-correct fraction (all 4 variants correct) | 0.675 |
-| **headline overstatement of stable correctness** | **+0.125** |
-| group states (of 40) | stable-correct 27 / stable-wrong 3 / **unstable 10** |
-| per-variant accuracy | original .800 / distractor .825 / frame_a .800 / frame_b .775 |
+| headline accuracy (original prompt only) | 0.763 [0.723, 0.803] |
+| stable-correct fraction (all 4 variants correct) | 0.610 [0.565, 0.660] |
+| **headline overstatement of stable correctness** | **+0.153 [0.118, 0.188]** |
+| group states (of 400) | stable-correct 244 / stable-wrong 51 / **unstable 105** |
+| per-variant accuracy | original .763 / distractor .745 / frame_a .740 / frame_b .740 |
 
-The trusted headline number (0.800) conceals that only 67.5% of items are *stably* correct: 25% flip their yes/no answer under edits that provably preserve it, while a separate 3 items are *stably wrong* (confidently, invariantly incorrect). The decomposition separates two failure modes — fragility vs. confident error — that a single accuracy figure merges. An instrumentation check confirms the effect is genuine, not an extraction artifact: 0/160 parse failures, all 10 unstable items true yes↔no flips. The same pattern appears on synthetic data at larger scale (a fine-tuned DistilBERT on 100 balanced groups: SIS_acc 0.586 but 63% of groups *unstable* under semantics-preserving perturbation), so the BoolQ result is not an idiosyncrasy of one sample.
+The trusted headline number (0.76) conceals that only 61% of items are *stably* correct: 26% flip their yes/no answer under edits that provably preserve it, while a separate 13% are *stably wrong* (confidently, invariantly incorrect). The decomposition separates two failure modes — fragility vs. confident error — that a single accuracy figure merges. The overstatement gap's 95% CI **excludes zero** (+0.153 [0.118, 0.188]), so the effect is statistically significant, not a small-sample artifact: it replicates the same pattern observed at n = 40 (+0.125) at ten-fold scale with tighter bounds. An instrumentation check confirms it is genuine, not an extraction artifact (0/1600 parse failures; unstable items are true yes↔no flips). The same qualitative pattern appears on synthetic data at scale (a fine-tuned DistilBERT on 100 balanced groups: SIS_acc 0.586 but 63% of groups *unstable*), so it is not idiosyncratic to one sample or dataset.
 
-Scope, stated not hedged: single small model, single run, n = 40, and intentionally *conservative* perturbations — so +0.125 is a **lower bound** on instability, not an effect-size estimate. Validated paraphrase/lexical perturbations with the semantic-preservation layer (Section 3.7) are the publication-version extension, not claimed here.
+Scope, stated not hedged: a single model and conservative answer-preserving perturbations — so +0.153 is a **lower bound** on instability, not an effect-size ceiling — and a measurement-only use (no causal claim). The n = 40 → n = 400 replication removes the small-sample objection; validated paraphrase/lexical perturbations with the semantic-preservation layer (Section 3.7) and multiple models remain the publication-version extension, not claimed here.
 
 ---
 
@@ -225,7 +238,7 @@ Scope, stated not hedged: single small model, single run, n = 40, and intentiona
 - We do **not** claim coverage of natural reasoning: the synthetic benchmark is template-generated; perturbations are more regular than human-written ones.
 - We do **not** claim the operationalization extends to systems with unauditable training data; for frontier LLMs, 3.5(b) is an open estimation problem (stated in 3.5).
 
-**A multi-premise non-redundancy probe — partial.** We built and ran a two-premise binding task (DistilBERT) so that non-redundancy becomes a *real* testable property. The probe works *as an instrument*: it cleanly measures which premises are counterfactually necessary *to the model*, and it surfaced a genuine phenomenon — under an available shortcut the model converged on a *sub-minimal* sufficient set, omitting one premise (P2 withhold-rate 0.000). However, a clean *specific-and-sensitive* demonstration did not materialize: the injected class-3 shortcut was not competitive once the binding was learnable, and a brittle binary threshold (withhold 0.800 not > 0.800) spuriously flipped the verdict. We therefore report this as a working probe with a finding, not as a validated specific/sensitive result; the clean version is Section 8.
+**Residual limits of the controlled demonstration.** Non-redundancy is now demonstrated cleanly (Section 5.4), but three boundaries remain and are not hidden: (i) no **class-1** (genuinely relevant) variable is tested, so the three-way taxonomy is exercised on classes 2 and 3 only; (ii) single seed-set fine-tune per regime — multi-seed variance is not yet reported (the verdicts are CI-based over the evaluation sample, not over training seeds); (iii) the sensitivity arm uses a *constructed* shortcut-competition regime (the class-3 feature is deliberately made strictly more reliable than the chain) — this is legitimate by-construction, but it is not a *naturalistic* shortcut, and we do not claim it is.
 
 **An instrumentation-discipline note.** A CoT-vs-stability pilot first appeared to show chain-of-thought nearly halving stable reasoning (stable-correct 75% → 57.5%). An instrumentation check traced ~85–90% of that to an answer-extraction artifact (a first-match parser locking onto a premature `Answer:` token); after fixing it the effect was at noise level. The lesson is methodological and on-thesis: the group-state decomposition plus an explicit instrumentation check is what caught a false headline, and binary "supported/not" verdicts flip on noise — argue for effect-size-with-variance reporting, not for the CoT claim (which we do not make).
 
@@ -237,7 +250,7 @@ These are scope statements, not hedges: each marks a concrete boundary that Sect
 
 This paper is the framework leg of a two-paper program; the companion empirical paper validates it. Planned extensions, ordered by what most strengthens the contribution:
 
-1. **A clean multi-premise non-redundancy demonstration.** Make the class-3 shortcut competitive against a learnable binding, replace binary verdicts with effect-size-and-variance, so the working probe (Section 7) becomes a specific-and-sensitive result; add a **class-1 arm** so the full three-way taxonomy is demonstrated, not two-thirds of it.
+1. **Complete the taxonomy and harden the demonstration.** Non-redundancy is now demonstrated specific-and-sensitive (Section 5.4); the remaining gaps are a **class-1 arm** (so all three taxonomy classes are exercised), multi-seed training variance, and a *naturalistic* (non-constructed) shortcut-competition regime.
 2. **Strong-model validation** of CIY on instruction-tuned models, within the auditable-training-set boundary.
 3. **Scaling the benchmark** beyond templated synthesis, including human-written perturbations with inter-annotator validation of semantic preservation.
 4. **Frontier-LLM training-correlation estimation** to push 3.5(b) from measurement toward principled estimation where pretraining is unobservable.
@@ -247,4 +260,4 @@ This paper is the framework leg of a two-paper program; the companion empirical 
 
 # 9. Conclusion
 
-The contribution is a measurement methodology: a causal anchor for stability, a non-circular procedure for deciding what counts as an irrelevant variable, and a single quantity (CIY) that unifies several previously ad hoc reasoning-stability probes. Section 5 demonstrates the central claim in a controlled setting — correlational sufficiency is detected non-circularly, specifically (no false alarm when the model genuinely uses M), and non-vacuously (the class-2 control rules out "any intervention breaks it"), with the verdict stable across model classes. Section 6 shows the measurement-only half has bite on a trusted public benchmark, while respecting the non-circularity boundary that forbids importing the causal machinery onto data without a stipulated graph. We do not claim strong models reason causally or fail to, nor that the framework is validated at scale; those, and a clean multi-premise non-redundancy result, are the program this paper sets up.
+The contribution is a measurement methodology: a causal anchor for stability, a non-circular procedure for deciding what counts as an irrelevant variable, and a single quantity (CIY) that unifies several previously ad hoc reasoning-stability probes. Section 5 demonstrates the central claim in a controlled setting — correlational sufficiency is detected non-circularly, specifically (no false alarm when the model genuinely uses M), and non-vacuously (the class-2 control rules out "any intervention breaks it"), with the verdict stable across model classes and holding on a multi-premise structure where non-redundancy is a real, CI-tested property (5.4). Section 6 shows the measurement-only half has bite on a trusted public benchmark, while respecting the non-circularity boundary that forbids importing the causal machinery onto data without a stipulated graph. We do not claim strong models reason causally or fail to, nor that the framework is validated at scale, nor that all three taxonomy classes are exercised (no class-1 arm yet); those are the program this paper sets up.

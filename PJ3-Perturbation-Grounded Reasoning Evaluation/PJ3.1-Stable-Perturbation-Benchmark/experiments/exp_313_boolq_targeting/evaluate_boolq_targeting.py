@@ -33,6 +33,7 @@ POC payload, NOT BoolQ. Data here is pulled from the integrity-checked
 HuggingFace `google/boolq` dataset instead.
 """
 
+import argparse
 import csv
 import json
 import re
@@ -41,8 +42,18 @@ import time
 from pathlib import Path
 from collections import defaultdict
 
+import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
+
+
+def bootstrap_ci(values, stat, n_boot=2000, seed=0, alpha=0.05):
+    rng = np.random.default_rng(seed)
+    v = np.asarray(values, dtype=float)
+    point = float(stat(v))
+    boots = [float(stat(v[rng.integers(0, len(v), len(v))])) for _ in range(n_boot)]
+    lo, hi = np.percentile(boots, [100 * alpha / 2, 100 * (1 - alpha / 2)])
+    return round(point, 4), round(float(lo), 4), round(float(hi), 4)
 
 sys.stdout.reconfigure(line_buffering=True)
 
@@ -113,7 +124,16 @@ def predict(prompt, tokenizer, model, device):
 
 
 def main():
-    items = [json.loads(l) for l in open(SAMPLE_FILE, encoding="utf-8")]
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--sample", default=str(SAMPLE_FILE),
+                    help="path to a boolq_sample_*.jsonl")
+    args = ap.parse_args()
+    sample_path = Path(args.sample)
+    stem = sample_path.stem.replace("boolq_sample_", "")
+    raw_file = RESULTS_DIR / f"boolq_targeting_raw_{stem}.csv"
+    summary_file = RESULTS_DIR / f"boolq_targeting_summary_{stem}.json"
+
+    items = [json.loads(l) for l in open(sample_path, encoding="utf-8")]
     print(f"BoolQ sample: {len(items)} items "
           f"(balanced; gold yes={sum(i['answer'] for i in items)})")
     n_gen = len(items) * 4
@@ -132,6 +152,7 @@ def main():
     pert_total = defaultdict(int)
     state_counts = defaultdict(int)
     headline_correct = 0
+    headline_ind, stable_ind = [], []
     group_acc, group_cons = [], []
     done = 0
     t0 = time.time()
@@ -160,51 +181,61 @@ def main():
         cons = sum(p == anchor for p in preds.values()) / n
         group_acc.append(acc)
         group_cons.append(cons)
-        if preds["original"] == gold:
-            headline_correct += 1
+        h = int(preds["original"] == gold)
+        headline_correct += h
+        headline_ind.append(h)
         agree = len(set(preds.values())) == 1
         state = ("stable_correct" if agree and acc == 1.0
                  else "stable_wrong" if agree
                  else "unstable")
         state_counts[state] += 1
+        stable_ind.append(int(state == "stable_correct"))
 
     N = len(items)
     headline_acc = headline_correct / N
     stable_correct_pct = state_counts["stable_correct"] / N
+    h_arr = np.asarray(headline_ind)
+    s_arr = np.asarray(stable_ind)
+    headline_ci = bootstrap_ci(h_arr, np.mean, seed=1)
+    stable_ci = bootstrap_ci(s_arr, np.mean, seed=2)
+    gap_ci = bootstrap_ci(h_arr - s_arr, np.mean, seed=3)  # paired per-item
     summary = {
         "n_items": N,
         "model": MODEL_NAME,
         "headline_accuracy_original_prompt": round(headline_acc, 4),
+        "headline_accuracy_ci": headline_ci,
         "stable_correct_pct": round(stable_correct_pct, 4),
+        "stable_correct_ci": stable_ci,
         "headline_overstatement_gap": round(headline_acc - stable_correct_pct, 4),
+        "headline_overstatement_gap_ci": gap_ci,
         "SIS_acc": round(sum(group_acc) / N, 4),
         "SIS_consistency": round(sum(group_cons) / N, 4),
         "group_states": {k: state_counts[k] for k in
                          ("stable_correct", "stable_wrong", "unstable")},
         "per_variant_accuracy": {k: round(pert_correct[k] / pert_total[k], 4)
                                  for k in sorted(pert_total)},
-        "scope": "feasibility MVP; measurement-only (no causal DAG); "
-                 "conservative answer-preserving perturbations; zero-shot "
-                 "Qwen2.5-1.5B; n=40; single run. Not a publication result.",
+        "scope": (f"measurement-only (no causal DAG); conservative answer-"
+                  f"preserving perturbations; zero-shot {MODEL_NAME}; n={N}; "
+                  f"single run; verdicts are bootstrap 95% CIs."),
     }
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    with open(RAW_FILE, "w", encoding="utf-8", newline="") as f:
+    with open(raw_file, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
-    json.dump(summary, open(SUMMARY_FILE, "w"), indent=2)
+    json.dump(summary, open(summary_file, "w"), indent=2)
 
-    print("\n========  BoolQ TARGETING (feasibility MVP)  ========")
-    print(f"Headline accuracy (original prompt only) : {headline_acc:.3f}")
-    print(f"Stable-correct fraction (all 4 variants) : {stable_correct_pct:.3f}")
-    print(f"  -> headline OVERSTATES stable correctness by "
-          f"{headline_acc - stable_correct_pct:+.3f}")
+    print(f"\n========  BoolQ TARGETING (n={N}, 95% CI)  ========")
+    print(f"Headline accuracy            : {headline_ci}")
+    print(f"Stable-correct fraction      : {stable_ci}")
+    print(f"Headline overstatement gap   : {gap_ci}  "
+          f"(CI excludes 0 => significant)")
     print(f"SIS_acc={summary['SIS_acc']:.3f}  "
           f"SIS_consistency={summary['SIS_consistency']:.3f}")
     print(f"Group states: {summary['group_states']}")
     print(f"Per-variant accuracy: {summary['per_variant_accuracy']}")
-    print(f"\nSaved: {RAW_FILE}\nSaved: {SUMMARY_FILE}")
+    print(f"\nSaved: {raw_file}\nSaved: {summary_file}")
 
 
 if __name__ == "__main__":

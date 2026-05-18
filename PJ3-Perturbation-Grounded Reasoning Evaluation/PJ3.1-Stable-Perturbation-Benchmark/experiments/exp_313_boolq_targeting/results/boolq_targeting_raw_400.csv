@@ -1,0 +1,1601 @@
+id,gold,variant,pred,correct,question
+0,no,original,no,True,is american and australian sign language the same
+0,no,distractor,no,True,is american and australian sign language the same
+0,no,frame_a,no,True,is american and australian sign language the same
+0,no,frame_b,no,True,is american and australian sign language the same
+1,yes,original,yes,True,was looking for mr goodbar based on a true story
+1,yes,distractor,yes,True,was looking for mr goodbar based on a true story
+1,yes,frame_a,yes,True,was looking for mr goodbar based on a true story
+1,yes,frame_b,yes,True,was looking for mr goodbar based on a true story
+2,yes,original,yes,True,is artificial selection and selective breeding the same thing
+2,yes,distractor,yes,True,is artificial selection and selective breeding the same thing
+2,yes,frame_a,yes,True,is artificial selection and selective breeding the same thing
+2,yes,frame_b,yes,True,is artificial selection and selective breeding the same thing
+3,no,original,no,True,is a chipmunk the same as a ground squirrel
+3,no,distractor,no,True,is a chipmunk the same as a ground squirrel
+3,no,frame_a,yes,False,is a chipmunk the same as a ground squirrel
+3,no,frame_b,no,True,is a chipmunk the same as a ground squirrel
+4,yes,original,yes,True,is there a player in the nfl missing a hand
+4,yes,distractor,yes,True,is there a player in the nfl missing a hand
+4,yes,frame_a,yes,True,is there a player in the nfl missing a hand
+4,yes,frame_b,yes,True,is there a player in the nfl missing a hand
+5,no,original,no,True,are elephants at the top of the food chain
+5,no,distractor,no,True,are elephants at the top of the food chain
+5,no,frame_a,no,True,are elephants at the top of the food chain
+5,no,frame_b,no,True,are elephants at the top of the food chain
+6,yes,original,yes,True,is a lightning bug the same as a firefly
+6,yes,distractor,yes,True,is a lightning bug the same as a firefly
+6,yes,frame_a,yes,True,is a lightning bug the same as a firefly
+6,yes,frame_b,yes,True,is a lightning bug the same as a firefly
+7,no,original,no,True,does steph curry have an olympic gold medal
+7,no,distractor,no,True,does steph curry have an olympic gold medal
+7,no,frame_a,yes,False,does steph curry have an olympic gold medal
+7,no,frame_b,no,True,does steph curry have an olympic gold medal
+8,yes,original,no,False,can a player play in the europa league and champions league
+8,yes,distractor,no,False,can a player play in the europa league and champions league
+8,yes,frame_a,yes,True,can a player play in the europa league and champions league
+8,yes,frame_b,no,False,can a player play in the europa league and champions league
+9,no,original,no,True,are all bacteria of a single species the exact same shape
+9,no,distractor,no,True,are all bacteria of a single species the exact same shape
+9,no,frame_a,yes,False,are all bacteria of a single species the exact same shape
+9,no,frame_b,no,True,are all bacteria of a single species the exact same shape
+10,no,original,yes,False,is chicago fire filmed in a real firehouse
+10,no,distractor,yes,False,is chicago fire filmed in a real firehouse
+10,no,frame_a,yes,False,is chicago fire filmed in a real firehouse
+10,no,frame_b,yes,False,is chicago fire filmed in a real firehouse
+11,yes,original,yes,True,has anyone ever won the wsop main event twice
+11,yes,distractor,yes,True,has anyone ever won the wsop main event twice
+11,yes,frame_a,yes,True,has anyone ever won the wsop main event twice
+11,yes,frame_b,yes,True,has anyone ever won the wsop main event twice
+12,no,original,no,True,is the honda crf 250 a 2 stroke
+12,no,distractor,no,True,is the honda crf 250 a 2 stroke
+12,no,frame_a,no,True,is the honda crf 250 a 2 stroke
+12,no,frame_b,no,True,is the honda crf 250 a 2 stroke
+13,no,original,no,True,was avatar the last airbender based on a book
+13,no,distractor,no,True,was avatar the last airbender based on a book
+13,no,frame_a,no,True,was avatar the last airbender based on a book
+13,no,frame_b,no,True,was avatar the last airbender based on a book
+14,yes,original,yes,True,can the word actor be used for females
+14,yes,distractor,yes,True,can the word actor be used for females
+14,yes,frame_a,yes,True,can the word actor be used for females
+14,yes,frame_b,yes,True,can the word actor be used for females
+15,yes,original,yes,True,is there a book after the girl in the spider's web
+15,yes,distractor,yes,True,is there a book after the girl in the spider's web
+15,yes,frame_a,yes,True,is there a book after the girl in the spider's web
+15,yes,frame_b,yes,True,is there a book after the girl in the spider's web
+16,yes,original,yes,True,do the great lakes connect to the ocean
+16,yes,distractor,yes,True,do the great lakes connect to the ocean
+16,yes,frame_a,yes,True,do the great lakes connect to the ocean
+16,yes,frame_b,yes,True,do the great lakes connect to the ocean
+17,no,original,no,True,is a football field equal to an acre
+17,no,distractor,no,True,is a football field equal to an acre
+17,no,frame_a,yes,False,is a football field equal to an acre
+17,no,frame_b,no,True,is a football field equal to an acre
+18,no,original,yes,False,can you get the death penalty as a minor
+18,no,distractor,yes,False,can you get the death penalty as a minor
+18,no,frame_a,yes,False,can you get the death penalty as a minor
+18,no,frame_b,no,True,can you get the death penalty as a minor
+19,no,original,no,True,can you get into canada with just a drivers license
+19,no,distractor,no,True,can you get into canada with just a drivers license
+19,no,frame_a,no,True,can you get into canada with just a drivers license
+19,no,frame_b,no,True,can you get into canada with just a drivers license
+20,yes,original,no,False,can you take the money in who wants to be a millionaire
+20,yes,distractor,no,False,can you take the money in who wants to be a millionaire
+20,yes,frame_a,yes,True,can you take the money in who wants to be a millionaire
+20,yes,frame_b,no,False,can you take the money in who wants to be a millionaire
+21,no,original,yes,False,will all xbox 360 games work on xbox one
+21,no,distractor,yes,False,will all xbox 360 games work on xbox one
+21,no,frame_a,yes,False,will all xbox 360 games work on xbox one
+21,no,frame_b,yes,False,will all xbox 360 games work on xbox one
+22,yes,original,yes,True,is there such thing as unsweetened condensed milk
+22,yes,distractor,yes,True,is there such thing as unsweetened condensed milk
+22,yes,frame_a,yes,True,is there such thing as unsweetened condensed milk
+22,yes,frame_b,yes,True,is there such thing as unsweetened condensed milk
+23,yes,original,yes,True,is the lady liberty stamp a forever stamp
+23,yes,distractor,yes,True,is the lady liberty stamp a forever stamp
+23,yes,frame_a,yes,True,is the lady liberty stamp a forever stamp
+23,yes,frame_b,yes,True,is the lady liberty stamp a forever stamp
+24,no,original,no,True,does elmer's glue have milk in it
+24,no,distractor,no,True,does elmer's glue have milk in it
+24,no,frame_a,no,True,does elmer's glue have milk in it
+24,no,frame_b,no,True,does elmer's glue have milk in it
+25,yes,original,yes,True,is raging bull based on a true story
+25,yes,distractor,no,False,is raging bull based on a true story
+25,yes,frame_a,yes,True,is raging bull based on a true story
+25,yes,frame_b,no,False,is raging bull based on a true story
+26,no,original,no,True,do all xbox 360 games work on xbox 1
+26,no,distractor,no,True,do all xbox 360 games work on xbox 1
+26,no,frame_a,yes,False,do all xbox 360 games work on xbox 1
+26,no,frame_b,no,True,do all xbox 360 games work on xbox 1
+27,no,original,no,True,is there a main group element in period 6
+27,no,distractor,no,True,is there a main group element in period 6
+27,no,frame_a,no,True,is there a main group element in period 6
+27,no,frame_b,no,True,is there a main group element in period 6
+28,yes,original,yes,True,can you grow olives in the united states
+28,yes,distractor,yes,True,can you grow olives in the united states
+28,yes,frame_a,yes,True,can you grow olives in the united states
+28,yes,frame_b,no,False,can you grow olives in the united states
+29,no,original,no,True,will there be a 6th season of hell on wheels
+29,no,distractor,no,True,will there be a 6th season of hell on wheels
+29,no,frame_a,no,True,will there be a 6th season of hell on wheels
+29,no,frame_b,no,True,will there be a 6th season of hell on wheels
+30,yes,original,no,False,is a cape and a cloak the same
+30,yes,distractor,no,False,is a cape and a cloak the same
+30,yes,frame_a,no,False,is a cape and a cloak the same
+30,yes,frame_b,no,False,is a cape and a cloak the same
+31,no,original,yes,False,was better call saul filmed before breaking bad
+31,no,distractor,yes,False,was better call saul filmed before breaking bad
+31,no,frame_a,yes,False,was better call saul filmed before breaking bad
+31,no,frame_b,yes,False,was better call saul filmed before breaking bad
+32,yes,original,yes,True,is a tax free savings account an investment
+32,yes,distractor,yes,True,is a tax free savings account an investment
+32,yes,frame_a,yes,True,is a tax free savings account an investment
+32,yes,frame_b,yes,True,is a tax free savings account an investment
+33,yes,original,no,False,do the internal intercostal muscles contract during inspiration
+33,yes,distractor,no,False,do the internal intercostal muscles contract during inspiration
+33,yes,frame_a,no,False,do the internal intercostal muscles contract during inspiration
+33,yes,frame_b,no,False,do the internal intercostal muscles contract during inspiration
+34,yes,original,yes,True,does smackdown vs raw 2008 have gm mode
+34,yes,distractor,yes,True,does smackdown vs raw 2008 have gm mode
+34,yes,frame_a,yes,True,does smackdown vs raw 2008 have gm mode
+34,yes,frame_b,yes,True,does smackdown vs raw 2008 have gm mode
+35,yes,original,yes,True,can a widower marry his sister in law
+35,yes,distractor,yes,True,can a widower marry his sister in law
+35,yes,frame_a,yes,True,can a widower marry his sister in law
+35,yes,frame_b,yes,True,can a widower marry his sister in law
+36,yes,original,yes,True,is test track the fastest ride in disney
+36,yes,distractor,yes,True,is test track the fastest ride in disney
+36,yes,frame_a,yes,True,is test track the fastest ride in disney
+36,yes,frame_b,no,False,is test track the fastest ride in disney
+37,yes,original,yes,True,is us virgin islands part of the caribbean
+37,yes,distractor,yes,True,is us virgin islands part of the caribbean
+37,yes,frame_a,yes,True,is us virgin islands part of the caribbean
+37,yes,frame_b,yes,True,is us virgin islands part of the caribbean
+38,no,original,no,True,is dragon fruit and pitaya the same thing
+38,no,distractor,no,True,is dragon fruit and pitaya the same thing
+38,no,frame_a,yes,False,is dragon fruit and pitaya the same thing
+38,no,frame_b,no,True,is dragon fruit and pitaya the same thing
+39,yes,original,no,False,is the movie a wrinkle in time out
+39,yes,distractor,no,False,is the movie a wrinkle in time out
+39,yes,frame_a,yes,True,is the movie a wrinkle in time out
+39,yes,frame_b,no,False,is the movie a wrinkle in time out
+40,yes,original,yes,True,is the summer soltice the longest day of the year
+40,yes,distractor,yes,True,is the summer soltice the longest day of the year
+40,yes,frame_a,yes,True,is the summer soltice the longest day of the year
+40,yes,frame_b,yes,True,is the summer soltice the longest day of the year
+41,yes,original,yes,True,is there any train between india and pakistan
+41,yes,distractor,yes,True,is there any train between india and pakistan
+41,yes,frame_a,yes,True,is there any train between india and pakistan
+41,yes,frame_b,yes,True,is there any train between india and pakistan
+42,no,original,no,True,does bourbon have to be made in bourbon county
+42,no,distractor,no,True,does bourbon have to be made in bourbon county
+42,no,frame_a,no,True,does bourbon have to be made in bourbon county
+42,no,frame_b,no,True,does bourbon have to be made in bourbon county
+43,yes,original,yes,True,can you buy alcohol on sunday in indiana 2018
+43,yes,distractor,yes,True,can you buy alcohol on sunday in indiana 2018
+43,yes,frame_a,yes,True,can you buy alcohol on sunday in indiana 2018
+43,yes,frame_b,yes,True,can you buy alcohol on sunday in indiana 2018
+44,no,original,no,True,is in n out only located in california
+44,no,distractor,no,True,is in n out only located in california
+44,no,frame_a,no,True,is in n out only located in california
+44,no,frame_b,no,True,is in n out only located in california
+45,no,original,no,True,can we have more than 9 supreme court justices
+45,no,distractor,no,True,can we have more than 9 supreme court justices
+45,no,frame_a,no,True,can we have more than 9 supreme court justices
+45,no,frame_b,no,True,can we have more than 9 supreme court justices
+46,no,original,yes,False,do we find out where fez is from
+46,no,distractor,yes,False,do we find out where fez is from
+46,no,frame_a,yes,False,do we find out where fez is from
+46,no,frame_b,yes,False,do we find out where fez is from
+47,no,original,no,True,did us ever win the world cup soccer
+47,no,distractor,no,True,did us ever win the world cup soccer
+47,no,frame_a,no,True,did us ever win the world cup soccer
+47,no,frame_b,no,True,did us ever win the world cup soccer
+48,no,original,no,True,do long island iced teas have tea in them
+48,no,distractor,no,True,do long island iced teas have tea in them
+48,no,frame_a,yes,False,do long island iced teas have tea in them
+48,no,frame_b,no,True,do long island iced teas have tea in them
+49,yes,original,no,False,does the right atrium receive blood from the lungs
+49,yes,distractor,no,False,does the right atrium receive blood from the lungs
+49,yes,frame_a,yes,True,does the right atrium receive blood from the lungs
+49,yes,frame_b,no,False,does the right atrium receive blood from the lungs
+50,no,original,no,True,is benzalkonium chloride the same as hydrogen peroxide
+50,no,distractor,no,True,is benzalkonium chloride the same as hydrogen peroxide
+50,no,frame_a,no,True,is benzalkonium chloride the same as hydrogen peroxide
+50,no,frame_b,no,True,is benzalkonium chloride the same as hydrogen peroxide
+51,no,original,no,True,can we travel faster than speed of light
+51,no,distractor,no,True,can we travel faster than speed of light
+51,no,frame_a,yes,False,can we travel faster than speed of light
+51,no,frame_b,no,True,can we travel faster than speed of light
+52,yes,original,yes,True,are activated charcoal and activated carbon the same
+52,yes,distractor,yes,True,are activated charcoal and activated carbon the same
+52,yes,frame_a,yes,True,are activated charcoal and activated carbon the same
+52,yes,frame_b,yes,True,are activated charcoal and activated carbon the same
+53,yes,original,no,False,was mama mia a play before a movie
+53,yes,distractor,no,False,was mama mia a play before a movie
+53,yes,frame_a,no,False,was mama mia a play before a movie
+53,yes,frame_b,no,False,was mama mia a play before a movie
+54,no,original,no,True,is new york and new jersey the same state
+54,no,distractor,no,True,is new york and new jersey the same state
+54,no,frame_a,no,True,is new york and new jersey the same state
+54,no,frame_b,no,True,is new york and new jersey the same state
+55,yes,original,no,False,are any of the original members of lynyrd skynyrd alive
+55,yes,distractor,no,False,are any of the original members of lynyrd skynyrd alive
+55,yes,frame_a,yes,True,are any of the original members of lynyrd skynyrd alive
+55,yes,frame_b,no,False,are any of the original members of lynyrd skynyrd alive
+56,no,original,yes,False,do dalmatians have spots when they are born
+56,no,distractor,yes,False,do dalmatians have spots when they are born
+56,no,frame_a,yes,False,do dalmatians have spots when they are born
+56,no,frame_b,yes,False,do dalmatians have spots when they are born
+57,no,original,no,True,are $10 000 bills still in circulation
+57,no,distractor,no,True,are $10 000 bills still in circulation
+57,no,frame_a,no,True,are $10 000 bills still in circulation
+57,no,frame_b,no,True,are $10 000 bills still in circulation
+58,no,original,yes,False,is the esophagus in front of the heart
+58,no,distractor,no,True,is the esophagus in front of the heart
+58,no,frame_a,yes,False,is the esophagus in front of the heart
+58,no,frame_b,yes,False,is the esophagus in front of the heart
+59,no,original,no,True,do college football players have to enter the draft
+59,no,distractor,no,True,do college football players have to enter the draft
+59,no,frame_a,no,True,do college football players have to enter the draft
+59,no,frame_b,no,True,do college football players have to enter the draft
+60,yes,original,no,False,can i go to montenegro with a schengen visa
+60,yes,distractor,no,False,can i go to montenegro with a schengen visa
+60,yes,frame_a,no,False,can i go to montenegro with a schengen visa
+60,yes,frame_b,no,False,can i go to montenegro with a schengen visa
+61,no,original,yes,False,is los lobos in the rock and roll hall of fame
+61,no,distractor,yes,False,is los lobos in the rock and roll hall of fame
+61,no,frame_a,yes,False,is los lobos in the rock and roll hall of fame
+61,no,frame_b,yes,False,is los lobos in the rock and roll hall of fame
+62,no,original,no,True,did my name is earl finish his list
+62,no,distractor,no,True,did my name is earl finish his list
+62,no,frame_a,no,True,did my name is earl finish his list
+62,no,frame_b,no,True,did my name is earl finish his list
+63,yes,original,yes,True,does minute maid stadium have a retractable roof
+63,yes,distractor,yes,True,does minute maid stadium have a retractable roof
+63,yes,frame_a,yes,True,does minute maid stadium have a retractable roof
+63,yes,frame_b,yes,True,does minute maid stadium have a retractable roof
+64,yes,original,yes,True,can you call the police with no sim
+64,yes,distractor,no,False,can you call the police with no sim
+64,yes,frame_a,yes,True,can you call the police with no sim
+64,yes,frame_b,no,False,can you call the police with no sim
+65,yes,original,yes,True,is there such thing as over drinking water
+65,yes,distractor,yes,True,is there such thing as over drinking water
+65,yes,frame_a,yes,True,is there such thing as over drinking water
+65,yes,frame_b,yes,True,is there such thing as over drinking water
+66,yes,original,yes,True,is there a sequel to the whole nine yards
+66,yes,distractor,yes,True,is there a sequel to the whole nine yards
+66,yes,frame_a,yes,True,is there a sequel to the whole nine yards
+66,yes,frame_b,yes,True,is there a sequel to the whole nine yards
+67,no,original,no,True,is there a difference between soy and soya sauce
+67,no,distractor,no,True,is there a difference between soy and soya sauce
+67,no,frame_a,no,True,is there a difference between soy and soya sauce
+67,no,frame_b,no,True,is there a difference between soy and soya sauce
+68,yes,original,no,False,does it matter which number comes first in a ratio
+68,yes,distractor,no,False,does it matter which number comes first in a ratio
+68,yes,frame_a,yes,True,does it matter which number comes first in a ratio
+68,yes,frame_b,no,False,does it matter which number comes first in a ratio
+69,no,original,yes,False,did tom hardy won an oscar for the revenant
+69,no,distractor,yes,False,did tom hardy won an oscar for the revenant
+69,no,frame_a,yes,False,did tom hardy won an oscar for the revenant
+69,no,frame_b,yes,False,did tom hardy won an oscar for the revenant
+70,yes,original,yes,True,can the non-striker be run out by the bowler
+70,yes,distractor,no,False,can the non-striker be run out by the bowler
+70,yes,frame_a,yes,True,can the non-striker be run out by the bowler
+70,yes,frame_b,no,False,can the non-striker be run out by the bowler
+71,no,original,yes,False,is 7.62 nato the same as 308 win
+71,no,distractor,yes,False,is 7.62 nato the same as 308 win
+71,no,frame_a,yes,False,is 7.62 nato the same as 308 win
+71,no,frame_b,yes,False,is 7.62 nato the same as 308 win
+72,yes,original,no,False,is there overlap between the different organ systems in a vertebrate
+72,yes,distractor,no,False,is there overlap between the different organ systems in a vertebrate
+72,yes,frame_a,no,False,is there overlap between the different organ systems in a vertebrate
+72,yes,frame_b,no,False,is there overlap between the different organ systems in a vertebrate
+73,yes,original,yes,True,does winning the fa cup qualify for europe
+73,yes,distractor,yes,True,does winning the fa cup qualify for europe
+73,yes,frame_a,yes,True,does winning the fa cup qualify for europe
+73,yes,frame_b,yes,True,does winning the fa cup qualify for europe
+74,no,original,yes,False,is the fruit orange named after the color
+74,no,distractor,yes,False,is the fruit orange named after the color
+74,no,frame_a,yes,False,is the fruit orange named after the color
+74,no,frame_b,yes,False,is the fruit orange named after the color
+75,no,original,no,True,does a paladin have to be lawful good
+75,no,distractor,no,True,does a paladin have to be lawful good
+75,no,frame_a,no,True,does a paladin have to be lawful good
+75,no,frame_b,no,True,does a paladin have to be lawful good
+76,yes,original,yes,True,does the government own the us postal service
+76,yes,distractor,yes,True,does the government own the us postal service
+76,yes,frame_a,yes,True,does the government own the us postal service
+76,yes,frame_b,yes,True,does the government own the us postal service
+77,no,original,no,True,is coca tea legal in the united states
+77,no,distractor,no,True,is coca tea legal in the united states
+77,no,frame_a,no,True,is coca tea legal in the united states
+77,no,frame_b,no,True,is coca tea legal in the united states
+78,yes,original,yes,True,do all colors of fruit loops taste the same
+78,yes,distractor,yes,True,do all colors of fruit loops taste the same
+78,yes,frame_a,yes,True,do all colors of fruit loops taste the same
+78,yes,frame_b,yes,True,do all colors of fruit loops taste the same
+79,no,original,no,True,is antarctica the same as the south pole
+79,no,distractor,no,True,is antarctica the same as the south pole
+79,no,frame_a,no,True,is antarctica the same as the south pole
+79,no,frame_b,no,True,is antarctica the same as the south pole
+80,yes,original,yes,True,does the a train go to penn station
+80,yes,distractor,yes,True,does the a train go to penn station
+80,yes,frame_a,yes,True,does the a train go to penn station
+80,yes,frame_b,yes,True,does the a train go to penn station
+81,yes,original,yes,True,are flash arrow and supergirl in the same universe
+81,yes,distractor,yes,True,are flash arrow and supergirl in the same universe
+81,yes,frame_a,yes,True,are flash arrow and supergirl in the same universe
+81,yes,frame_b,yes,True,are flash arrow and supergirl in the same universe
+82,yes,original,no,False,do all craftsman tools have a lifetime warranty
+82,yes,distractor,no,False,do all craftsman tools have a lifetime warranty
+82,yes,frame_a,yes,True,do all craftsman tools have a lifetime warranty
+82,yes,frame_b,no,False,do all craftsman tools have a lifetime warranty
+83,yes,original,yes,True,is there a zoo in las vegas nevada
+83,yes,distractor,yes,True,is there a zoo in las vegas nevada
+83,yes,frame_a,yes,True,is there a zoo in las vegas nevada
+83,yes,frame_b,yes,True,is there a zoo in las vegas nevada
+84,no,original,no,True,can an american president run for 3 terms
+84,no,distractor,no,True,can an american president run for 3 terms
+84,no,frame_a,no,True,can an american president run for 3 terms
+84,no,frame_b,no,True,can an american president run for 3 terms
+85,yes,original,yes,True,does switzerland allow free movement of eu citizens
+85,yes,distractor,yes,True,does switzerland allow free movement of eu citizens
+85,yes,frame_a,yes,True,does switzerland allow free movement of eu citizens
+85,yes,frame_b,yes,True,does switzerland allow free movement of eu citizens
+86,yes,original,yes,True,did spain win the world cup in 2010
+86,yes,distractor,yes,True,did spain win the world cup in 2010
+86,yes,frame_a,yes,True,did spain win the world cup in 2010
+86,yes,frame_b,yes,True,did spain win the world cup in 2010
+87,no,original,no,True,do you have to touch the ball to be offside in soccer
+87,no,distractor,no,True,do you have to touch the ball to be offside in soccer
+87,no,frame_a,no,True,do you have to touch the ball to be offside in soccer
+87,no,frame_b,no,True,do you have to touch the ball to be offside in soccer
+88,yes,original,yes,True,are there only 2 rounds in the nba draft
+88,yes,distractor,yes,True,are there only 2 rounds in the nba draft
+88,yes,frame_a,yes,True,are there only 2 rounds in the nba draft
+88,yes,frame_b,yes,True,are there only 2 rounds in the nba draft
+89,yes,original,no,False,is married at first sight still on tv
+89,yes,distractor,no,False,is married at first sight still on tv
+89,yes,frame_a,yes,True,is married at first sight still on tv
+89,yes,frame_b,no,False,is married at first sight still on tv
+90,no,original,no,True,can an emt-basic start an iv
+90,no,distractor,no,True,can an emt-basic start an iv
+90,no,frame_a,yes,False,can an emt-basic start an iv
+90,no,frame_b,no,True,can an emt-basic start an iv
+91,yes,original,yes,True,is there a golf course at the indy 500
+91,yes,distractor,yes,True,is there a golf course at the indy 500
+91,yes,frame_a,yes,True,is there a golf course at the indy 500
+91,yes,frame_b,yes,True,is there a golf course at the indy 500
+92,yes,original,no,False,is the palace of versailles open to the public
+92,yes,distractor,no,False,is the palace of versailles open to the public
+92,yes,frame_a,yes,True,is the palace of versailles open to the public
+92,yes,frame_b,no,False,is the palace of versailles open to the public
+93,yes,original,yes,True,is there such a thing as a fainting goat
+93,yes,distractor,yes,True,is there such a thing as a fainting goat
+93,yes,frame_a,yes,True,is there such a thing as a fainting goat
+93,yes,frame_b,yes,True,is there such a thing as a fainting goat
+94,yes,original,yes,True,is there an interstate that goes coast to coast
+94,yes,distractor,yes,True,is there an interstate that goes coast to coast
+94,yes,frame_a,yes,True,is there an interstate that goes coast to coast
+94,yes,frame_b,yes,True,is there an interstate that goes coast to coast
+95,yes,original,no,False,are the ryman and grand ole opry the same thing
+95,yes,distractor,no,False,are the ryman and grand ole opry the same thing
+95,yes,frame_a,yes,True,are the ryman and grand ole opry the same thing
+95,yes,frame_b,no,False,are the ryman and grand ole opry the same thing
+96,yes,original,yes,True,is a nissan titan a full size truck
+96,yes,distractor,yes,True,is a nissan titan a full size truck
+96,yes,frame_a,yes,True,is a nissan titan a full size truck
+96,yes,frame_b,yes,True,is a nissan titan a full size truck
+97,yes,original,no,False,has anyone won the million dollars on are you smarter than a fifth grader
+97,yes,distractor,no,False,has anyone won the million dollars on are you smarter than a fifth grader
+97,yes,frame_a,no,False,has anyone won the million dollars on are you smarter than a fifth grader
+97,yes,frame_b,no,False,has anyone won the million dollars on are you smarter than a fifth grader
+98,yes,original,yes,True,does shadow of mordor take place before lotr
+98,yes,distractor,no,False,does shadow of mordor take place before lotr
+98,yes,frame_a,yes,True,does shadow of mordor take place before lotr
+98,yes,frame_b,no,False,does shadow of mordor take place before lotr
+99,no,original,yes,False,has wisconsin ever been in the little league world series
+99,no,distractor,yes,False,has wisconsin ever been in the little league world series
+99,no,frame_a,yes,False,has wisconsin ever been in the little league world series
+99,no,frame_b,yes,False,has wisconsin ever been in the little league world series
+100,yes,original,yes,True,does dory find her parents in finding dory
+100,yes,distractor,no,False,does dory find her parents in finding dory
+100,yes,frame_a,yes,True,does dory find her parents in finding dory
+100,yes,frame_b,no,False,does dory find her parents in finding dory
+101,no,original,no,True,is single research design suitable in all research studies
+101,no,distractor,no,True,is single research design suitable in all research studies
+101,no,frame_a,yes,False,is single research design suitable in all research studies
+101,no,frame_b,no,True,is single research design suitable in all research studies
+102,no,original,no,True,does robert's rules of order allow proxy voting
+102,no,distractor,no,True,does robert's rules of order allow proxy voting
+102,no,frame_a,yes,False,does robert's rules of order allow proxy voting
+102,no,frame_b,no,True,does robert's rules of order allow proxy voting
+103,yes,original,yes,True,is pokemon lets go a main series game
+103,yes,distractor,yes,True,is pokemon lets go a main series game
+103,yes,frame_a,yes,True,is pokemon lets go a main series game
+103,yes,frame_b,yes,True,is pokemon lets go a main series game
+104,yes,original,yes,True,is it possible to be allergic to meat
+104,yes,distractor,yes,True,is it possible to be allergic to meat
+104,yes,frame_a,yes,True,is it possible to be allergic to meat
+104,yes,frame_b,yes,True,is it possible to be allergic to meat
+105,yes,original,yes,True,is it possible to create mass from energy
+105,yes,distractor,yes,True,is it possible to create mass from energy
+105,yes,frame_a,yes,True,is it possible to create mass from energy
+105,yes,frame_b,yes,True,is it possible to create mass from energy
+106,no,original,no,True,is the civil rights act in the constitution
+106,no,distractor,no,True,is the civil rights act in the constitution
+106,no,frame_a,no,True,is the civil rights act in the constitution
+106,no,frame_b,no,True,is the civil rights act in the constitution
+107,no,original,no,True,is there always a full moon on summer solstice
+107,no,distractor,no,True,is there always a full moon on summer solstice
+107,no,frame_a,no,True,is there always a full moon on summer solstice
+107,no,frame_b,no,True,is there always a full moon on summer solstice
+108,yes,original,no,False,have the thunder ever made it to the finals
+108,yes,distractor,no,False,have the thunder ever made it to the finals
+108,yes,frame_a,no,False,have the thunder ever made it to the finals
+108,yes,frame_b,no,False,have the thunder ever made it to the finals
+109,no,original,no,True,does every set of traffic lights have cameras
+109,no,distractor,no,True,does every set of traffic lights have cameras
+109,no,frame_a,no,True,does every set of traffic lights have cameras
+109,no,frame_b,no,True,does every set of traffic lights have cameras
+110,no,original,no,True,is nuclear power the same as nuclear energy
+110,no,distractor,no,True,is nuclear power the same as nuclear energy
+110,no,frame_a,yes,False,is nuclear power the same as nuclear energy
+110,no,frame_b,no,True,is nuclear power the same as nuclear energy
+111,no,original,yes,False,is the book of jasher in the bible
+111,no,distractor,yes,False,is the book of jasher in the bible
+111,no,frame_a,yes,False,is the book of jasher in the bible
+111,no,frame_b,yes,False,is the book of jasher in the bible
+112,yes,original,yes,True,is west texas a&m part of texas a&m
+112,yes,distractor,yes,True,is west texas a&m part of texas a&m
+112,yes,frame_a,yes,True,is west texas a&m part of texas a&m
+112,yes,frame_b,yes,True,is west texas a&m part of texas a&m
+113,yes,original,yes,True,does company of heroes 2 have a campaign
+113,yes,distractor,yes,True,does company of heroes 2 have a campaign
+113,yes,frame_a,yes,True,does company of heroes 2 have a campaign
+113,yes,frame_b,yes,True,does company of heroes 2 have a campaign
+114,yes,original,yes,True,does each state have its own constitution australia
+114,yes,distractor,yes,True,does each state have its own constitution australia
+114,yes,frame_a,yes,True,does each state have its own constitution australia
+114,yes,frame_b,yes,True,does each state have its own constitution australia
+115,no,original,no,True,is a pentagon made of 5 equilateral triangles
+115,no,distractor,no,True,is a pentagon made of 5 equilateral triangles
+115,no,frame_a,no,True,is a pentagon made of 5 equilateral triangles
+115,no,frame_b,no,True,is a pentagon made of 5 equilateral triangles
+116,yes,original,yes,True,is god of war sequel to god of war 3
+116,yes,distractor,yes,True,is god of war sequel to god of war 3
+116,yes,frame_a,yes,True,is god of war sequel to god of war 3
+116,yes,frame_b,yes,True,is god of war sequel to god of war 3
+117,yes,original,yes,True,is the tommy gun a sub machine gun
+117,yes,distractor,yes,True,is the tommy gun a sub machine gun
+117,yes,frame_a,yes,True,is the tommy gun a sub machine gun
+117,yes,frame_b,yes,True,is the tommy gun a sub machine gun
+118,no,original,no,True,do you win chess by taking the queen
+118,no,distractor,no,True,do you win chess by taking the queen
+118,no,frame_a,no,True,do you win chess by taking the queen
+118,no,frame_b,no,True,do you win chess by taking the queen
+119,no,original,no,True,is a markup language designed to describe data
+119,no,distractor,no,True,is a markup language designed to describe data
+119,no,frame_a,yes,False,is a markup language designed to describe data
+119,no,frame_b,no,True,is a markup language designed to describe data
+120,yes,original,no,False,can you go out in uno with a wildcard
+120,yes,distractor,no,False,can you go out in uno with a wildcard
+120,yes,frame_a,yes,True,can you go out in uno with a wildcard
+120,yes,frame_b,no,False,can you go out in uno with a wildcard
+121,no,original,no,True,is prince of tides based on a true story
+121,no,distractor,no,True,is prince of tides based on a true story
+121,no,frame_a,no,True,is prince of tides based on a true story
+121,no,frame_b,no,True,is prince of tides based on a true story
+122,no,original,yes,False,is there a mechanical advantage for a fixed pulley
+122,no,distractor,no,True,is there a mechanical advantage for a fixed pulley
+122,no,frame_a,yes,False,is there a mechanical advantage for a fixed pulley
+122,no,frame_b,yes,False,is there a mechanical advantage for a fixed pulley
+123,yes,original,no,False,is a vulture the same as a buzzard
+123,yes,distractor,no,False,is a vulture the same as a buzzard
+123,yes,frame_a,no,False,is a vulture the same as a buzzard
+123,yes,frame_b,no,False,is a vulture the same as a buzzard
+124,no,original,no,True,is the county court business centre a real court
+124,no,distractor,no,True,is the county court business centre a real court
+124,no,frame_a,yes,False,is the county court business centre a real court
+124,no,frame_b,no,True,is the county court business centre a real court
+125,yes,original,yes,True,is lipid profile and lipid panel the same
+125,yes,distractor,no,False,is lipid profile and lipid panel the same
+125,yes,frame_a,yes,True,is lipid profile and lipid panel the same
+125,yes,frame_b,yes,True,is lipid profile and lipid panel the same
+126,yes,original,yes,True,is soho in the west end of london
+126,yes,distractor,yes,True,is soho in the west end of london
+126,yes,frame_a,yes,True,is soho in the west end of london
+126,yes,frame_b,yes,True,is soho in the west end of london
+127,no,original,no,True,is gdp per capita the same as average income
+127,no,distractor,no,True,is gdp per capita the same as average income
+127,no,frame_a,yes,False,is gdp per capita the same as average income
+127,no,frame_b,no,True,is gdp per capita the same as average income
+128,no,original,no,True,is nitric oxide and nitrous oxide the same
+128,no,distractor,no,True,is nitric oxide and nitrous oxide the same
+128,no,frame_a,no,True,is nitric oxide and nitrous oxide the same
+128,no,frame_b,no,True,is nitric oxide and nitrous oxide the same
+129,yes,original,yes,True,is song of songs in the old testament
+129,yes,distractor,yes,True,is song of songs in the old testament
+129,yes,frame_a,yes,True,is song of songs in the old testament
+129,yes,frame_b,yes,True,is song of songs in the old testament
+130,yes,original,yes,True,is sway bar the same as stabilizer bar
+130,yes,distractor,yes,True,is sway bar the same as stabilizer bar
+130,yes,frame_a,yes,True,is sway bar the same as stabilizer bar
+130,yes,frame_b,yes,True,is sway bar the same as stabilizer bar
+131,yes,original,yes,True,is a dachshund the same as a sausage dog
+131,yes,distractor,yes,True,is a dachshund the same as a sausage dog
+131,yes,frame_a,yes,True,is a dachshund the same as a sausage dog
+131,yes,frame_b,yes,True,is a dachshund the same as a sausage dog
+132,yes,original,yes,True,does dying light enhanced edition come with the base game
+132,yes,distractor,yes,True,does dying light enhanced edition come with the base game
+132,yes,frame_a,yes,True,does dying light enhanced edition come with the base game
+132,yes,frame_b,yes,True,does dying light enhanced edition come with the base game
+133,no,original,yes,False,does ethanol take more energy make that produces
+133,no,distractor,yes,False,does ethanol take more energy make that produces
+133,no,frame_a,yes,False,does ethanol take more energy make that produces
+133,no,frame_b,no,True,does ethanol take more energy make that produces
+134,yes,original,yes,True,has anyone ever hit a hole-in-one on a par 5
+134,yes,distractor,yes,True,has anyone ever hit a hole-in-one on a par 5
+134,yes,frame_a,yes,True,has anyone ever hit a hole-in-one on a par 5
+134,yes,frame_b,yes,True,has anyone ever hit a hole-in-one on a par 5
+135,no,original,no,True,is the big dipper the same as ursa major
+135,no,distractor,no,True,is the big dipper the same as ursa major
+135,no,frame_a,yes,False,is the big dipper the same as ursa major
+135,no,frame_b,no,True,is the big dipper the same as ursa major
+136,no,original,yes,False,do you have to have a license to own a tv in england
+136,no,distractor,yes,False,do you have to have a license to own a tv in england
+136,no,frame_a,yes,False,do you have to have a license to own a tv in england
+136,no,frame_b,yes,False,do you have to have a license to own a tv in england
+137,yes,original,yes,True,can the world cup final be decided on penalties
+137,yes,distractor,yes,True,can the world cup final be decided on penalties
+137,yes,frame_a,yes,True,can the world cup final be decided on penalties
+137,yes,frame_b,yes,True,can the world cup final be decided on penalties
+138,no,original,yes,False,is a dodge dakota a half ton truck
+138,no,distractor,yes,False,is a dodge dakota a half ton truck
+138,no,frame_a,yes,False,is a dodge dakota a half ton truck
+138,no,frame_b,yes,False,is a dodge dakota a half ton truck
+139,no,original,no,True,are greenwich village and the west village the same
+139,no,distractor,no,True,are greenwich village and the west village the same
+139,no,frame_a,no,True,are greenwich village and the west village the same
+139,no,frame_b,no,True,are greenwich village and the west village the same
+140,no,original,no,True,does the girl die in brain on fire
+140,no,distractor,no,True,does the girl die in brain on fire
+140,no,frame_a,no,True,does the girl die in brain on fire
+140,no,frame_b,no,True,does the girl die in brain on fire
+141,no,original,no,True,are liquor stores in oklahoma open on 4th of july
+141,no,distractor,no,True,are liquor stores in oklahoma open on 4th of july
+141,no,frame_a,no,True,are liquor stores in oklahoma open on 4th of july
+141,no,frame_b,no,True,are liquor stores in oklahoma open on 4th of july
+142,no,original,no,True,are stroke volume and ejection fraction the same
+142,no,distractor,no,True,are stroke volume and ejection fraction the same
+142,no,frame_a,no,True,are stroke volume and ejection fraction the same
+142,no,frame_b,no,True,are stroke volume and ejection fraction the same
+143,yes,original,no,False,is there more than 9 seasons of heartland
+143,yes,distractor,no,False,is there more than 9 seasons of heartland
+143,yes,frame_a,no,False,is there more than 9 seasons of heartland
+143,yes,frame_b,no,False,is there more than 9 seasons of heartland
+144,no,original,no,True,is a porpoise and a dolphin the same animal
+144,no,distractor,no,True,is a porpoise and a dolphin the same animal
+144,no,frame_a,no,True,is a porpoise and a dolphin the same animal
+144,no,frame_b,no,True,is a porpoise and a dolphin the same animal
+145,yes,original,yes,True,will there be a season 5 the 100
+145,yes,distractor,yes,True,will there be a season 5 the 100
+145,yes,frame_a,yes,True,will there be a season 5 the 100
+145,yes,frame_b,yes,True,will there be a season 5 the 100
+146,yes,original,yes,True,are pork back ribs same as baby back
+146,yes,distractor,yes,True,are pork back ribs same as baby back
+146,yes,frame_a,yes,True,are pork back ribs same as baby back
+146,yes,frame_b,yes,True,are pork back ribs same as baby back
+147,yes,original,yes,True,is visa delta the same as visa debit
+147,yes,distractor,yes,True,is visa delta the same as visa debit
+147,yes,frame_a,yes,True,is visa delta the same as visa debit
+147,yes,frame_b,yes,True,is visa delta the same as visa debit
+148,no,original,no,True,is pokemon lets go eevee a spin off
+148,no,distractor,no,True,is pokemon lets go eevee a spin off
+148,no,frame_a,no,True,is pokemon lets go eevee a spin off
+148,no,frame_b,no,True,is pokemon lets go eevee a spin off
+149,yes,original,yes,True,can you feel pain from a broken heart
+149,yes,distractor,yes,True,can you feel pain from a broken heart
+149,yes,frame_a,yes,True,can you feel pain from a broken heart
+149,yes,frame_b,yes,True,can you feel pain from a broken heart
+150,no,original,no,True,are walgreens and rite aid owned by the same company
+150,no,distractor,no,True,are walgreens and rite aid owned by the same company
+150,no,frame_a,no,True,are walgreens and rite aid owned by the same company
+150,no,frame_b,no,True,are walgreens and rite aid owned by the same company
+151,no,original,no,True,is all of australia in the same time zone
+151,no,distractor,no,True,is all of australia in the same time zone
+151,no,frame_a,no,True,is all of australia in the same time zone
+151,no,frame_b,no,True,is all of australia in the same time zone
+152,yes,original,yes,True,are there any games that are cross platform
+152,yes,distractor,yes,True,are there any games that are cross platform
+152,yes,frame_a,yes,True,are there any games that are cross platform
+152,yes,frame_b,yes,True,are there any games that are cross platform
+153,yes,original,yes,True,has anyone ever ran a 4 minute mile
+153,yes,distractor,yes,True,has anyone ever ran a 4 minute mile
+153,yes,frame_a,yes,True,has anyone ever ran a 4 minute mile
+153,yes,frame_b,yes,True,has anyone ever ran a 4 minute mile
+154,yes,original,yes,True,does a flagrant foul count as a personal foul
+154,yes,distractor,yes,True,does a flagrant foul count as a personal foul
+154,yes,frame_a,yes,True,does a flagrant foul count as a personal foul
+154,yes,frame_b,yes,True,does a flagrant foul count as a personal foul
+155,yes,original,no,False,does fred from first dates have a partner
+155,yes,distractor,no,False,does fred from first dates have a partner
+155,yes,frame_a,yes,True,does fred from first dates have a partner
+155,yes,frame_b,no,False,does fred from first dates have a partner
+156,no,original,no,True,does a sim free phone lock to a network
+156,no,distractor,no,True,does a sim free phone lock to a network
+156,no,frame_a,no,True,does a sim free phone lock to a network
+156,no,frame_b,no,True,does a sim free phone lock to a network
+157,yes,original,yes,True,is it possible to have thunder without rain
+157,yes,distractor,yes,True,is it possible to have thunder without rain
+157,yes,frame_a,yes,True,is it possible to have thunder without rain
+157,yes,frame_b,yes,True,is it possible to have thunder without rain
+158,yes,original,yes,True,is a dogfish part of the shark family
+158,yes,distractor,yes,True,is a dogfish part of the shark family
+158,yes,frame_a,yes,True,is a dogfish part of the shark family
+158,yes,frame_b,yes,True,is a dogfish part of the shark family
+159,no,original,no,True,is fort walton beach the same as destin
+159,no,distractor,no,True,is fort walton beach the same as destin
+159,no,frame_a,yes,False,is fort walton beach the same as destin
+159,no,frame_b,no,True,is fort walton beach the same as destin
+160,no,original,no,True,are there any ww1 veterans still alive 2018
+160,no,distractor,no,True,are there any ww1 veterans still alive 2018
+160,no,frame_a,no,True,are there any ww1 veterans still alive 2018
+160,no,frame_b,no,True,are there any ww1 veterans still alive 2018
+161,yes,original,yes,True,is split phase the same as single phase
+161,yes,distractor,yes,True,is split phase the same as single phase
+161,yes,frame_a,yes,True,is split phase the same as single phase
+161,yes,frame_b,yes,True,is split phase the same as single phase
+162,yes,original,yes,True,is there a 3rd season of berlin station
+162,yes,distractor,yes,True,is there a 3rd season of berlin station
+162,yes,frame_a,yes,True,is there a 3rd season of berlin station
+162,yes,frame_b,yes,True,is there a 3rd season of berlin station
+163,no,original,yes,False,does the world cup trophy have a name
+163,no,distractor,no,True,does the world cup trophy have a name
+163,no,frame_a,yes,False,does the world cup trophy have a name
+163,no,frame_b,yes,False,does the world cup trophy have a name
+164,yes,original,yes,True,can a civilian own a fn five seven
+164,yes,distractor,yes,True,can a civilian own a fn five seven
+164,yes,frame_a,yes,True,can a civilian own a fn five seven
+164,yes,frame_b,yes,True,can a civilian own a fn five seven
+165,no,original,no,True,is the prostate part of the endocrine system
+165,no,distractor,no,True,is the prostate part of the endocrine system
+165,no,frame_a,no,True,is the prostate part of the endocrine system
+165,no,frame_b,no,True,is the prostate part of the endocrine system
+166,yes,original,yes,True,is there more than one type of mono
+166,yes,distractor,yes,True,is there more than one type of mono
+166,yes,frame_a,yes,True,is there more than one type of mono
+166,yes,frame_b,yes,True,is there more than one type of mono
+167,no,original,no,True,do you need a license for airsoft guns uk
+167,no,distractor,no,True,do you need a license for airsoft guns uk
+167,no,frame_a,no,True,do you need a license for airsoft guns uk
+167,no,frame_b,no,True,do you need a license for airsoft guns uk
+168,yes,original,no,False,is an engine speed sensor the same as a crankshaft sensor
+168,yes,distractor,no,False,is an engine speed sensor the same as a crankshaft sensor
+168,yes,frame_a,yes,True,is an engine speed sensor the same as a crankshaft sensor
+168,yes,frame_b,no,False,is an engine speed sensor the same as a crankshaft sensor
+169,no,original,no,True,is there a national park in all 50 states
+169,no,distractor,no,True,is there a national park in all 50 states
+169,no,frame_a,yes,False,is there a national park in all 50 states
+169,no,frame_b,no,True,is there a national park in all 50 states
+170,no,original,no,True,are black widow and red back spiders the same
+170,no,distractor,no,True,are black widow and red back spiders the same
+170,no,frame_a,no,True,are black widow and red back spiders the same
+170,no,frame_b,no,True,are black widow and red back spiders the same
+171,no,original,yes,False,can you grow banana trees from a banana
+171,no,distractor,no,True,can you grow banana trees from a banana
+171,no,frame_a,yes,False,can you grow banana trees from a banana
+171,no,frame_b,no,True,can you grow banana trees from a banana
+172,no,original,no,True,does the winner of the british open get to keep the jug
+172,no,distractor,no,True,does the winner of the british open get to keep the jug
+172,no,frame_a,yes,False,does the winner of the british open get to keep the jug
+172,no,frame_b,no,True,does the winner of the british open get to keep the jug
+173,no,original,no,True,is a lion part of the dog family
+173,no,distractor,no,True,is a lion part of the dog family
+173,no,frame_a,no,True,is a lion part of the dog family
+173,no,frame_b,no,True,is a lion part of the dog family
+174,no,original,no,True,was the united states in the world cup this year
+174,no,distractor,no,True,was the united states in the world cup this year
+174,no,frame_a,no,True,was the united states in the world cup this year
+174,no,frame_b,no,True,was the united states in the world cup this year
+175,yes,original,yes,True,does the government give subsidies to oil companies
+175,yes,distractor,yes,True,does the government give subsidies to oil companies
+175,yes,frame_a,yes,True,does the government give subsidies to oil companies
+175,yes,frame_b,yes,True,does the government give subsidies to oil companies
+176,yes,original,yes,True,is the terminal based on a real story
+176,yes,distractor,no,False,is the terminal based on a real story
+176,yes,frame_a,yes,True,is the terminal based on a real story
+176,yes,frame_b,no,False,is the terminal based on a real story
+177,yes,original,no,False,is a turkey vulture and a buzzard the same thing
+177,yes,distractor,no,False,is a turkey vulture and a buzzard the same thing
+177,yes,frame_a,yes,True,is a turkey vulture and a buzzard the same thing
+177,yes,frame_b,no,False,is a turkey vulture and a buzzard the same thing
+178,no,original,no,True,is father's day the same day every year
+178,no,distractor,no,True,is father's day the same day every year
+178,no,frame_a,no,True,is father's day the same day every year
+178,no,frame_b,no,True,is father's day the same day every year
+179,no,original,yes,False,will there be any more tinker bell movies
+179,no,distractor,yes,False,will there be any more tinker bell movies
+179,no,frame_a,yes,False,will there be any more tinker bell movies
+179,no,frame_b,no,True,will there be any more tinker bell movies
+180,no,original,yes,False,can you really hear the ocean in a seashell
+180,no,distractor,yes,False,can you really hear the ocean in a seashell
+180,no,frame_a,yes,False,can you really hear the ocean in a seashell
+180,no,frame_b,yes,False,can you really hear the ocean in a seashell
+181,yes,original,no,False,is there a new kung fu panda coming out
+181,yes,distractor,no,False,is there a new kung fu panda coming out
+181,yes,frame_a,yes,True,is there a new kung fu panda coming out
+181,yes,frame_b,no,False,is there a new kung fu panda coming out
+182,no,original,yes,False,is there such a place as garrison colorado
+182,no,distractor,yes,False,is there such a place as garrison colorado
+182,no,frame_a,yes,False,is there such a place as garrison colorado
+182,no,frame_b,yes,False,is there such a place as garrison colorado
+183,yes,original,yes,True,are the marvel tv shows in the mcu
+183,yes,distractor,yes,True,are the marvel tv shows in the mcu
+183,yes,frame_a,yes,True,are the marvel tv shows in the mcu
+183,yes,frame_b,yes,True,are the marvel tv shows in the mcu
+184,no,original,no,True,is mycosis fungoides caused by a fungal infection
+184,no,distractor,no,True,is mycosis fungoides caused by a fungal infection
+184,no,frame_a,no,True,is mycosis fungoides caused by a fungal infection
+184,no,frame_b,no,True,is mycosis fungoides caused by a fungal infection
+185,no,original,no,True,is there an official release date for the last airbender 2
+185,no,distractor,no,True,is there an official release date for the last airbender 2
+185,no,frame_a,no,True,is there an official release date for the last airbender 2
+185,no,frame_b,no,True,is there an official release date for the last airbender 2
+186,no,original,no,True,is a veteran someone who went to war
+186,no,distractor,no,True,is a veteran someone who went to war
+186,no,frame_a,yes,False,is a veteran someone who went to war
+186,no,frame_b,no,True,is a veteran someone who went to war
+187,no,original,no,True,does christina yang die in season 10 episode 24
+187,no,distractor,no,True,does christina yang die in season 10 episode 24
+187,no,frame_a,no,True,does christina yang die in season 10 episode 24
+187,no,frame_b,no,True,does christina yang die in season 10 episode 24
+188,yes,original,yes,True,will there be another season of the affiar
+188,yes,distractor,yes,True,will there be another season of the affiar
+188,yes,frame_a,yes,True,will there be another season of the affiar
+188,yes,frame_b,yes,True,will there be another season of the affiar
+189,no,original,no,True,is there a monthly fee for google voice
+189,no,distractor,no,True,is there a monthly fee for google voice
+189,no,frame_a,no,True,is there a monthly fee for google voice
+189,no,frame_b,no,True,is there a monthly fee for google voice
+190,yes,original,yes,True,will there be a series 5 of brokenwood mysteries
+190,yes,distractor,yes,True,will there be a series 5 of brokenwood mysteries
+190,yes,frame_a,yes,True,will there be a series 5 of brokenwood mysteries
+190,yes,frame_b,yes,True,will there be a series 5 of brokenwood mysteries
+191,no,original,no,True,is the tv series star crossed based on a book
+191,no,distractor,no,True,is the tv series star crossed based on a book
+191,no,frame_a,no,True,is the tv series star crossed based on a book
+191,no,frame_b,no,True,is the tv series star crossed based on a book
+192,no,original,no,True,has sweden ever been in a world cup final
+192,no,distractor,no,True,has sweden ever been in a world cup final
+192,no,frame_a,no,True,has sweden ever been in a world cup final
+192,no,frame_b,no,True,has sweden ever been in a world cup final
+193,no,original,no,True,does britain have the right to bear arms
+193,no,distractor,no,True,does britain have the right to bear arms
+193,no,frame_a,no,True,does britain have the right to bear arms
+193,no,frame_b,no,True,does britain have the right to bear arms
+194,yes,original,yes,True,will the next step have a season 6
+194,yes,distractor,yes,True,will the next step have a season 6
+194,yes,frame_a,yes,True,will the next step have a season 6
+194,yes,frame_b,yes,True,will the next step have a season 6
+195,yes,original,yes,True,has the amazing race ever gone to israel
+195,yes,distractor,yes,True,has the amazing race ever gone to israel
+195,yes,frame_a,yes,True,has the amazing race ever gone to israel
+195,yes,frame_b,yes,True,has the amazing race ever gone to israel
+196,no,original,no,True,are corn chips and tortilla chips the same
+196,no,distractor,no,True,are corn chips and tortilla chips the same
+196,no,frame_a,no,True,are corn chips and tortilla chips the same
+196,no,frame_b,no,True,are corn chips and tortilla chips the same
+197,no,original,no,True,are there any states where you can marry your sibling
+197,no,distractor,no,True,are there any states where you can marry your sibling
+197,no,frame_a,no,True,are there any states where you can marry your sibling
+197,no,frame_b,no,True,are there any states where you can marry your sibling
+198,no,original,no,True,can a person have dual citizenship in india
+198,no,distractor,no,True,can a person have dual citizenship in india
+198,no,frame_a,yes,False,can a person have dual citizenship in india
+198,no,frame_b,no,True,can a person have dual citizenship in india
+199,no,original,no,True,will being flat footed keep you out of the military
+199,no,distractor,no,True,will being flat footed keep you out of the military
+199,no,frame_a,no,True,will being flat footed keep you out of the military
+199,no,frame_b,no,True,will being flat footed keep you out of the military
+200,yes,original,yes,True,do female and male blue jays look the same
+200,yes,distractor,no,False,do female and male blue jays look the same
+200,yes,frame_a,yes,True,do female and male blue jays look the same
+200,yes,frame_b,no,False,do female and male blue jays look the same
+201,no,original,no,True,are all xbox games compatible with xbox one
+201,no,distractor,no,True,are all xbox games compatible with xbox one
+201,no,frame_a,no,True,are all xbox games compatible with xbox one
+201,no,frame_b,no,True,are all xbox games compatible with xbox one
+202,no,original,no,True,is the tv show taken still on the air
+202,no,distractor,no,True,is the tv show taken still on the air
+202,no,frame_a,no,True,is the tv show taken still on the air
+202,no,frame_b,no,True,is the tv show taken still on the air
+203,yes,original,no,False,is a dame the same as a knight
+203,yes,distractor,no,False,is a dame the same as a knight
+203,yes,frame_a,no,False,is a dame the same as a knight
+203,yes,frame_b,no,False,is a dame the same as a knight
+204,no,original,no,True,is there a third clash of the titans
+204,no,distractor,yes,False,is there a third clash of the titans
+204,no,frame_a,yes,False,is there a third clash of the titans
+204,no,frame_b,no,True,is there a third clash of the titans
+205,no,original,no,True,is pyruvic acid and pyruvate the same thing
+205,no,distractor,no,True,is pyruvic acid and pyruvate the same thing
+205,no,frame_a,yes,False,is pyruvic acid and pyruvate the same thing
+205,no,frame_b,no,True,is pyruvic acid and pyruvate the same thing
+206,no,original,no,True,does the united states have a fixed exchange rate
+206,no,distractor,no,True,does the united states have a fixed exchange rate
+206,no,frame_a,no,True,does the united states have a fixed exchange rate
+206,no,frame_b,no,True,does the united states have a fixed exchange rate
+207,no,original,yes,False,is extended release the same as sustained release
+207,no,distractor,yes,False,is extended release the same as sustained release
+207,no,frame_a,yes,False,is extended release the same as sustained release
+207,no,frame_b,yes,False,is extended release the same as sustained release
+208,yes,original,yes,True,is red velvet cake chocolate cake with red dye
+208,yes,distractor,yes,True,is red velvet cake chocolate cake with red dye
+208,yes,frame_a,yes,True,is red velvet cake chocolate cake with red dye
+208,yes,frame_b,yes,True,is red velvet cake chocolate cake with red dye
+209,no,original,no,True,did kristen bell sing all the voices of anna
+209,no,distractor,no,True,did kristen bell sing all the voices of anna
+209,no,frame_a,yes,False,did kristen bell sing all the voices of anna
+209,no,frame_b,no,True,did kristen bell sing all the voices of anna
+210,no,original,yes,False,is there such a thing as x ray glasses
+210,no,distractor,yes,False,is there such a thing as x ray glasses
+210,no,frame_a,yes,False,is there such a thing as x ray glasses
+210,no,frame_b,yes,False,is there such a thing as x ray glasses
+211,no,original,no,True,was the movie insomnia based on a book
+211,no,distractor,no,True,was the movie insomnia based on a book
+211,no,frame_a,yes,False,was the movie insomnia based on a book
+211,no,frame_b,yes,False,was the movie insomnia based on a book
+212,no,original,yes,False,is there a tiebreaker in final set at wimbledon
+212,no,distractor,yes,False,is there a tiebreaker in final set at wimbledon
+212,no,frame_a,yes,False,is there a tiebreaker in final set at wimbledon
+212,no,frame_b,no,True,is there a tiebreaker in final set at wimbledon
+213,yes,original,no,False,can you have more than 2 sets of teeth
+213,yes,distractor,no,False,can you have more than 2 sets of teeth
+213,yes,frame_a,yes,True,can you have more than 2 sets of teeth
+213,yes,frame_b,no,False,can you have more than 2 sets of teeth
+214,yes,original,yes,True,can humans catch ear mites from a cat
+214,yes,distractor,yes,True,can humans catch ear mites from a cat
+214,yes,frame_a,yes,True,can humans catch ear mites from a cat
+214,yes,frame_b,yes,True,can humans catch ear mites from a cat
+215,yes,original,no,False,does her dad die in the last song
+215,yes,distractor,no,False,does her dad die in the last song
+215,yes,frame_a,no,False,does her dad die in the last song
+215,yes,frame_b,no,False,does her dad die in the last song
+216,yes,original,yes,True,does daniel come back to life in once upon a time
+216,yes,distractor,no,False,does daniel come back to life in once upon a time
+216,yes,frame_a,yes,True,does daniel come back to life in once upon a time
+216,yes,frame_b,no,False,does daniel come back to life in once upon a time
+217,yes,original,no,False,is there a town under caesar's creek
+217,yes,distractor,no,False,is there a town under caesar's creek
+217,yes,frame_a,no,False,is there a town under caesar's creek
+217,yes,frame_b,no,False,is there a town under caesar's creek
+218,yes,original,no,False,can pipelining help latency of a single task
+218,yes,distractor,no,False,can pipelining help latency of a single task
+218,yes,frame_a,yes,True,can pipelining help latency of a single task
+218,yes,frame_b,no,False,can pipelining help latency of a single task
+219,yes,original,yes,True,is flexor pollicis longus in the carpal tunnel
+219,yes,distractor,yes,True,is flexor pollicis longus in the carpal tunnel
+219,yes,frame_a,yes,True,is flexor pollicis longus in the carpal tunnel
+219,yes,frame_b,no,False,is flexor pollicis longus in the carpal tunnel
+220,no,original,yes,False,is universal music group part of universal studios
+220,no,distractor,yes,False,is universal music group part of universal studios
+220,no,frame_a,yes,False,is universal music group part of universal studios
+220,no,frame_b,yes,False,is universal music group part of universal studios
+221,yes,original,no,False,does everyone do their own singing in mamma mia
+221,yes,distractor,no,False,does everyone do their own singing in mamma mia
+221,yes,frame_a,no,False,does everyone do their own singing in mamma mia
+221,yes,frame_b,no,False,does everyone do their own singing in mamma mia
+222,yes,original,no,False,does the size of a rain gauge matter
+222,yes,distractor,no,False,does the size of a rain gauge matter
+222,yes,frame_a,yes,True,does the size of a rain gauge matter
+222,yes,frame_b,no,False,does the size of a rain gauge matter
+223,yes,original,no,False,is we bought a zoo a true story
+223,yes,distractor,no,False,is we bought a zoo a true story
+223,yes,frame_a,no,False,is we bought a zoo a true story
+223,yes,frame_b,no,False,is we bought a zoo a true story
+224,no,original,no,True,is nba playoffs 2-3-2
+224,no,distractor,no,True,is nba playoffs 2-3-2
+224,no,frame_a,no,True,is nba playoffs 2-3-2
+224,no,frame_b,no,True,is nba playoffs 2-3-2
+225,no,original,no,True,is the outcasts based on a true story
+225,no,distractor,no,True,is the outcasts based on a true story
+225,no,frame_a,no,True,is the outcasts based on a true story
+225,no,frame_b,no,True,is the outcasts based on a true story
+226,no,original,no,True,does taiwan have a seat in the un
+226,no,distractor,no,True,does taiwan have a seat in the un
+226,no,frame_a,no,True,does taiwan have a seat in the un
+226,no,frame_b,no,True,does taiwan have a seat in the un
+227,yes,original,yes,True,is a woodchuck and a ground hog the same thing
+227,yes,distractor,yes,True,is a woodchuck and a ground hog the same thing
+227,yes,frame_a,yes,True,is a woodchuck and a ground hog the same thing
+227,yes,frame_b,yes,True,is a woodchuck and a ground hog the same thing
+228,yes,original,yes,True,is there really a how to train your dragon 3
+228,yes,distractor,no,False,is there really a how to train your dragon 3
+228,yes,frame_a,yes,True,is there really a how to train your dragon 3
+228,yes,frame_b,yes,True,is there really a how to train your dragon 3
+229,yes,original,no,False,do jenny and nate ever date in gossip girl
+229,yes,distractor,no,False,do jenny and nate ever date in gossip girl
+229,yes,frame_a,yes,True,do jenny and nate ever date in gossip girl
+229,yes,frame_b,no,False,do jenny and nate ever date in gossip girl
+230,yes,original,yes,True,did christine and the phantom have a son
+230,yes,distractor,yes,True,did christine and the phantom have a son
+230,yes,frame_a,yes,True,did christine and the phantom have a son
+230,yes,frame_b,yes,True,did christine and the phantom have a son
+231,no,original,no,True,does 1 ball and 1 lucky star win euromillions
+231,no,distractor,no,True,does 1 ball and 1 lucky star win euromillions
+231,no,frame_a,no,True,does 1 ball and 1 lucky star win euromillions
+231,no,frame_b,no,True,does 1 ball and 1 lucky star win euromillions
+232,yes,original,no,False,has anyone won the grand slam in golf
+232,yes,distractor,no,False,has anyone won the grand slam in golf
+232,yes,frame_a,yes,True,has anyone won the grand slam in golf
+232,yes,frame_b,no,False,has anyone won the grand slam in golf
+233,no,original,yes,False,are there any tin mines left in cornwall
+233,no,distractor,yes,False,are there any tin mines left in cornwall
+233,no,frame_a,yes,False,are there any tin mines left in cornwall
+233,no,frame_b,yes,False,are there any tin mines left in cornwall
+234,no,original,no,True,is there a season 3 of indian summers
+234,no,distractor,no,True,is there a season 3 of indian summers
+234,no,frame_a,no,True,is there a season 3 of indian summers
+234,no,frame_b,no,True,is there a season 3 of indian summers
+235,yes,original,yes,True,are ion-dipole stronger than hydrogen bonds
+235,yes,distractor,yes,True,are ion-dipole stronger than hydrogen bonds
+235,yes,frame_a,yes,True,are ion-dipole stronger than hydrogen bonds
+235,yes,frame_b,yes,True,are ion-dipole stronger than hydrogen bonds
+236,no,original,no,True,can a state constitution override the us constitution
+236,no,distractor,no,True,can a state constitution override the us constitution
+236,no,frame_a,no,True,can a state constitution override the us constitution
+236,no,frame_b,no,True,can a state constitution override the us constitution
+237,no,original,no,True,does season finale mean the show is over
+237,no,distractor,no,True,does season finale mean the show is over
+237,no,frame_a,yes,False,does season finale mean the show is over
+237,no,frame_b,no,True,does season finale mean the show is over
+238,yes,original,yes,True,is the international journal of nursing studies peer reviewed
+238,yes,distractor,yes,True,is the international journal of nursing studies peer reviewed
+238,yes,frame_a,yes,True,is the international journal of nursing studies peer reviewed
+238,yes,frame_b,yes,True,is the international journal of nursing studies peer reviewed
+239,yes,original,yes,True,have the washington capitals ever been in a stanley cup
+239,yes,distractor,yes,True,have the washington capitals ever been in a stanley cup
+239,yes,frame_a,yes,True,have the washington capitals ever been in a stanley cup
+239,yes,frame_b,yes,True,have the washington capitals ever been in a stanley cup
+240,yes,original,no,False,is red stripe light sold in the us
+240,yes,distractor,no,False,is red stripe light sold in the us
+240,yes,frame_a,no,False,is red stripe light sold in the us
+240,yes,frame_b,no,False,is red stripe light sold in the us
+241,yes,original,yes,True,did estonia used to be part of russia
+241,yes,distractor,yes,True,did estonia used to be part of russia
+241,yes,frame_a,yes,True,did estonia used to be part of russia
+241,yes,frame_b,yes,True,did estonia used to be part of russia
+242,yes,original,yes,True,can law of sines be used on any triangle
+242,yes,distractor,no,False,can law of sines be used on any triangle
+242,yes,frame_a,yes,True,can law of sines be used on any triangle
+242,yes,frame_b,yes,True,can law of sines be used on any triangle
+243,yes,original,no,False,can you use .224 bullets in a .223
+243,yes,distractor,no,False,can you use .224 bullets in a .223
+243,yes,frame_a,yes,True,can you use .224 bullets in a .223
+243,yes,frame_b,no,False,can you use .224 bullets in a .223
+244,no,original,no,True,is the new god of war 2 players
+244,no,distractor,no,True,is the new god of war 2 players
+244,no,frame_a,no,True,is the new god of war 2 players
+244,no,frame_b,no,True,is the new god of war 2 players
+245,yes,original,yes,True,does dark brown sugar have molasses in it
+245,yes,distractor,yes,True,does dark brown sugar have molasses in it
+245,yes,frame_a,yes,True,does dark brown sugar have molasses in it
+245,yes,frame_b,yes,True,does dark brown sugar have molasses in it
+246,yes,original,yes,True,does derek shepard die in grey's anatomy
+246,yes,distractor,yes,True,does derek shepard die in grey's anatomy
+246,yes,frame_a,yes,True,does derek shepard die in grey's anatomy
+246,yes,frame_b,yes,True,does derek shepard die in grey's anatomy
+247,yes,original,yes,True,can you die from hot dog eating contest
+247,yes,distractor,yes,True,can you die from hot dog eating contest
+247,yes,frame_a,yes,True,can you die from hot dog eating contest
+247,yes,frame_b,yes,True,can you die from hot dog eating contest
+248,yes,original,yes,True,can someone die from a bullet shot in the air
+248,yes,distractor,yes,True,can someone die from a bullet shot in the air
+248,yes,frame_a,yes,True,can someone die from a bullet shot in the air
+248,yes,frame_b,yes,True,can someone die from a bullet shot in the air
+249,no,original,no,True,is the young and the restless going off the air
+249,no,distractor,no,True,is the young and the restless going off the air
+249,no,frame_a,no,True,is the young and the restless going off the air
+249,no,frame_b,no,True,is the young and the restless going off the air
+250,no,original,yes,False,does damon and elena get together in season 3
+250,no,distractor,yes,False,does damon and elena get together in season 3
+250,no,frame_a,yes,False,does damon and elena get together in season 3
+250,no,frame_b,yes,False,does damon and elena get together in season 3
+251,yes,original,yes,True,does the british monarchy have any power in canada
+251,yes,distractor,yes,True,does the british monarchy have any power in canada
+251,yes,frame_a,yes,True,does the british monarchy have any power in canada
+251,yes,frame_b,no,False,does the british monarchy have any power in canada
+252,yes,original,no,False,can the speaker of the house be removed
+252,yes,distractor,no,False,can the speaker of the house be removed
+252,yes,frame_a,yes,True,can the speaker of the house be removed
+252,yes,frame_b,no,False,can the speaker of the house be removed
+253,yes,original,no,False,is talc and talcum powder the same thing
+253,yes,distractor,no,False,is talc and talcum powder the same thing
+253,yes,frame_a,yes,True,is talc and talcum powder the same thing
+253,yes,frame_b,no,False,is talc and talcum powder the same thing
+254,no,original,no,True,is the open door policy still used today
+254,no,distractor,no,True,is the open door policy still used today
+254,no,frame_a,no,True,is the open door policy still used today
+254,no,frame_b,no,True,is the open door policy still used today
+255,yes,original,yes,True,is there an orange county in new york
+255,yes,distractor,yes,True,is there an orange county in new york
+255,yes,frame_a,yes,True,is there an orange county in new york
+255,yes,frame_b,yes,True,is there an orange county in new york
+256,yes,original,no,False,is the plaza hotel in nyc still open
+256,yes,distractor,no,False,is the plaza hotel in nyc still open
+256,yes,frame_a,yes,True,is the plaza hotel in nyc still open
+256,yes,frame_b,no,False,is the plaza hotel in nyc still open
+257,yes,original,no,False,is motherhood maternity and destination maternity the same
+257,yes,distractor,no,False,is motherhood maternity and destination maternity the same
+257,yes,frame_a,yes,True,is motherhood maternity and destination maternity the same
+257,yes,frame_b,no,False,is motherhood maternity and destination maternity the same
+258,yes,original,yes,True,can a fly lay eggs in your skin
+258,yes,distractor,yes,True,can a fly lay eggs in your skin
+258,yes,frame_a,yes,True,can a fly lay eggs in your skin
+258,yes,frame_b,no,False,can a fly lay eggs in your skin
+259,yes,original,yes,True,is call of duty modern warfare 2 multiplayer
+259,yes,distractor,yes,True,is call of duty modern warfare 2 multiplayer
+259,yes,frame_a,yes,True,is call of duty modern warfare 2 multiplayer
+259,yes,frame_b,yes,True,is call of duty modern warfare 2 multiplayer
+260,no,original,no,True,is remember the titans based on a book
+260,no,distractor,no,True,is remember the titans based on a book
+260,no,frame_a,no,True,is remember the titans based on a book
+260,no,frame_b,no,True,is remember the titans based on a book
+261,no,original,no,True,do all ford explorers have 4 wheel drive
+261,no,distractor,no,True,do all ford explorers have 4 wheel drive
+261,no,frame_a,no,True,do all ford explorers have 4 wheel drive
+261,no,frame_b,no,True,do all ford explorers have 4 wheel drive
+262,no,original,no,True,is there a series 9 of vampire diaries
+262,no,distractor,no,True,is there a series 9 of vampire diaries
+262,no,frame_a,no,True,is there a series 9 of vampire diaries
+262,no,frame_b,no,True,is there a series 9 of vampire diaries
+263,no,original,no,True,do you count walks in the batting average
+263,no,distractor,no,True,do you count walks in the batting average
+263,no,frame_a,no,True,do you count walks in the batting average
+263,no,frame_b,no,True,do you count walks in the batting average
+264,no,original,no,True,do i need a visa to visit svalbard
+264,no,distractor,no,True,do i need a visa to visit svalbard
+264,no,frame_a,no,True,do i need a visa to visit svalbard
+264,no,frame_b,no,True,do i need a visa to visit svalbard
+265,no,original,no,True,is the depth of the water table always the same
+265,no,distractor,no,True,is the depth of the water table always the same
+265,no,frame_a,no,True,is the depth of the water table always the same
+265,no,frame_b,no,True,is the depth of the water table always the same
+266,no,original,no,True,is home depot and lowes the same company
+266,no,distractor,no,True,is home depot and lowes the same company
+266,no,frame_a,yes,False,is home depot and lowes the same company
+266,no,frame_b,no,True,is home depot and lowes the same company
+267,no,original,no,True,does the t distribution have a standard deviation of 1
+267,no,distractor,no,True,does the t distribution have a standard deviation of 1
+267,no,frame_a,no,True,does the t distribution have a standard deviation of 1
+267,no,frame_b,no,True,does the t distribution have a standard deviation of 1
+268,no,original,no,True,did izzie stevens die on grey's anatomy
+268,no,distractor,no,True,did izzie stevens die on grey's anatomy
+268,no,frame_a,no,True,did izzie stevens die on grey's anatomy
+268,no,frame_b,no,True,did izzie stevens die on grey's anatomy
+269,yes,original,yes,True,does a fennec fox live in the desert
+269,yes,distractor,yes,True,does a fennec fox live in the desert
+269,yes,frame_a,yes,True,does a fennec fox live in the desert
+269,yes,frame_b,yes,True,does a fennec fox live in the desert
+270,yes,original,no,False,is a digital audio cable the same as an optical cable
+270,yes,distractor,no,False,is a digital audio cable the same as an optical cable
+270,yes,frame_a,yes,True,is a digital audio cable the same as an optical cable
+270,yes,frame_b,no,False,is a digital audio cable the same as an optical cable
+271,no,original,yes,False,do i need a stamp if it says freepost
+271,no,distractor,no,True,do i need a stamp if it says freepost
+271,no,frame_a,yes,False,do i need a stamp if it says freepost
+271,no,frame_b,no,True,do i need a stamp if it says freepost
+272,yes,original,yes,True,is employment termination the same as being fired
+272,yes,distractor,yes,True,is employment termination the same as being fired
+272,yes,frame_a,yes,True,is employment termination the same as being fired
+272,yes,frame_b,yes,True,is employment termination the same as being fired
+273,yes,original,yes,True,does leslie knope win the city council election
+273,yes,distractor,yes,True,does leslie knope win the city council election
+273,yes,frame_a,yes,True,does leslie knope win the city council election
+273,yes,frame_b,yes,True,does leslie knope win the city council election
+274,yes,original,yes,True,can the heat of a hair dryer kill lice
+274,yes,distractor,yes,True,can the heat of a hair dryer kill lice
+274,yes,frame_a,yes,True,can the heat of a hair dryer kill lice
+274,yes,frame_b,yes,True,can the heat of a hair dryer kill lice
+275,no,original,yes,False,is oasis of the seas the largest cruise ship
+275,no,distractor,yes,False,is oasis of the seas the largest cruise ship
+275,no,frame_a,yes,False,is oasis of the seas the largest cruise ship
+275,no,frame_b,yes,False,is oasis of the seas the largest cruise ship
+276,yes,original,yes,True,can a judge be removed from the bench
+276,yes,distractor,yes,True,can a judge be removed from the bench
+276,yes,frame_a,yes,True,can a judge be removed from the bench
+276,yes,frame_b,yes,True,can a judge be removed from the bench
+277,no,original,no,True,is the eiffel tower the tallest structure in the world
+277,no,distractor,no,True,is the eiffel tower the tallest structure in the world
+277,no,frame_a,no,True,is the eiffel tower the tallest structure in the world
+277,no,frame_b,no,True,is the eiffel tower the tallest structure in the world
+278,yes,original,yes,True,is it possible for a person to have two different colored eyes
+278,yes,distractor,yes,True,is it possible for a person to have two different colored eyes
+278,yes,frame_a,yes,True,is it possible for a person to have two different colored eyes
+278,yes,frame_b,yes,True,is it possible for a person to have two different colored eyes
+279,yes,original,yes,True,is a bachelor degree considered an undergraduate degree
+279,yes,distractor,yes,True,is a bachelor degree considered an undergraduate degree
+279,yes,frame_a,yes,True,is a bachelor degree considered an undergraduate degree
+279,yes,frame_b,yes,True,is a bachelor degree considered an undergraduate degree
+280,no,original,no,True,does every school in the uk wear uniforms
+280,no,distractor,no,True,does every school in the uk wear uniforms
+280,no,frame_a,no,True,does every school in the uk wear uniforms
+280,no,frame_b,no,True,does every school in the uk wear uniforms
+281,yes,original,yes,True,is the boy in the striped pajamas based on a book
+281,yes,distractor,yes,True,is the boy in the striped pajamas based on a book
+281,yes,frame_a,yes,True,is the boy in the striped pajamas based on a book
+281,yes,frame_b,yes,True,is the boy in the striped pajamas based on a book
+282,no,original,no,True,did england beat belgium in the world cup
+282,no,distractor,no,True,did england beat belgium in the world cup
+282,no,frame_a,no,True,did england beat belgium in the world cup
+282,no,frame_b,no,True,did england beat belgium in the world cup
+283,no,original,no,True,is input lag and response time the same thing
+283,no,distractor,no,True,is input lag and response time the same thing
+283,no,frame_a,no,True,is input lag and response time the same thing
+283,no,frame_b,no,True,is input lag and response time the same thing
+284,no,original,yes,False,did they use a real gorilla in mighty joe young
+284,no,distractor,no,True,did they use a real gorilla in mighty joe young
+284,no,frame_a,yes,False,did they use a real gorilla in mighty joe young
+284,no,frame_b,no,True,did they use a real gorilla in mighty joe young
+285,no,original,no,True,do netherland dwarf rabbits like to be held
+285,no,distractor,no,True,do netherland dwarf rabbits like to be held
+285,no,frame_a,no,True,do netherland dwarf rabbits like to be held
+285,no,frame_b,no,True,do netherland dwarf rabbits like to be held
+286,no,original,no,True,is series of unfortunate events a true story
+286,no,distractor,no,True,is series of unfortunate events a true story
+286,no,frame_a,no,True,is series of unfortunate events a true story
+286,no,frame_b,no,True,is series of unfortunate events a true story
+287,yes,original,yes,True,is pb(no3)2 soluble in water
+287,yes,distractor,yes,True,is pb(no3)2 soluble in water
+287,yes,frame_a,yes,True,is pb(no3)2 soluble in water
+287,yes,frame_b,yes,True,is pb(no3)2 soluble in water
+288,yes,original,yes,True,did eric clapton play while my guitar gently weeps
+288,yes,distractor,yes,True,did eric clapton play while my guitar gently weeps
+288,yes,frame_a,yes,True,did eric clapton play while my guitar gently weeps
+288,yes,frame_b,yes,True,did eric clapton play while my guitar gently weeps
+289,no,original,no,True,is the movie roman j israel based on a true story
+289,no,distractor,no,True,is the movie roman j israel based on a true story
+289,no,frame_a,no,True,is the movie roman j israel based on a true story
+289,no,frame_b,no,True,is the movie roman j israel based on a true story
+290,no,original,no,True,is there a gulf stream in the pacific
+290,no,distractor,no,True,is there a gulf stream in the pacific
+290,no,frame_a,yes,False,is there a gulf stream in the pacific
+290,no,frame_b,no,True,is there a gulf stream in the pacific
+291,no,original,no,True,is fear the walking dead the same as the walking dead
+291,no,distractor,no,True,is fear the walking dead the same as the walking dead
+291,no,frame_a,yes,False,is fear the walking dead the same as the walking dead
+291,no,frame_b,no,True,is fear the walking dead the same as the walking dead
+292,no,original,no,True,are rice noodles and glass noodles the same
+292,no,distractor,no,True,are rice noodles and glass noodles the same
+292,no,frame_a,no,True,are rice noodles and glass noodles the same
+292,no,frame_b,no,True,are rice noodles and glass noodles the same
+293,no,original,no,True,is comcast and time warner the same company
+293,no,distractor,no,True,is comcast and time warner the same company
+293,no,frame_a,no,True,is comcast and time warner the same company
+293,no,frame_b,no,True,is comcast and time warner the same company
+294,yes,original,no,False,are us toll-free numbers free in canada
+294,yes,distractor,no,False,are us toll-free numbers free in canada
+294,yes,frame_a,yes,True,are us toll-free numbers free in canada
+294,yes,frame_b,no,False,are us toll-free numbers free in canada
+295,no,original,yes,False,is the jaws ride at universal orlando closed
+295,no,distractor,yes,False,is the jaws ride at universal orlando closed
+295,no,frame_a,yes,False,is the jaws ride at universal orlando closed
+295,no,frame_b,yes,False,is the jaws ride at universal orlando closed
+296,yes,original,yes,True,does a business have a birthday or anniversary
+296,yes,distractor,yes,True,does a business have a birthday or anniversary
+296,yes,frame_a,yes,True,does a business have a birthday or anniversary
+296,yes,frame_b,yes,True,does a business have a birthday or anniversary
+297,yes,original,yes,True,is france qualified for the world cup 2018
+297,yes,distractor,yes,True,is france qualified for the world cup 2018
+297,yes,frame_a,yes,True,is france qualified for the world cup 2018
+297,yes,frame_b,yes,True,is france qualified for the world cup 2018
+298,yes,original,yes,True,is the dot product of two vectors a scalar
+298,yes,distractor,yes,True,is the dot product of two vectors a scalar
+298,yes,frame_a,yes,True,is the dot product of two vectors a scalar
+298,yes,frame_b,yes,True,is the dot product of two vectors a scalar
+299,no,original,no,True,do evergreen trees lose their leaves in the winter
+299,no,distractor,no,True,do evergreen trees lose their leaves in the winter
+299,no,frame_a,no,True,do evergreen trees lose their leaves in the winter
+299,no,frame_b,no,True,do evergreen trees lose their leaves in the winter
+300,yes,original,yes,True,is there a floating mass of garbage in the ocean
+300,yes,distractor,yes,True,is there a floating mass of garbage in the ocean
+300,yes,frame_a,yes,True,is there a floating mass of garbage in the ocean
+300,yes,frame_b,yes,True,is there a floating mass of garbage in the ocean
+301,no,original,no,True,can i use a net10 card on a tracfone
+301,no,distractor,no,True,can i use a net10 card on a tracfone
+301,no,frame_a,yes,False,can i use a net10 card on a tracfone
+301,no,frame_b,no,True,can i use a net10 card on a tracfone
+302,no,original,no,True,do the chargers still play in san diego
+302,no,distractor,no,True,do the chargers still play in san diego
+302,no,frame_a,no,True,do the chargers still play in san diego
+302,no,frame_b,no,True,do the chargers still play in san diego
+303,yes,original,no,False,is teenage mutant ninja turtles still on tv
+303,yes,distractor,no,False,is teenage mutant ninja turtles still on tv
+303,yes,frame_a,no,False,is teenage mutant ninja turtles still on tv
+303,yes,frame_b,no,False,is teenage mutant ninja turtles still on tv
+304,yes,original,no,False,is atmospheric pressure the same as air pressure
+304,yes,distractor,no,False,is atmospheric pressure the same as air pressure
+304,yes,frame_a,yes,True,is atmospheric pressure the same as air pressure
+304,yes,frame_b,no,False,is atmospheric pressure the same as air pressure
+305,no,original,no,True,is railroad retirement the same as social security
+305,no,distractor,no,True,is railroad retirement the same as social security
+305,no,frame_a,no,True,is railroad retirement the same as social security
+305,no,frame_b,no,True,is railroad retirement the same as social security
+306,yes,original,no,False,can you use other colors for a green screen
+306,yes,distractor,no,False,can you use other colors for a green screen
+306,yes,frame_a,yes,True,can you use other colors for a green screen
+306,yes,frame_b,no,False,can you use other colors for a green screen
+307,no,original,no,True,are honey bees and bumble bees the same
+307,no,distractor,no,True,are honey bees and bumble bees the same
+307,no,frame_a,no,True,are honey bees and bumble bees the same
+307,no,frame_b,no,True,are honey bees and bumble bees the same
+308,no,original,no,True,is there a season 8 of once apon a time
+308,no,distractor,no,True,is there a season 8 of once apon a time
+308,no,frame_a,no,True,is there a season 8 of once apon a time
+308,no,frame_b,no,True,is there a season 8 of once apon a time
+309,no,original,no,True,are ground coriander and cumin the same thing
+309,no,distractor,no,True,are ground coriander and cumin the same thing
+309,no,frame_a,no,True,are ground coriander and cumin the same thing
+309,no,frame_b,no,True,are ground coriander and cumin the same thing
+310,no,original,no,True,are only commercial banks subject to​ runs
+310,no,distractor,no,True,are only commercial banks subject to​ runs
+310,no,frame_a,no,True,are only commercial banks subject to​ runs
+310,no,frame_b,no,True,are only commercial banks subject to​ runs
+311,yes,original,yes,True,does host team automatically qualify for world cup
+311,yes,distractor,yes,True,does host team automatically qualify for world cup
+311,yes,frame_a,yes,True,does host team automatically qualify for world cup
+311,yes,frame_b,yes,True,does host team automatically qualify for world cup
+312,no,original,no,True,is the dominican republic considered part of the united states
+312,no,distractor,no,True,is the dominican republic considered part of the united states
+312,no,frame_a,no,True,is the dominican republic considered part of the united states
+312,no,frame_b,no,True,is the dominican republic considered part of the united states
+313,yes,original,no,False,can you be left footed and right handed
+313,yes,distractor,no,False,can you be left footed and right handed
+313,yes,frame_a,yes,True,can you be left footed and right handed
+313,yes,frame_b,no,False,can you be left footed and right handed
+314,no,original,no,True,can you score off a throw in in soccer
+314,no,distractor,no,True,can you score off a throw in in soccer
+314,no,frame_a,no,True,can you score off a throw in in soccer
+314,no,frame_b,no,True,can you score off a throw in in soccer
+315,no,original,no,True,is it goaltending if the ball hits the backboard below the rim
+315,no,distractor,no,True,is it goaltending if the ball hits the backboard below the rim
+315,no,frame_a,no,True,is it goaltending if the ball hits the backboard below the rim
+315,no,frame_b,no,True,is it goaltending if the ball hits the backboard below the rim
+316,yes,original,yes,True,is there an english translation of the torah
+316,yes,distractor,yes,True,is there an english translation of the torah
+316,yes,frame_a,yes,True,is there an english translation of the torah
+316,yes,frame_b,yes,True,is there an english translation of the torah
+317,no,original,no,True,do jj and reid date in criminal minds
+317,no,distractor,no,True,do jj and reid date in criminal minds
+317,no,frame_a,no,True,do jj and reid date in criminal minds
+317,no,frame_b,no,True,do jj and reid date in criminal minds
+318,no,original,no,True,are the spinal cord and vertebral column the same length
+318,no,distractor,no,True,are the spinal cord and vertebral column the same length
+318,no,frame_a,no,True,are the spinal cord and vertebral column the same length
+318,no,frame_b,no,True,are the spinal cord and vertebral column the same length
+319,yes,original,yes,True,can xbox 360 games be played on xbox1
+319,yes,distractor,yes,True,can xbox 360 games be played on xbox1
+319,yes,frame_a,yes,True,can xbox 360 games be played on xbox1
+319,yes,frame_b,yes,True,can xbox 360 games be played on xbox1
+320,yes,original,yes,True,is orlando international airport the same as mco
+320,yes,distractor,yes,True,is orlando international airport the same as mco
+320,yes,frame_a,yes,True,is orlando international airport the same as mco
+320,yes,frame_b,yes,True,is orlando international airport the same as mco
+321,yes,original,no,False,is an ace 2 3 4 5 a straight
+321,yes,distractor,no,False,is an ace 2 3 4 5 a straight
+321,yes,frame_a,no,False,is an ace 2 3 4 5 a straight
+321,yes,frame_b,no,False,is an ace 2 3 4 5 a straight
+322,no,original,no,True,is europe a part of the united states
+322,no,distractor,no,True,is europe a part of the united states
+322,no,frame_a,no,True,is europe a part of the united states
+322,no,frame_b,no,True,is europe a part of the united states
+323,no,original,yes,False,is there an airport in fort walton beach florida
+323,no,distractor,yes,False,is there an airport in fort walton beach florida
+323,no,frame_a,yes,False,is there an airport in fort walton beach florida
+323,no,frame_b,yes,False,is there an airport in fort walton beach florida
+324,yes,original,yes,True,has croatia ever placed in the world cup
+324,yes,distractor,yes,True,has croatia ever placed in the world cup
+324,yes,frame_a,yes,True,has croatia ever placed in the world cup
+324,yes,frame_b,yes,True,has croatia ever placed in the world cup
+325,no,original,no,True,does the national guard stay in the us
+325,no,distractor,no,True,does the national guard stay in the us
+325,no,frame_a,yes,False,does the national guard stay in the us
+325,no,frame_b,no,True,does the national guard stay in the us
+326,yes,original,yes,True,do runs have to be the same suit in gin rummy
+326,yes,distractor,yes,True,do runs have to be the same suit in gin rummy
+326,yes,frame_a,yes,True,do runs have to be the same suit in gin rummy
+326,yes,frame_b,yes,True,do runs have to be the same suit in gin rummy
+327,yes,original,yes,True,does the new mama mia have abba music
+327,yes,distractor,yes,True,does the new mama mia have abba music
+327,yes,frame_a,yes,True,does the new mama mia have abba music
+327,yes,frame_b,yes,True,does the new mama mia have abba music
+328,no,original,no,True,is the monorail at disney a maglev train
+328,no,distractor,no,True,is the monorail at disney a maglev train
+328,no,frame_a,no,True,is the monorail at disney a maglev train
+328,no,frame_b,no,True,is the monorail at disney a maglev train
+329,yes,original,yes,True,is key west part of the united states
+329,yes,distractor,yes,True,is key west part of the united states
+329,yes,frame_a,yes,True,is key west part of the united states
+329,yes,frame_b,yes,True,is key west part of the united states
+330,yes,original,no,False,is the world health organization a government organization
+330,yes,distractor,no,False,is the world health organization a government organization
+330,yes,frame_a,no,False,is the world health organization a government organization
+330,yes,frame_b,no,False,is the world health organization a government organization
+331,yes,original,yes,True,is the cecum part of the large intestine
+331,yes,distractor,yes,True,is the cecum part of the large intestine
+331,yes,frame_a,yes,True,is the cecum part of the large intestine
+331,yes,frame_b,yes,True,is the cecum part of the large intestine
+332,no,original,no,True,is the show bloodline based on a true story
+332,no,distractor,no,True,is the show bloodline based on a true story
+332,no,frame_a,no,True,is the show bloodline based on a true story
+332,no,frame_b,no,True,is the show bloodline based on a true story
+333,no,original,yes,False,is the umbilical cord inside the amniotic sac
+333,no,distractor,yes,False,is the umbilical cord inside the amniotic sac
+333,no,frame_a,yes,False,is the umbilical cord inside the amniotic sac
+333,no,frame_b,no,True,is the umbilical cord inside the amniotic sac
+334,no,original,no,True,does passive transport go against the concentration gradient
+334,no,distractor,no,True,does passive transport go against the concentration gradient
+334,no,frame_a,yes,False,does passive transport go against the concentration gradient
+334,no,frame_b,no,True,does passive transport go against the concentration gradient
+335,yes,original,yes,True,can quartz cuvette be used in visible range
+335,yes,distractor,yes,True,can quartz cuvette be used in visible range
+335,yes,frame_a,yes,True,can quartz cuvette be used in visible range
+335,yes,frame_b,yes,True,can quartz cuvette be used in visible range
+336,no,original,no,True,is static pressure the same as atmospheric pressure
+336,no,distractor,no,True,is static pressure the same as atmospheric pressure
+336,no,frame_a,yes,False,is static pressure the same as atmospheric pressure
+336,no,frame_b,no,True,is static pressure the same as atmospheric pressure
+337,yes,original,no,False,have both parts of the titanic been found
+337,yes,distractor,no,False,have both parts of the titanic been found
+337,yes,frame_a,no,False,have both parts of the titanic been found
+337,yes,frame_b,no,False,have both parts of the titanic been found
+338,no,original,no,True,does halo 2 have achievements on xbox 360
+338,no,distractor,no,True,does halo 2 have achievements on xbox 360
+338,no,frame_a,no,True,does halo 2 have achievements on xbox 360
+338,no,frame_b,no,True,does halo 2 have achievements on xbox 360
+339,no,original,no,True,is the home insurance building still standing in chicago
+339,no,distractor,no,True,is the home insurance building still standing in chicago
+339,no,frame_a,no,True,is the home insurance building still standing in chicago
+339,no,frame_b,no,True,is the home insurance building still standing in chicago
+340,no,original,no,True,do all teachers have to take the rica
+340,no,distractor,no,True,do all teachers have to take the rica
+340,no,frame_a,no,True,do all teachers have to take the rica
+340,no,frame_b,no,True,do all teachers have to take the rica
+341,no,original,no,True,is internal energy the same as potential energy
+341,no,distractor,no,True,is internal energy the same as potential energy
+341,no,frame_a,no,True,is internal energy the same as potential energy
+341,no,frame_b,no,True,is internal energy the same as potential energy
+342,yes,original,yes,True,does the robot in lost in space talk
+342,yes,distractor,yes,True,does the robot in lost in space talk
+342,yes,frame_a,yes,True,does the robot in lost in space talk
+342,yes,frame_b,yes,True,does the robot in lost in space talk
+343,yes,original,no,False,does a spark plug keep an engine running
+343,yes,distractor,no,False,does a spark plug keep an engine running
+343,yes,frame_a,yes,True,does a spark plug keep an engine running
+343,yes,frame_b,no,False,does a spark plug keep an engine running
+344,no,original,yes,False,is the port mann bridge a toll bridge
+344,no,distractor,yes,False,is the port mann bridge a toll bridge
+344,no,frame_a,yes,False,is the port mann bridge a toll bridge
+344,no,frame_b,yes,False,is the port mann bridge a toll bridge
+345,no,original,yes,False,is adjusted gross income the same as taxable income
+345,no,distractor,yes,False,is adjusted gross income the same as taxable income
+345,no,frame_a,yes,False,is adjusted gross income the same as taxable income
+345,no,frame_b,yes,False,is adjusted gross income the same as taxable income
+346,yes,original,yes,True,does the moment of inertia depend on the axis of rotation
+346,yes,distractor,yes,True,does the moment of inertia depend on the axis of rotation
+346,yes,frame_a,yes,True,does the moment of inertia depend on the axis of rotation
+346,yes,frame_b,yes,True,does the moment of inertia depend on the axis of rotation
+347,no,original,no,True,can you have a maid of honor and a chief bridesmaid
+347,no,distractor,no,True,can you have a maid of honor and a chief bridesmaid
+347,no,frame_a,yes,False,can you have a maid of honor and a chief bridesmaid
+347,no,frame_b,no,True,can you have a maid of honor and a chief bridesmaid
+348,no,original,no,True,is the derivative of a continuous function always continuous
+348,no,distractor,no,True,is the derivative of a continuous function always continuous
+348,no,frame_a,yes,False,is the derivative of a continuous function always continuous
+348,no,frame_b,no,True,is the derivative of a continuous function always continuous
+349,no,original,no,True,is a girdle the same as a corset
+349,no,distractor,no,True,is a girdle the same as a corset
+349,no,frame_a,no,True,is a girdle the same as a corset
+349,no,frame_b,no,True,is a girdle the same as a corset
+350,yes,original,yes,True,is the wonderful wizard of oz a fairy tale
+350,yes,distractor,yes,True,is the wonderful wizard of oz a fairy tale
+350,yes,frame_a,yes,True,is the wonderful wizard of oz a fairy tale
+350,yes,frame_b,yes,True,is the wonderful wizard of oz a fairy tale
+351,yes,original,yes,True,is 0 in the set of natural numbers
+351,yes,distractor,yes,True,is 0 in the set of natural numbers
+351,yes,frame_a,yes,True,is 0 in the set of natural numbers
+351,yes,frame_b,yes,True,is 0 in the set of natural numbers
+352,no,original,no,True,does a junctional rhythm have a p wave
+352,no,distractor,no,True,does a junctional rhythm have a p wave
+352,no,frame_a,yes,False,does a junctional rhythm have a p wave
+352,no,frame_b,no,True,does a junctional rhythm have a p wave
+353,yes,original,yes,True,have any of the school shootings been at private schools
+353,yes,distractor,yes,True,have any of the school shootings been at private schools
+353,yes,frame_a,yes,True,have any of the school shootings been at private schools
+353,yes,frame_b,yes,True,have any of the school shootings been at private schools
+354,no,original,yes,False,is italy going to the world cup 2018
+354,no,distractor,yes,False,is italy going to the world cup 2018
+354,no,frame_a,yes,False,is italy going to the world cup 2018
+354,no,frame_b,yes,False,is italy going to the world cup 2018
+355,yes,original,yes,True,is highway 91 in florida a toll road
+355,yes,distractor,yes,True,is highway 91 in florida a toll road
+355,yes,frame_a,yes,True,is highway 91 in florida a toll road
+355,yes,frame_b,yes,True,is highway 91 in florida a toll road
+356,yes,original,yes,True,does a batter get an rbi on a fielder's choice
+356,yes,distractor,yes,True,does a batter get an rbi on a fielder's choice
+356,yes,frame_a,yes,True,does a batter get an rbi on a fielder's choice
+356,yes,frame_b,yes,True,does a batter get an rbi on a fielder's choice
+357,no,original,no,True,is the view and the talk the same show
+357,no,distractor,no,True,is the view and the talk the same show
+357,no,frame_a,no,True,is the view and the talk the same show
+357,no,frame_b,no,True,is the view and the talk the same show
+358,yes,original,yes,True,is it possible to thunder and lightning while snowing
+358,yes,distractor,yes,True,is it possible to thunder and lightning while snowing
+358,yes,frame_a,yes,True,is it possible to thunder and lightning while snowing
+358,yes,frame_b,yes,True,is it possible to thunder and lightning while snowing
+359,no,original,no,True,is america the only country with an electoral college
+359,no,distractor,no,True,is america the only country with an electoral college
+359,no,frame_a,no,True,is america the only country with an electoral college
+359,no,frame_b,no,True,is america the only country with an electoral college
+360,no,original,no,True,does the main character in 12 strong die
+360,no,distractor,no,True,does the main character in 12 strong die
+360,no,frame_a,no,True,does the main character in 12 strong die
+360,no,frame_b,no,True,does the main character in 12 strong die
+361,yes,original,yes,True,was the game a spin off of girlfriends
+361,yes,distractor,yes,True,was the game a spin off of girlfriends
+361,yes,frame_a,yes,True,was the game a spin off of girlfriends
+361,yes,frame_b,yes,True,was the game a spin off of girlfriends
+362,yes,original,yes,True,do you have to call a married woman matron of honor
+362,yes,distractor,no,False,do you have to call a married woman matron of honor
+362,yes,frame_a,yes,True,do you have to call a married woman matron of honor
+362,yes,frame_b,no,False,do you have to call a married woman matron of honor
+363,yes,original,no,False,will there be new episodes of black mirror
+363,yes,distractor,no,False,will there be new episodes of black mirror
+363,yes,frame_a,yes,True,will there be new episodes of black mirror
+363,yes,frame_b,no,False,will there be new episodes of black mirror
+364,yes,original,yes,True,is it a law that you have to pull over for an ambulance
+364,yes,distractor,yes,True,is it a law that you have to pull over for an ambulance
+364,yes,frame_a,yes,True,is it a law that you have to pull over for an ambulance
+364,yes,frame_b,yes,True,is it a law that you have to pull over for an ambulance
+365,yes,original,yes,True,can ingrown toenails come back after being removed
+365,yes,distractor,yes,True,can ingrown toenails come back after being removed
+365,yes,frame_a,yes,True,can ingrown toenails come back after being removed
+365,yes,frame_b,yes,True,can ingrown toenails come back after being removed
+366,yes,original,yes,True,can i use cast iron pans on an induction hob
+366,yes,distractor,yes,True,can i use cast iron pans on an induction hob
+366,yes,frame_a,yes,True,can i use cast iron pans on an induction hob
+366,yes,frame_b,yes,True,can i use cast iron pans on an induction hob
+367,no,original,no,True,is roman j israel movie based on a true story
+367,no,distractor,no,True,is roman j israel movie based on a true story
+367,no,frame_a,no,True,is roman j israel movie based on a true story
+367,no,frame_b,no,True,is roman j israel movie based on a true story
+368,no,original,no,True,is there a season four of red rock
+368,no,distractor,no,True,is there a season four of red rock
+368,no,frame_a,no,True,is there a season four of red rock
+368,no,frame_b,no,True,is there a season four of red rock
+369,no,original,no,True,has anyone ever came back from 3-0 in nba
+369,no,distractor,no,True,has anyone ever came back from 3-0 in nba
+369,no,frame_a,no,True,has anyone ever came back from 3-0 in nba
+369,no,frame_b,no,True,has anyone ever came back from 3-0 in nba
+370,yes,original,yes,True,did alexander graham bell propose answering the phone with ahoy
+370,yes,distractor,yes,True,did alexander graham bell propose answering the phone with ahoy
+370,yes,frame_a,yes,True,did alexander graham bell propose answering the phone with ahoy
+370,yes,frame_b,no,False,did alexander graham bell propose answering the phone with ahoy
+371,no,original,no,True,is greece still in the world cup 2018
+371,no,distractor,no,True,is greece still in the world cup 2018
+371,no,frame_a,yes,False,is greece still in the world cup 2018
+371,no,frame_b,no,True,is greece still in the world cup 2018
+372,no,original,no,True,do the days get longer and shorter at the equator
+372,no,distractor,no,True,do the days get longer and shorter at the equator
+372,no,frame_a,yes,False,do the days get longer and shorter at the equator
+372,no,frame_b,no,True,do the days get longer and shorter at the equator
+373,no,original,no,True,does tara die in sons of anarchy season 4
+373,no,distractor,no,True,does tara die in sons of anarchy season 4
+373,no,frame_a,no,True,does tara die in sons of anarchy season 4
+373,no,frame_b,no,True,does tara die in sons of anarchy season 4
+374,no,original,no,True,is the movie daddy little girl a true story
+374,no,distractor,no,True,is the movie daddy little girl a true story
+374,no,frame_a,no,True,is the movie daddy little girl a true story
+374,no,frame_b,no,True,is the movie daddy little girl a true story
+375,yes,original,unknown,False,do you get overseas service bars for korea
+375,yes,distractor,unknown,False,do you get overseas service bars for korea
+375,yes,frame_a,unknown,False,do you get overseas service bars for korea
+375,yes,frame_b,unknown,False,do you get overseas service bars for korea
+376,no,original,no,True,is congo and democratic republic of congo the same country
+376,no,distractor,no,True,is congo and democratic republic of congo the same country
+376,no,frame_a,yes,False,is congo and democratic republic of congo the same country
+376,no,frame_b,no,True,is congo and democratic republic of congo the same country
+377,yes,original,yes,True,is there a new child's play movie coming out
+377,yes,distractor,yes,True,is there a new child's play movie coming out
+377,yes,frame_a,yes,True,is there a new child's play movie coming out
+377,yes,frame_b,yes,True,is there a new child's play movie coming out
+378,yes,original,yes,True,will there be more bee and puppycat episodes
+378,yes,distractor,yes,True,will there be more bee and puppycat episodes
+378,yes,frame_a,yes,True,will there be more bee and puppycat episodes
+378,yes,frame_b,yes,True,will there be more bee and puppycat episodes
+379,yes,original,yes,True,can you be born with both female and male parts
+379,yes,distractor,yes,True,can you be born with both female and male parts
+379,yes,frame_a,yes,True,can you be born with both female and male parts
+379,yes,frame_b,yes,True,can you be born with both female and male parts
+380,yes,original,yes,True,are they making a season 8 of suits
+380,yes,distractor,yes,True,are they making a season 8 of suits
+380,yes,frame_a,yes,True,are they making a season 8 of suits
+380,yes,frame_b,yes,True,are they making a season 8 of suits
+381,no,original,no,True,is a prince the same as a duke
+381,no,distractor,no,True,is a prince the same as a duke
+381,no,frame_a,yes,False,is a prince the same as a duke
+381,no,frame_b,no,True,is a prince the same as a duke
+382,yes,original,no,False,is there a difference between old english bulldogs and english bulldogs
+382,yes,distractor,no,False,is there a difference between old english bulldogs and english bulldogs
+382,yes,frame_a,yes,True,is there a difference between old english bulldogs and english bulldogs
+382,yes,frame_b,no,False,is there a difference between old english bulldogs and english bulldogs
+383,yes,original,yes,True,are the virgin islands part of the leeward islands
+383,yes,distractor,yes,True,are the virgin islands part of the leeward islands
+383,yes,frame_a,yes,True,are the virgin islands part of the leeward islands
+383,yes,frame_b,no,False,are the virgin islands part of the leeward islands
+384,no,original,no,True,was how i met your mother filmed in new york
+384,no,distractor,no,True,was how i met your mother filmed in new york
+384,no,frame_a,no,True,was how i met your mother filmed in new york
+384,no,frame_b,no,True,was how i met your mother filmed in new york
+385,yes,original,no,False,is blue cross and blue shield the same company
+385,yes,distractor,no,False,is blue cross and blue shield the same company
+385,yes,frame_a,no,False,is blue cross and blue shield the same company
+385,yes,frame_b,no,False,is blue cross and blue shield the same company
+386,yes,original,no,False,is salt lake city the biggest city in utah
+386,yes,distractor,no,False,is salt lake city the biggest city in utah
+386,yes,frame_a,no,False,is salt lake city the biggest city in utah
+386,yes,frame_b,no,False,is salt lake city the biggest city in utah
+387,no,original,yes,False,is canada part of the un security council
+387,no,distractor,yes,False,is canada part of the un security council
+387,no,frame_a,yes,False,is canada part of the un security council
+387,no,frame_b,yes,False,is canada part of the un security council
+388,yes,original,yes,True,is the movie the kissing booth on netflix
+388,yes,distractor,yes,True,is the movie the kissing booth on netflix
+388,yes,frame_a,yes,True,is the movie the kissing booth on netflix
+388,yes,frame_b,yes,True,is the movie the kissing booth on netflix
+389,yes,original,yes,True,is the blue whale the largest animal ever
+389,yes,distractor,yes,True,is the blue whale the largest animal ever
+389,yes,frame_a,yes,True,is the blue whale the largest animal ever
+389,yes,frame_b,yes,True,is the blue whale the largest animal ever
+390,yes,original,no,False,is a german shepherd and an alsatian the same dog
+390,yes,distractor,no,False,is a german shepherd and an alsatian the same dog
+390,yes,frame_a,no,False,is a german shepherd and an alsatian the same dog
+390,yes,frame_b,no,False,is a german shepherd and an alsatian the same dog
+391,no,original,no,True,does the girl in don take the girl die
+391,no,distractor,no,True,does the girl in don take the girl die
+391,no,frame_a,yes,False,does the girl in don take the girl die
+391,no,frame_b,no,True,does the girl in don take the girl die
+392,no,original,no,True,is barq's root beer a pepsi product
+392,no,distractor,no,True,is barq's root beer a pepsi product
+392,no,frame_a,no,True,is barq's root beer a pepsi product
+392,no,frame_b,no,True,is barq's root beer a pepsi product
+393,no,original,no,True,does the us mint make 1000 dollar bills
+393,no,distractor,no,True,does the us mint make 1000 dollar bills
+393,no,frame_a,no,True,does the us mint make 1000 dollar bills
+393,no,frame_b,no,True,does the us mint make 1000 dollar bills
+394,no,original,yes,False,can an mlb game end in a tie
+394,no,distractor,yes,False,can an mlb game end in a tie
+394,no,frame_a,yes,False,can an mlb game end in a tie
+394,no,frame_b,yes,False,can an mlb game end in a tie
+395,no,original,no,True,have england ever won the women's world cup
+395,no,distractor,no,True,have england ever won the women's world cup
+395,no,frame_a,no,True,have england ever won the women's world cup
+395,no,frame_b,no,True,have england ever won the women's world cup
+396,no,original,no,True,is the iphone se before the iphone 6
+396,no,distractor,no,True,is the iphone se before the iphone 6
+396,no,frame_a,no,True,is the iphone se before the iphone 6
+396,no,frame_b,no,True,is the iphone se before the iphone 6
+397,no,original,no,True,do i use plumbers tape on compression fittings
+397,no,distractor,no,True,do i use plumbers tape on compression fittings
+397,no,frame_a,yes,False,do i use plumbers tape on compression fittings
+397,no,frame_b,no,True,do i use plumbers tape on compression fittings
+398,yes,original,yes,True,is white spirits the same as mineral spirits
+398,yes,distractor,yes,True,is white spirits the same as mineral spirits
+398,yes,frame_a,yes,True,is white spirits the same as mineral spirits
+398,yes,frame_b,yes,True,is white spirits the same as mineral spirits
+399,no,original,no,True,is there a season 4 for red rock
+399,no,distractor,no,True,is there a season 4 for red rock
+399,no,frame_a,no,True,is there a season 4 for red rock
+399,no,frame_b,no,True,is there a season 4 for red rock
