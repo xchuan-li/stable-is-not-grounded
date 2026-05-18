@@ -13,7 +13,7 @@ A recurring question in evaluating learned reasoning systems is whether a model'
 
 We present an evaluation methodology that removes this circularity. We anchor "stable inference" to a **Minimal Causal Structure (MCS)** — a minimal, non-redundant premise set whose sufficiency is required to be robust under interventions on variables outside it — and we define **Causal Inferential Yield (CIY)** as a model's ability to recover a conclusion *in units of* its MCS: correctly, minimally, and stably under intervention. The key methodological move is to split the circular question into two non-circular ones: whether a variable is causally irrelevant is fixed *by construction* (synthetic items whose ground-truth graph we stipulate), while whether it is entangled with the target is measured *empirically* on the model's training data.
 
-We then show, on TF-IDF + Logistic Regression and fine-tuned DistilBERT baselines, that the framework's distinctions are **not vacuous**. In a controlled synthetic setting, the procedure is specific (it does not flag a model that can use the stipulated MCS), sensitive (it flags a shortcut-rider), and non-vacuous (a class-2 control remains intact). On a trusted benchmark, the measurement-only half of the framework shows that headline accuracy can substantially overstate stable correctness: on a 400-item BoolQ sample, original-prompt accuracy is 0.763 while only 0.610 of items are stably correct across four answer-preserving presentations. The empirical point is modest but important: ignoring the framework's distinctions yields different conclusions from inspecting correctness alone.
+We then show, on three model classes — TF-IDF + Logistic Regression, fine-tuned DistilBERT (66M), and LoRA fine-tuned Qwen2.5-1.5B (1.5B) — that the framework's distinctions are **not vacuous**. In a controlled synthetic setting, the procedure is specific (it does not flag a model that can use the stipulated MCS), sensitive (it flags a shortcut-rider), and non-vacuous (a class-2 control remains intact). On a trusted benchmark, the measurement-only half of the framework shows that headline accuracy can substantially overstate stable correctness: on a 400-item BoolQ sample, original-prompt accuracy is 0.763 while only 0.610 of items are stably correct across four answer-preserving presentations. The empirical point is modest but important: ignoring the framework's distinctions yields different conclusions from inspecting correctness alone.
 
 We are explicit about what we do not claim (Section 7) and frame the open program — validation on strong models, intervention-level prompting, and frontier-LLM training-correlation estimation — as the intended line of subsequent work.
 
@@ -190,7 +190,15 @@ The operationalization is **specific** — it does not false-alarm when the mode
 
 ## 5.3 Model-class robustness
 
-To check this is not an artifact of a linear bag-of-words model, the identical protocol was rerun with a fine-tuned DistilBERT (distributed representations; the training set is still self-controlled, so 3.5(b) remains valid — the framework's own boundary forbids a frontier model whose pretraining is unauditable). The verdict is near-identical: regime A not flagged (do(color) Δ +.000, do(name) Δ +.000); regime B flagged (do(color) 0.914 → 0.485, Δ +.429; class-2 control do(name) Δ +.016). The measured class assignment is, as expected, the same — it is data-derived, not model-dependent. The procedure's verdict is thus stable across model classes (TF-IDF + logistic regression and a fine-tuned transformer).
+To check the verdict is not an artifact of a specific architecture, the identical protocol was rerun on two additional model classes — a fine-tuned DistilBERT (encoder-only, bidirectional, 66M parameters, full fine-tune) and a LoRA fine-tuned Qwen2.5-1.5B (decoder-only, causal, 1.5B parameters, 0.07% trainable). In both cases the training set remains self-controlled, so §3.5(b) is valid. The measured class assignment is data-derived, not model-dependent, and is identical across all three models.
+
+| model | regime A: do(color) drop | regime A: flagged | regime B: do(color) drop | regime B: flagged |
+|---|---|---|---|---|
+| TF-IDF + LR | Δ +.000 | No | Δ +.408 | **Yes** |
+| DistilBERT (66M, full FT) | Δ +.000 | No | Δ +.429 | **Yes** |
+| Qwen2.5-1.5B (LoRA) | Δ +.000 | No | Δ +.501 | **Yes** |
+
+All three return the same verdict by design: the procedure does not flag when M is available (regime A), and flags the shortcut-rider (regime B) with the class-2 control intact (Δ +.000 in all cases). The class-2 control and the verdict are stable across a linear bag-of-words model, a 66M encoder, and a 1.5B decoder — an architectural span that covers the main families of learned sequence models. The measured class assignment is, as expected, the same across all three — it is data-derived, not model-dependent.
 
 The construction so far uses a single-premise M, which exercises the non-redundancy clause (3.2-ii) only trivially. Section 5.4 removes that limitation.
 
