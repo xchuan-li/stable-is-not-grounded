@@ -1,0 +1,161 @@
+id,gold,variant,pred,correct,question
+0,no,original,yes,False,is adjusted gross income the same as taxable income
+0,no,distractor,no,True,is adjusted gross income the same as taxable income
+0,no,frame_a,yes,False,is adjusted gross income the same as taxable income
+0,no,frame_b,yes,False,is adjusted gross income the same as taxable income
+1,no,original,no,True,can you get into canada with just a drivers license
+1,no,distractor,no,True,can you get into canada with just a drivers license
+1,no,frame_a,no,True,can you get into canada with just a drivers license
+1,no,frame_b,no,True,can you get into canada with just a drivers license
+2,yes,original,no,False,does her dad die in the last song
+2,yes,distractor,no,False,does her dad die in the last song
+2,yes,frame_a,no,False,does her dad die in the last song
+2,yes,frame_b,no,False,does her dad die in the last song
+3,no,original,no,True,is there a monthly fee for google voice
+3,no,distractor,no,True,is there a monthly fee for google voice
+3,no,frame_a,no,True,is there a monthly fee for google voice
+3,no,frame_b,no,True,is there a monthly fee for google voice
+4,yes,original,no,False,does fred from first dates have a partner
+4,yes,distractor,no,False,does fred from first dates have a partner
+4,yes,frame_a,yes,True,does fred from first dates have a partner
+4,yes,frame_b,no,False,does fred from first dates have a partner
+5,no,original,no,True,are $10 000 bills still in circulation
+5,no,distractor,no,True,are $10 000 bills still in circulation
+5,no,frame_a,no,True,are $10 000 bills still in circulation
+5,no,frame_b,no,True,are $10 000 bills still in circulation
+6,yes,original,yes,True,are pork back ribs same as baby back
+6,yes,distractor,yes,True,are pork back ribs same as baby back
+6,yes,frame_a,yes,True,are pork back ribs same as baby back
+6,yes,frame_b,yes,True,are pork back ribs same as baby back
+7,no,original,no,True,are liquor stores in oklahoma open on 4th of july
+7,no,distractor,no,True,are liquor stores in oklahoma open on 4th of july
+7,no,frame_a,no,True,are liquor stores in oklahoma open on 4th of july
+7,no,frame_b,no,True,are liquor stores in oklahoma open on 4th of july
+8,no,original,no,True,do i use plumbers tape on compression fittings
+8,no,distractor,no,True,do i use plumbers tape on compression fittings
+8,no,frame_a,yes,False,do i use plumbers tape on compression fittings
+8,no,frame_b,no,True,do i use plumbers tape on compression fittings
+9,yes,original,yes,True,can a widower marry his sister in law
+9,yes,distractor,yes,True,can a widower marry his sister in law
+9,yes,frame_a,yes,True,can a widower marry his sister in law
+9,yes,frame_b,yes,True,can a widower marry his sister in law
+10,no,original,no,True,is the show bloodline based on a true story
+10,no,distractor,no,True,is the show bloodline based on a true story
+10,no,frame_a,no,True,is the show bloodline based on a true story
+10,no,frame_b,no,True,is the show bloodline based on a true story
+11,yes,original,yes,True,is the movie the kissing booth on netflix
+11,yes,distractor,yes,True,is the movie the kissing booth on netflix
+11,yes,frame_a,yes,True,is the movie the kissing booth on netflix
+11,yes,frame_b,yes,True,is the movie the kissing booth on netflix
+12,yes,original,yes,True,do the great lakes connect to the ocean
+12,yes,distractor,yes,True,do the great lakes connect to the ocean
+12,yes,frame_a,yes,True,do the great lakes connect to the ocean
+12,yes,frame_b,yes,True,do the great lakes connect to the ocean
+13,yes,original,yes,True,is a tax free savings account an investment
+13,yes,distractor,yes,True,is a tax free savings account an investment
+13,yes,frame_a,yes,True,is a tax free savings account an investment
+13,yes,frame_b,yes,True,is a tax free savings account an investment
+14,no,original,no,True,do college football players have to enter the draft
+14,no,distractor,no,True,do college football players have to enter the draft
+14,no,frame_a,no,True,do college football players have to enter the draft
+14,no,frame_b,no,True,do college football players have to enter the draft
+15,yes,original,no,False,can you take the money in who wants to be a millionaire
+15,yes,distractor,no,False,can you take the money in who wants to be a millionaire
+15,yes,frame_a,yes,True,can you take the money in who wants to be a millionaire
+15,yes,frame_b,no,False,can you take the money in who wants to be a millionaire
+16,no,original,no,True,do you need a license for airsoft guns uk
+16,no,distractor,no,True,do you need a license for airsoft guns uk
+16,no,frame_a,no,True,do you need a license for airsoft guns uk
+16,no,frame_b,no,True,do you need a license for airsoft guns uk
+17,yes,original,yes,True,can a fly lay eggs in your skin
+17,yes,distractor,yes,True,can a fly lay eggs in your skin
+17,yes,frame_a,yes,True,can a fly lay eggs in your skin
+17,yes,frame_b,no,False,can a fly lay eggs in your skin
+18,yes,original,yes,True,is there an orange county in new york
+18,yes,distractor,yes,True,is there an orange county in new york
+18,yes,frame_a,yes,True,is there an orange county in new york
+18,yes,frame_b,yes,True,is there an orange county in new york
+19,yes,original,yes,True,is a nissan titan a full size truck
+19,yes,distractor,yes,True,is a nissan titan a full size truck
+19,yes,frame_a,yes,True,is a nissan titan a full size truck
+19,yes,frame_b,yes,True,is a nissan titan a full size truck
+20,yes,original,no,False,have both parts of the titanic been found
+20,yes,distractor,no,False,have both parts of the titanic been found
+20,yes,frame_a,no,False,have both parts of the titanic been found
+20,yes,frame_b,no,False,have both parts of the titanic been found
+21,yes,original,no,False,do jenny and nate ever date in gossip girl
+21,yes,distractor,no,False,do jenny and nate ever date in gossip girl
+21,yes,frame_a,yes,True,do jenny and nate ever date in gossip girl
+21,yes,frame_b,no,False,do jenny and nate ever date in gossip girl
+22,no,original,no,True,is series of unfortunate events a true story
+22,no,distractor,no,True,is series of unfortunate events a true story
+22,no,frame_a,no,True,is series of unfortunate events a true story
+22,no,frame_b,no,True,is series of unfortunate events a true story
+23,yes,original,yes,True,was the game a spin off of girlfriends
+23,yes,distractor,yes,True,was the game a spin off of girlfriends
+23,yes,frame_a,yes,True,was the game a spin off of girlfriends
+23,yes,frame_b,yes,True,was the game a spin off of girlfriends
+24,yes,original,yes,True,is employment termination the same as being fired
+24,yes,distractor,yes,True,is employment termination the same as being fired
+24,yes,frame_a,yes,True,is employment termination the same as being fired
+24,yes,frame_b,yes,True,is employment termination the same as being fired
+25,no,original,no,True,is the derivative of a continuous function always continuous
+25,no,distractor,no,True,is the derivative of a continuous function always continuous
+25,no,frame_a,yes,False,is the derivative of a continuous function always continuous
+25,no,frame_b,no,True,is the derivative of a continuous function always continuous
+26,no,original,no,True,is there a main group element in period 6
+26,no,distractor,no,True,is there a main group element in period 6
+26,no,frame_a,no,True,is there a main group element in period 6
+26,no,frame_b,no,True,is there a main group element in period 6
+27,yes,original,no,False,is the world health organization a government organization
+27,yes,distractor,no,False,is the world health organization a government organization
+27,yes,frame_a,no,False,is the world health organization a government organization
+27,yes,frame_b,no,False,is the world health organization a government organization
+28,yes,original,yes,True,is there such thing as over drinking water
+28,yes,distractor,yes,True,is there such thing as over drinking water
+28,yes,frame_a,yes,True,is there such thing as over drinking water
+28,yes,frame_b,yes,True,is there such thing as over drinking water
+29,no,original,no,True,is the movie roman j israel based on a true story
+29,no,distractor,no,True,is the movie roman j israel based on a true story
+29,no,frame_a,no,True,is the movie roman j israel based on a true story
+29,no,frame_b,no,True,is the movie roman j israel based on a true story
+30,yes,original,yes,True,has anyone ever won the wsop main event twice
+30,yes,distractor,yes,True,has anyone ever won the wsop main event twice
+30,yes,frame_a,yes,True,has anyone ever won the wsop main event twice
+30,yes,frame_b,yes,True,has anyone ever won the wsop main event twice
+31,no,original,no,True,is there a season 3 of indian summers
+31,no,distractor,no,True,is there a season 3 of indian summers
+31,no,frame_a,no,True,is there a season 3 of indian summers
+31,no,frame_b,no,True,is there a season 3 of indian summers
+32,yes,original,yes,True,does the government own the us postal service
+32,yes,distractor,yes,True,does the government own the us postal service
+32,yes,frame_a,yes,True,does the government own the us postal service
+32,yes,frame_b,yes,True,does the government own the us postal service
+33,no,original,no,True,does halo 2 have achievements on xbox 360
+33,no,distractor,no,True,does halo 2 have achievements on xbox 360
+33,no,frame_a,no,True,does halo 2 have achievements on xbox 360
+33,no,frame_b,no,True,does halo 2 have achievements on xbox 360
+34,yes,original,no,False,do all craftsman tools have a lifetime warranty
+34,yes,distractor,no,False,do all craftsman tools have a lifetime warranty
+34,yes,frame_a,yes,True,do all craftsman tools have a lifetime warranty
+34,yes,frame_b,no,False,do all craftsman tools have a lifetime warranty
+35,no,original,no,True,was how i met your mother filmed in new york
+35,no,distractor,no,True,was how i met your mother filmed in new york
+35,no,frame_a,no,True,was how i met your mother filmed in new york
+35,no,frame_b,no,True,was how i met your mother filmed in new york
+36,no,original,no,True,is the depth of the water table always the same
+36,no,distractor,no,True,is the depth of the water table always the same
+36,no,frame_a,no,True,is the depth of the water table always the same
+36,no,frame_b,no,True,is the depth of the water table always the same
+37,no,original,no,True,can we have more than 9 supreme court justices
+37,no,distractor,no,True,can we have more than 9 supreme court justices
+37,no,frame_a,no,True,can we have more than 9 supreme court justices
+37,no,frame_b,no,True,can we have more than 9 supreme court justices
+38,no,original,no,True,is a chipmunk the same as a ground squirrel
+38,no,distractor,no,True,is a chipmunk the same as a ground squirrel
+38,no,frame_a,yes,False,is a chipmunk the same as a ground squirrel
+38,no,frame_b,no,True,is a chipmunk the same as a ground squirrel
+39,no,original,no,True,does steph curry have an olympic gold medal
+39,no,distractor,no,True,does steph curry have an olympic gold medal
+39,no,frame_a,yes,False,does steph curry have an olympic gold medal
+39,no,frame_b,no,True,does steph curry have an olympic gold medal

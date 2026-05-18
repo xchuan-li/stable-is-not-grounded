@@ -202,7 +202,19 @@ Run 1 appears to show CoT nearly halving stable reasoning — a publishable head
 
 Two methodological points follow, both on-thesis for an evaluation methodology paper. First, the framework's group-state decomposition plus an explicit instrumentation check is what exposed the artifact — naive aggregate scoring would have reported the run-1 headline. Second, the experiment's binary "supported / not supported" verdict flips (NOT supported → SUPPORTED) on noise-level differences, which argues against binary verdicts and for effect-size-with-variance reporting — exactly what the group-state metric, run with seeds, supports. (Caveats: single small model, single run, synthetic benchmark, prompt-induced CoT; this is a cautionary pilot, not a CoT result.)
 
-Together: the distinctions are not idle bookkeeping — discarding them yields a falsely reassuring number (5.1), a wrong empirical conclusion (5.2), a causal test mislabeled as a robustness test (5.3), and — absent the framework's instrumentation discipline — a near-fully artifactual headline (5.4).
+**5.5 The instrument, turned on a trusted benchmark, finds hidden instability.** The preceding subsections use synthetic or own-task data. We now turn the *measurement-only* half of the framework on BoolQ, a widely used public benchmark. This deliberately uses **no causal structure**: BoolQ items carry no stipulated ground-truth graph, so applying the full clause-(iii) operationalization here would reintroduce the very circularity the framework removes. The causal operationalization is therefore confined to the by-construction synthetic setting; what is legitimate on a real benchmark is the dual-metric, three-state decomposition, which needs only gold labels and answer-preserving perturbations. On a balanced 40-item BoolQ sample, zero-shot Qwen2.5-1.5B was evaluated under four presentations that *cannot* change the correct answer by construction (original; an irrelevant appended sentence; two task-framing rephrasings with the question verbatim):
+
+| quantity | value |
+|---|---|
+| headline accuracy (original prompt only) | 0.800 |
+| stable-correct fraction (all 4 variants correct) | 0.675 |
+| **headline overstatement of stable correctness** | **+0.125** |
+| group states (of 40) | stable-correct 27 / stable-wrong 3 / **unstable 10** |
+| per-variant accuracy | original .800 / distractor .825 / frame_a .800 / frame_b .775 |
+
+The standard headline number (0.800) conceals that only 67.5% of items are *stably* correct: 25% flip their yes/no answer under edits that provably preserve the answer, while a separate 3 items are *stably wrong* (confidently, invariantly incorrect). The decomposition thus separates two failure modes — fragility vs. confident error — that a single accuracy figure merges. An instrumentation check confirmed the effect is genuine, not an extraction artifact: 0/160 parse failures, and all 10 unstable items are true yes↔no flips. Scope (stated, not hedged): single small model, single run, n = 40, and intentionally *conservative* perturbations — so 0.125 is a **lower bound** on instability, not an effect-size estimate; validated paraphrase/lexical perturbations with the semantic-preservation layer (Section 3.7) are the publication-version extension, not claimed here.
+
+Together: the distinctions are not idle bookkeeping — discarding them yields a falsely reassuring number (5.1), a wrong empirical conclusion (5.2), a causal test mislabeled as a robustness test (5.3), a near-fully artifactual headline absent instrumentation discipline (5.4), and — on a benchmark the community trusts — a headline accuracy that overstates stable correctness while masking the fragile-vs-confidently-wrong distinction (5.5).
 
 ---
 
