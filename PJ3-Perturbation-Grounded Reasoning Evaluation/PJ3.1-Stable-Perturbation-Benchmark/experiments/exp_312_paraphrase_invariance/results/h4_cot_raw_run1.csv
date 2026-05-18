@@ -1,0 +1,201 @@
+group_id,reasoning_type,perturbation_type,gold,direct_pred,cot_pred,cot_raw
+tax_v3_008,taxonomic,original,yes,yes,yes,Answer: yes
+tax_v3_008,taxonomic,paraphrase,yes,yes,yes,Answer: yes
+tax_v3_008,taxonomic,lexical_shift,yes,yes,yes,Answer: yes
+tax_v3_008,taxonomic,reasoning_path_shift,yes,yes,yes,Answer: yes
+tax_v3_008,taxonomic,distractor,yes,yes,yes,Answer: yes
+tax_v3_004,taxonomic,original,yes,yes,yes,Answer: yes
+tax_v3_004,taxonomic,paraphrase,yes,yes,yes,Answer: yes
+tax_v3_004,taxonomic,lexical_shift,yes,yes,yes,Answer: yes
+tax_v3_004,taxonomic,reasoning_path_shift,yes,yes,yes,Answer: yes
+tax_v3_004,taxonomic,distractor,yes,yes,yes,Answer: yes
+tax_v3_003,taxonomic,original,yes,yes,yes,Answer: yes
+tax_v3_003,taxonomic,paraphrase,yes,yes,yes,Answer: yes
+tax_v3_003,taxonomic,lexical_shift,yes,yes,yes,Answer: yes
+tax_v3_003,taxonomic,reasoning_path_shift,yes,yes,yes,Answer: yes
+tax_v3_003,taxonomic,distractor,yes,yes,yes,"Answer: yes  Explanation: 1. All flowers are plants (This is the given premise). 2. A rose is a flower (From the first statement, we know roses fit this category). 3. Since all flowers are plants and a rose is a flower, it follows that a rose must be a plant.  Therefore, based on these logical steps"
+tax_v3_009,taxonomic,original,yes,yes,yes,Answer: yes
+tax_v3_009,taxonomic,paraphrase,yes,yes,yes,Answer: yes
+tax_v3_009,taxonomic,lexical_shift,yes,yes,yes,Answer: yes
+tax_v3_009,taxonomic,reasoning_path_shift,yes,yes,yes,Answer: yes
+tax_v3_009,taxonomic,distractor,yes,yes,yes,"Answer: yes  Explanation: 1. All fruits are foods. 2. An apple is a fruit. 3. Since all fruits are foods and an apple is a fruit, it follows that an apple is a food.  Therefore, the conclusion ""an apple is a food"" logically follows from the given premises."
+tax_v3_014,taxonomic,original,no,no,no,Answer: no
+tax_v3_014,taxonomic,paraphrase,no,no,no,Answer: no
+tax_v3_014,taxonomic,lexical_shift,no,no,no,Answer: no
+tax_v3_014,taxonomic,reasoning_path_shift,no,no,no,Answer: no
+tax_v3_014,taxonomic,distractor,no,no,no,"Answer: no  Explanation: 1. All mammals are animals (True) 2. A cloud is not a mammal (True) 3. Someone left the door open earlier (This information does not affect whether a cloud is an animal)  Since we know that clouds are not mammals and all mammals are animals, it logically follows that clouds "
+tax_v3_016,taxonomic,original,no,no,no,Answer: no
+tax_v3_016,taxonomic,paraphrase,no,no,no,Answer: no
+tax_v3_016,taxonomic,lexical_shift,no,no,no,Answer: no
+tax_v3_016,taxonomic,reasoning_path_shift,no,no,no,Answer: no
+tax_v3_016,taxonomic,distractor,no,no,no,"Answer: no  Explanation: 1. All trees are plants. 2. A lamp is not a tree. 3. Someone left the door open earlier.  From these statements, we can deduce that a lamp cannot be classified as a plant because it does not fit the criteria of being a tree (which is a type of plant). The fact that someone l"
+tax_v3_013,taxonomic,original,no,no,no,Answer: no
+tax_v3_013,taxonomic,paraphrase,no,no,no,Answer: no
+tax_v3_013,taxonomic,lexical_shift,no,no,no,Answer: no
+tax_v3_013,taxonomic,reasoning_path_shift,no,no,no,Answer: no
+tax_v3_013,taxonomic,distractor,no,no,no,"Answer: no  Explanation: 1. All birds are animals. 2. A rock is not a bird (which means it does not fit into the category of ""birds""). 3. Since a rock is not a bird and all birds are animals, we can conclude that a rock is not an animal.  Therefore, based on these logical steps, a rock cannot be con"
+tax_v3_015,taxonomic,original,no,no,no,Answer: no
+tax_v3_015,taxonomic,paraphrase,no,no,no,Answer: no
+tax_v3_015,taxonomic,lexical_shift,no,no,no,Answer: no
+tax_v3_015,taxonomic,reasoning_path_shift,no,no,no,Answer: no
+tax_v3_015,taxonomic,distractor,no,no,no,"Answer: no  Explanation: 1. All insects are animals. 2. A spoon is not an insect. 3. The weather today is cloudy.  Given these facts, we can conclude that a spoon is not an animal because it does not fit the criteria of being an insect (which is an animal). The fact that the weather is cloudy has no"
+trans_v3_008,transitive,original,yes,yes,yes,Answer: yes
+trans_v3_008,transitive,paraphrase,yes,yes,yes,"To determine if ants are animals, let's break down the given information:  1. ""Every member of ants is among insects.""    - This means all members of ants belong to the insect category.  2. ""Every member of insects is among animals.""    - This means all members of insects also belong to the animal c"
+trans_v3_008,transitive,lexical_shift,yes,yes,yes,Answer: yes
+trans_v3_008,transitive,reasoning_path_shift,yes,yes,yes,Answer: yes
+trans_v3_008,transitive,distractor,yes,yes,yes,"Answer: yes  Explanation: 1. We start with the given information: ""All ants are insects"" and ""All insects are animals"". 2. From these statements, we can logically conclude that if something is an ant (which is also an insect), then it must be an animal. 3. The statement about a blue car parked outsi"
+trans_v3_006,transitive,original,yes,yes,yes,Answer: yes
+trans_v3_006,transitive,paraphrase,yes,yes,no,"Answer: no  Explanation: 1. We start with the given statements:    - ""Every member of oaks is among trees.""    - ""Every member of trees is among plants.""  2. From these, we can infer:    - Since every oak is in trees and every tree is in plants, then every oak must be in plants.  3. Therefore, if an"
+trans_v3_006,transitive,lexical_shift,yes,yes,yes,Answer: yes
+trans_v3_006,transitive,reasoning_path_shift,yes,yes,yes,Answer: yes
+trans_v3_006,transitive,distractor,yes,no,no,"Answer: no  Explanation: 1. We know that all oaks are trees. 2. We also know that all trees are plants. 3. Therefore, if something is an oak (which is a type of tree), it must be a plant. 4. However, the question asks specifically about whether oaks are plants in general, not just in this particular"
+trans_v3_001,transitive,original,yes,yes,yes,"Answer: yes  Explanation: 1. We start with the given statements: ""All roses are flowers"" and ""All flowers are plants"". 2. From these, we can infer that if something is a rose (which is a type of flower), then it must also be a plant. 3. Therefore, since all roses are flowers and all flowers are plan"
+trans_v3_001,transitive,paraphrase,yes,yes,yes,"To determine if roses are plants, let's analyze the given statements:  1. ""Every member of roses is among flowers."" 2. ""Every member of flowers is among plants.""  From these two statements: - If every rose (which is a member of roses) is also a flower, then roses must be included in the set of flowe"
+trans_v3_001,transitive,lexical_shift,yes,yes,yes,Answer: yes
+trans_v3_001,transitive,reasoning_path_shift,yes,yes,yes,Answer: yes
+trans_v3_001,transitive,distractor,yes,no,no,"Answer: no  Explanation: 1. We know that all roses are flowers. 2. We also know that all flowers are plants. 3. Therefore, if the weather is cloudy (which doesn't affect whether something is a plant), then roses must be plants because they are included in both categories of being flowers and plants."
+trans_v3_003,transitive,original,yes,yes,yes,"To determine if all squares are polygons, let's break down the information given:  1. ""All squares are rectangles"" - This is true because a square is a special type of rectangle where all sides are equal. 2. ""All rectangles are polygons"" - This is also true because any shape that has straight sides "
+trans_v3_003,transitive,paraphrase,yes,yes,yes,"To determine if squares are polygons, let's analyze the given statements:  1. ""Every member of squares is among rectangles.""    - This means all squares are also rectangles.  2. ""Every member of rectangles is among polygons.""    - This means all rectangles are polygons.  Combining these two points: "
+trans_v3_003,transitive,lexical_shift,yes,yes,yes,Answer: yes
+trans_v3_003,transitive,reasoning_path_shift,yes,yes,yes,Answer: yes
+trans_v3_003,transitive,distractor,yes,yes,yes,"Answer: yes  Explanation: 1. We know that all squares are rectangles (given). 2. We also know that all rectangles are polygons (given). 3. Since squares are a subset of rectangles, and all rectangles are polygons, it follows that squares must be polygons as well.  Therefore, the statement ""Are squar"
+trans_v3_018,transitive,original,no,no,no,Answer: no
+trans_v3_018,transitive,paraphrase,no,no,no,"Answer: no  Explanation: 1. Every member of cars is among vehicles. 2. A boat is a vehicle. 3. From these two statements, we cannot conclude that a boat is a car.  The first statement tells us that all members of the ""cars"" category are also included in the broader category of ""vehicles"". However, t"
+trans_v3_018,transitive,lexical_shift,no,no,no,Answer: no
+trans_v3_018,transitive,reasoning_path_shift,no,no,no,Answer: no
+trans_v3_018,transitive,distractor,no,no,no,Answer: no
+trans_v3_019,transitive,original,no,no,no,"Answer: no  Explanation: 1. All apples are fruits. 2. A carrot is also classified as a fruit. 3. However, the question asks if a carrot is an apple. 4. Apples and carrots belong to different categories (fruit vs. vegetable). 5. Therefore, a carrot cannot be considered an apple."
+trans_v3_019,transitive,paraphrase,no,no,no,"Answer: no  Explanation: 1. Every member of apples is among fruits.    - This means all members of the ""apples"" category are also considered to be in the broader category of ""fruits.""  2. A carrot is a fruit.    - This directly states that carrots fall under the category of fruits.  3. Does it follo"
+trans_v3_019,transitive,lexical_shift,no,no,no,Answer: no
+trans_v3_019,transitive,reasoning_path_shift,no,no,no,Answer: no
+trans_v3_019,transitive,distractor,no,no,no,"Answer: no  Explanation: 1. All apples are fruits. 2. A carrot is a fruit. 3. The question asks if a carrot is an apple.  Since all apples are fruits and carrots are fruits, it follows that any carrot would be considered an apple in this context because they both fall under the category of ""fruit"". "
+trans_v3_014,transitive,original,no,no,no,Answer: no
+trans_v3_014,transitive,paraphrase,no,no,no,"Answer: no  Explanation: 1. Every member of sparrows is among birds. 2. A penguin is a bird. 3. The statement ""A penguin is a sparrow"" does not logically follow from the given information.  The first point establishes that all members of the Sparrow family are part of the broader category of birds, "
+trans_v3_014,transitive,lexical_shift,no,no,no,Answer: no
+trans_v3_014,transitive,reasoning_path_shift,no,no,no,Answer: no
+trans_v3_014,transitive,distractor,no,no,no,"Answer: no  Explanation: 1. All sparrows are birds. 2. A penguin is a bird. 3. A blue car is parked outside.  The question asks if a penguin is a sparrow, but we know from the first two statements that all sparrows are indeed birds and so are penguins. However, being a bird does not make something a"
+trans_v3_011,transitive,original,no,no,no,Answer: no
+trans_v3_011,transitive,paraphrase,no,no,no,"Answer: no  Explanation: 1. Roses are a subset of flowers. 2. Tulips are also classified as flowers. 3. However, not every flower is necessarily a rose (or any other specific type of flower). 4. Therefore, just because a tulip is a flower does not mean it is specifically a rose.  Final answer: Answe"
+trans_v3_011,transitive,lexical_shift,no,no,no,Answer: no
+trans_v3_011,transitive,reasoning_path_shift,no,no,no,Answer: no
+trans_v3_011,transitive,distractor,no,no,no,"Answer: no  Explanation: 1. All roses are flowers. 2. A tulip is a flower. 3. The question asks if a tulip is a rose.  Since all roses are flowers and a tulip is also a flower, it follows that any tulip would be considered a type of flower. However, the statement ""all roses are flowers"" does not imp"
+caus_v3_010,causal,original,yes,yes,yes,Answer: yes
+caus_v3_010,causal,paraphrase,yes,yes,yes,Answer: yes
+caus_v3_010,causal,lexical_shift,yes,yes,yes,Answer: yes
+caus_v3_010,causal,reasoning_path_shift,yes,yes,yes,Answer: yes
+caus_v3_010,causal,distractor,yes,yes,yes,Answer: yes
+caus_v3_007,causal,original,yes,yes,yes,Answer: yes
+caus_v3_007,causal,paraphrase,yes,yes,yes,Answer: yes
+caus_v3_007,causal,lexical_shift,yes,yes,yes,Answer: yes
+caus_v3_007,causal,reasoning_path_shift,yes,yes,no,Answer: no
+caus_v3_007,causal,distractor,yes,yes,no,Answer: no
+caus_v3_008,causal,original,yes,yes,yes,Answer: yes
+caus_v3_008,causal,paraphrase,yes,yes,yes,Answer: yes
+caus_v3_008,causal,lexical_shift,yes,yes,yes,"To determine if the light illuminates given the conditions provided:  1. If the switch is toggled, then the light illuminates. 2. The switch is toggled.  From these two statements: - We know for certain that the switch has been toggled (Statement 2). - According to Statement 1, when the switch is to"
+caus_v3_008,causal,reasoning_path_shift,yes,yes,yes,Answer: yes
+caus_v3_008,causal,distractor,yes,yes,yes,Answer: yes
+caus_v3_004,causal,original,yes,yes,yes,Answer: yes
+caus_v3_004,causal,paraphrase,yes,yes,yes,Answer: yes
+caus_v3_004,causal,lexical_shift,yes,yes,yes,Answer: yes
+caus_v3_004,causal,reasoning_path_shift,yes,yes,yes,Answer: yes
+caus_v3_004,causal,distractor,yes,yes,yes,Answer: yes
+caus_v3_019,causal,original,no,no,no,Answer: no
+caus_v3_019,causal,paraphrase,no,no,no,Answer: no
+caus_v3_019,causal,lexical_shift,no,no,no,Answer: no
+caus_v3_019,causal,reasoning_path_shift,no,no,no,Answer: no
+caus_v3_019,causal,distractor,no,no,no,"Answer: no  Explanation: The question presents two separate statements and asks if they logically lead to the same conclusion about whether the dough becomes bread.  1. ""If the dough is baked, then it becomes bread."" This is a conditional statement in logic. 2. ""It is not the case that the dough is "
+caus_v3_011,causal,original,no,no,no,Answer: no
+caus_v3_011,causal,paraphrase,no,no,no,Answer: no
+caus_v3_011,causal,lexical_shift,no,no,no,Answer: no
+caus_v3_011,causal,reasoning_path_shift,no,no,no,Answer: no
+caus_v3_011,causal,distractor,no,no,no,"Answer: no  Explanation: 1. If the soil is watered, then the seeds germinate. 2. It is not the case that the soil is watered. 3. Therefore, we cannot conclude that the seeds germinated based on this information.  The fact that the meeting started at noon does not provide any relevant information abo"
+caus_v3_014,causal,original,no,no,no,Answer: no
+caus_v3_014,causal,paraphrase,no,no,no,Answer: no
+caus_v3_014,causal,lexical_shift,no,no,no,Answer: no
+caus_v3_014,causal,reasoning_path_shift,no,no,no,Answer: no
+caus_v3_014,causal,distractor,no,no,no,"Answer: no  Explanation: The given statements are logically contradictory. If ""It is not the case that the plant receives sunlight,"" this directly contradicts the first statement which says ""the plant receives sunlight."" Therefore, we cannot conclude from these two statements that the plant grows.  "
+caus_v3_013,causal,original,no,no,no,"Answer: no  Explanation: 1. The statement ""If it rains on the field, then the ground becomes wet"" can be represented as an implication: P → Q where P is ""it rains on the field"" and Q is ""the ground becomes wet"". 2. The second part of the question states ""It is not the case that it rains on the field"
+caus_v3_013,causal,paraphrase,no,no,no,Answer: no
+caus_v3_013,causal,lexical_shift,no,no,no,Answer: no
+caus_v3_013,causal,reasoning_path_shift,no,no,no,Answer: no
+caus_v3_013,causal,distractor,no,no,no,"Answer: no  Explanation: 1. The first statement says ""If it rains on the field, then the ground becomes wet."" This is an implication. 2. The second statement says ""It is not the case that it rains on the field."" 3. These two statements contradict each other because if something is true (it rains), t"
+comm_v3_006,commonsense,original,yes,yes,yes,Answer: yes
+comm_v3_006,commonsense,paraphrase,yes,yes,yes,Answer: yes
+comm_v3_006,commonsense,lexical_shift,yes,yes,yes,Answer: yes
+comm_v3_006,commonsense,reasoning_path_shift,yes,yes,yes,Answer: yes
+comm_v3_006,commonsense,distractor,yes,yes,no,Answer: no
+comm_v3_008,commonsense,original,yes,yes,yes,Answer: yes
+comm_v3_008,commonsense,paraphrase,yes,yes,yes,"To determine if the statement ""A coat keeps a person warm during winter"" matches everyday common sense, let's break it down:  1. **Purpose of a Coat**: A coat is designed to protect against cold weather. 2. **Functionality in Winter**: In winter, temperatures are typically lower than other seasons, "
+comm_v3_008,commonsense,lexical_shift,yes,yes,yes,Answer: yes
+comm_v3_008,commonsense,reasoning_path_shift,yes,yes,yes,Answer: yes
+comm_v3_008,commonsense,distractor,yes,yes,no,Answer: no
+comm_v3_005,commonsense,original,yes,yes,yes,Answer: yes
+comm_v3_005,commonsense,paraphrase,yes,yes,yes,Answer: yes
+comm_v3_005,commonsense,lexical_shift,yes,yes,yes,Answer: yes
+comm_v3_005,commonsense,reasoning_path_shift,yes,yes,yes,Answer: yes
+comm_v3_005,commonsense,distractor,yes,no,no,Answer: no
+comm_v3_010,commonsense,original,yes,yes,yes,Answer: yes
+comm_v3_010,commonsense,paraphrase,yes,yes,yes,Answer: yes
+comm_v3_010,commonsense,lexical_shift,yes,yes,yes,Answer: yes
+comm_v3_010,commonsense,reasoning_path_shift,yes,yes,yes,Answer: yes
+comm_v3_010,commonsense,distractor,yes,yes,no,Answer: no
+comm_v3_011,commonsense,original,no,no,no,Answer: no
+comm_v3_011,commonsense,paraphrase,no,yes,no,Answer: no
+comm_v3_011,commonsense,lexical_shift,no,no,no,Answer: no
+comm_v3_011,commonsense,reasoning_path_shift,no,no,no,Answer: no
+comm_v3_011,commonsense,distractor,no,no,no,Answer: no
+comm_v3_014,commonsense,original,no,no,no,Answer: no
+comm_v3_014,commonsense,paraphrase,no,yes,unknown,"To determine if the statement ""A fish breathes air easily for days out of water"" matches everyday common sense, let's break it down:  1. **Fish Breathing**: Fish primarily breathe through gills, which are specialized organs designed to extract oxygen from water.  2. **Air and Water Composition**: Ai"
+comm_v3_014,commonsense,lexical_shift,no,yes,no,Answer: no
+comm_v3_014,commonsense,reasoning_path_shift,no,yes,no,Answer: no
+comm_v3_014,commonsense,distractor,no,no,no,Answer: no
+comm_v3_020,commonsense,original,no,yes,yes,Answer: yes
+comm_v3_020,commonsense,paraphrase,no,yes,no,"To determine if the statement ""A heavy stone floats on top of still water"" matches everyday common sense, let's break it down:  1. **Understanding the Statement**: The statement suggests that a heavy object (stone) is floating on top of still water.  2. **Common Sense Perspective**:    - In general,"
+comm_v3_020,commonsense,lexical_shift,no,yes,yes,Answer: yes
+comm_v3_020,commonsense,reasoning_path_shift,no,yes,yes,"To determine if this situation is expected based on common sense, let's break it down:  1. **Density and Floatation**: According to Archimedes' principle, an object will float if its density is less than that of the fluid (in this case, water). If the object has more mass per unit volume (i.e., high"
+comm_v3_020,commonsense,distractor,no,yes,no,Answer: no
+comm_v3_017,commonsense,original,no,no,no,Answer: no
+comm_v3_017,commonsense,paraphrase,no,no,no,Answer: no
+comm_v3_017,commonsense,lexical_shift,no,no,no,Answer: no
+comm_v3_017,commonsense,reasoning_path_shift,no,yes,yes,Answer: yes
+comm_v3_017,commonsense,distractor,no,no,no,Answer: no
+cont_v3_007,contradiction,original,yes,yes,unknown,"To determine if the statement ""A train can be moving while a passenger inside is sitting still relative to the train"" is logically consistent, let's break it down:  1. **Understanding Relative Motion**: When we say someone is ""sitting still,"" it means they are not moving with respect to their surrou"
+cont_v3_007,contradiction,paraphrase,yes,no,no,Answer: no
+cont_v3_007,contradiction,lexical_shift,yes,yes,unknown,"To determine if the statement ""A locomotive can move while a rider inside is stationary relative to the car"" is logically consistent, let's break it down:  1. **Locomotive Movement**: A locomotive is designed and built to move along tracks. 2. **Rider Stationary Relative to Car**: The rider is descr"
+cont_v3_007,contradiction,reasoning_path_shift,yes,yes,yes,Answer: yes
+cont_v3_007,contradiction,distractor,yes,yes,no,"Answer: no  Explanation: The statement ""A train can be moving while a passenger inside is sitting still relative to the train"" is not logically consistent with the given information that the meeting started at noon.  If someone is sitting still relative to the train, they cannot simultaneously be mo"
+cont_v3_001,contradiction,original,yes,yes,no,"To determine if reading a book and listening to music are logically consistent, let's break it down:  1. **Reading a Book**: This involves focusing one's attention on the text in front of them. 2. **Listening to Music**: This requires concentrating on the sounds being produced.  These two activities"
+cont_v3_001,contradiction,paraphrase,yes,yes,unknown,"To determine if reading a book and listening to music simultaneously makes logical sense, let's break it down:  1. **Reading a Book**: This involves focusing one's attention on the text being read. 2. **Listening to Music**: This requires concentrating on the sounds produced by the music.  When some"
+cont_v3_001,contradiction,lexical_shift,yes,yes,no,"To determine if perusing a book and hearing music simultaneously is logically consistent, let's break it down:  1. **Perusing a Book**: This involves reading the text of the book. 2. **Hearing Music**: This involves listening to musical sounds.  These two activities are distinct: - Reading requires "
+cont_v3_001,contradiction,reasoning_path_shift,yes,yes,yes,Answer: yes
+cont_v3_001,contradiction,distractor,yes,yes,yes,"Answer: yes  Justification: Reading a book and listening to music simultaneously is indeed logically consistent because these two activities do not inherently conflict with each other. A person can focus on reading one book while enjoying another musical piece, as long as they have enough attention "
+cont_v3_005,contradiction,original,yes,yes,yes,"To determine if studying mathematics and playing the piano are logically consistent, let's break it down:  1. **Understanding Logical Consistency**: For two statements to be logically consistent, they must not contradict each other.  2. **Analyzing the Statements**:    - ""A student can study mathema"
+cont_v3_005,contradiction,paraphrase,yes,yes,unknown,"To determine if studying mathematics and playing the piano logically makes sense, let's break it down:  1. **Mathematics**: This is a fundamental subject that involves numbers, logic, and problem-solving. 2. **Playing Piano**: This is an art form involving music and requires both physical skill (tou"
+cont_v3_005,contradiction,lexical_shift,yes,yes,yes,"To determine if learning mathematics and performing on the piano are logically consistent, let's break it down:  1. **Understanding the Statements**:    - ""A pupil can learn mathematics"" means that there exists at least one person who has learned mathematics.    - ""Also perform on the piano"" means t"
+cont_v3_005,contradiction,reasoning_path_shift,yes,yes,yes,Answer: yes
+cont_v3_005,contradiction,distractor,yes,yes,yes,"To determine if the statement ""A student can study mathematics and also play the piano"" is logically consistent with the fact that someone left the door open earlier, we need to consider whether these two statements are mutually exclusive.  1. The first statement describes an individual's ability to"
+cont_v3_009,contradiction,original,yes,yes,no,"To determine if being both a parent and a child is logically consistent, let's break it down:  1. **Parent**: A parent has children. 2. **Child**: A child has parents.  If we consider the relationship between these two roles: - If you are a parent (have children), then those children must have paren"
+cont_v3_009,contradiction,paraphrase,yes,yes,yes,"To determine if the statement ""Someone can be a parent while also being another person's child"" makes logical sense, let's break it down:  1. **Parent**: A parent is someone who has biological children. 2. **Child**: A child is someone who has been born to their parents.  The statement suggests that"
+cont_v3_009,contradiction,lexical_shift,yes,yes,no,"To determine if being a parent and being an offspring are logically consistent, let's break it down:  1. **Parent**: An individual who has given birth to another person. 2. **Offspring**: The child of that parent.  These two roles cannot coexist in the same individual because: - If you're a parent ("
+cont_v3_009,contradiction,reasoning_path_shift,yes,yes,no,"To determine if the described situation is logically consistent, let's break it down:  1. Being a parent involves having authority over another person. 2. Being a child involves being under someone else's authority.  These two roles are mutually exclusive; you cannot simultaneously be both a parent "
+cont_v3_009,contradiction,distractor,yes,yes,no,"Answer: no  Explanation: The statements ""A person can be a parent and also a child of someone else"" are logically consistent because they describe two different roles that a person might have in the family hierarchy.  However, the statement ""A blue car is parked outside"" does not inherently imply an"
+cont_v3_015,contradiction,original,no,no,no,"Answer: no  Explanation: The statement ""A triangle has exactly three sides and exactly four sides at once"" is not logically consistent because it contradicts itself. A triangle, by definition, must have exactly three sides, while the phrase ""exactly four sides at once"" implies that there are more th"
+cont_v3_015,contradiction,paraphrase,no,no,no,Answer: no
+cont_v3_015,contradiction,lexical_shift,no,no,no,Answer: no
+cont_v3_015,contradiction,reasoning_path_shift,no,no,no,"To determine if the described situation is logically consistent, let's break it down:  1. The statement says ""exactly three and exactly four are incompatible counts."" 2. This implies that there can be either 3 or 4 of something, but not both. 3. It also states that a shape cannot have both.  Given t"
+cont_v3_015,contradiction,distractor,no,no,no,Answer: no
+cont_v3_020,contradiction,original,no,no,no,Answer: no
+cont_v3_020,contradiction,paraphrase,no,yes,no,"To determine if the statement ""It rains in all places and in no places simultaneously"" makes logical sense, let's break it down:  1. The first part of the statement says ""It rains in all places."" This is logically consistent because rain can occur everywhere at once.  2. The second part states ""in n"
+cont_v3_020,contradiction,lexical_shift,no,yes,unknown,"To determine if rain falling everywhere and nowhere at the same moment is logically consistent, let's break it down:  1. **Spatial Consistency**: Rain can fall in different locations simultaneously. This part of the statement is logically consistent.  2. **Temporal Consistency**: The idea that rain "
+cont_v3_020,contradiction,reasoning_path_shift,no,no,no,"To determine if the described situation is logically consistent, let's break it down:  1. ""Everywhere"" refers to all locations in space. 2. ""Nowhere"" refers to an absence of something.  The statement says that these two concepts are opposite but both can't exist simultaneously. This implies: - Every"
+cont_v3_020,contradiction,distractor,no,no,no,"To determine if the statement ""It is raining everywhere and raining nowhere at the same time"" is logically consistent with the given information, let's break it down:  1. **Raining Everywhere**: This means that rain is occurring in every location simultaneously. 2. **Raining Nowhere**: This means th"
+cont_v3_012,contradiction,original,no,no,no,Answer: no
+cont_v3_012,contradiction,paraphrase,no,no,no,Answer: no
+cont_v3_012,contradiction,lexical_shift,no,no,no,Answer: no
+cont_v3_012,contradiction,reasoning_path_shift,no,yes,yes,"To determine if the described situation is logically consistent, let's break it down:  1. **Definition of Asleep and Awake**:     - Being asleep means one is not aware of their surroundings.    - Being awake means one is aware of their surroundings.  2. **Mutually Exclusive States**:    - Mutually e"
+cont_v3_012,contradiction,distractor,no,yes,no,Answer: no
+cont_v3_018,contradiction,original,no,no,no,"Answer: no  Step-by-step reasoning: 1. The statement ""A person is taller than themselves"" implies that the height of the person exceeds their own height. 2. This directly contradicts the fundamental principle in physics and geometry that an object cannot be taller than its own length. 3. Therefore, "
+cont_v3_018,contradiction,paraphrase,no,no,no,Answer: no
+cont_v3_018,contradiction,lexical_shift,no,no,unknown,"To determine if an individual exceeding their own height is logically consistent, let's break it down:  1. **Definition of Height**: Height refers to the vertical distance from the top of one's head to the ground.  2. **Individual Exceeding Their Own Height**: This means that someone has measured th"
+cont_v3_018,contradiction,reasoning_path_shift,no,no,no,Answer: no
+cont_v3_018,contradiction,distractor,no,no,no,"Answer: no  Step-by-step reasoning: 1. A person cannot be taller than themselves because height is measured from the ground to their head, and they are not higher than their own body. 2. The statement ""The meeting started at noon"" is factually correct if we consider that noon is 12:00 PM in standard"

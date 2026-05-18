@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_003",
+  "reasoning_type": "contradiction",
+  "expected_answer": "yes",
+  "core_inference": "contradiction_consistent_003",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_003_original",
+      "type": "original",
+      "text": "It can be sunny in one city and rainy in another at the same time. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_003_paraphrase",
+      "type": "paraphrase",
+      "text": "One city can be sunny while a different city is rainy at the same moment. Does this make logical sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_003_lexical_shift",
+      "type": "lexical_shift",
+      "text": "It can be clear in one town and wet in another simultaneously. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Weather is local. Two cities can have different weather at once, so this is consistent. Is the described situation logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_003_distractor",
+      "type": "distractor",
+      "text": "It can be sunny in one city and rainy in another at the same time. The report is due on Friday. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

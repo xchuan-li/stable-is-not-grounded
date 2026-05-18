@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_002",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_002",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_002_original",
+      "type": "original",
+      "text": "Ice feels cold to the touch. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_002_paraphrase",
+      "type": "paraphrase",
+      "text": "Ice is cold when you touch it. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_002_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A block of frozen water feels cold to the touch. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_002_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Frozen water is cold. Ice is frozen water, so it feels cold. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_002_distractor",
+      "type": "distractor",
+      "text": "Ice feels cold to the touch. Someone left the door open earlier. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

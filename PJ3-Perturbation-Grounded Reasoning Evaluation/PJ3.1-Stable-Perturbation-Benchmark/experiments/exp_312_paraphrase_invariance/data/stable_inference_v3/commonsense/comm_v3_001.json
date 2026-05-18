@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_001",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_001",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_001_original",
+      "type": "original",
+      "text": "A person drinks water because they are thirsty. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_001_paraphrase",
+      "type": "paraphrase",
+      "text": "Someone consumes water because of thirst. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_001_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An individual drinks H2O because they feel thirsty. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_001_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Thirst leads people to drink water. A person was thirsty and drank water. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_001_distractor",
+      "type": "distractor",
+      "text": "A person drinks water because they are thirsty. The room temperature is 22 degrees Celsius. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

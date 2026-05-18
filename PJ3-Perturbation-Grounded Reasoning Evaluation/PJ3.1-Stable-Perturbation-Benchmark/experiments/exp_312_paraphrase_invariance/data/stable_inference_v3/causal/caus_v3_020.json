@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_020",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "a_sprout_appears_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_020_original",
+      "type": "original",
+      "text": "If the seed is planted and watered, then a sprout appears. It is not the case that the seed is planted and watered. Does it follow that a sprout appears?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_020_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the seed is planted and watered, a sprout appears. However, in this situation it is not true that the seed is planted and watered. Can we conclude that a sprout appears?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_020_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the seed is sown and irrigated, then a shoot emerges. It is not the case that the seed is sown and irrigated. Does it follow that a shoot emerges?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_020_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'a sprout appears' is 'the seed is planted and watered'. That cause did not occur. Can we conclude that a sprout appears?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_020_distractor",
+      "type": "distractor",
+      "text": "If the seed is planted and watered, then a sprout appears. It is not the case that the seed is planted and watered. This topic was discussed last week. Does it follow that a sprout appears?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

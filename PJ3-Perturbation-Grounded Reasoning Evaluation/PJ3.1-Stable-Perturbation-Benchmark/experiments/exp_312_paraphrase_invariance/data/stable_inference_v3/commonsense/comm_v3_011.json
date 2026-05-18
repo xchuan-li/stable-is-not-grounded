@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_011",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_011",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_011_original",
+      "type": "original",
+      "text": "A person drinks sand because they are thirsty. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_011_paraphrase",
+      "type": "paraphrase",
+      "text": "Someone consumes sand because of thirst. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_011_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An individual drinks dry sand because they feel thirsty. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_011_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Thirst is relieved by liquids, not sand. A thirsty person drinking sand does not relieve thirst. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_011_distractor",
+      "type": "distractor",
+      "text": "A person drinks sand because they are thirsty. The weather today is cloudy. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

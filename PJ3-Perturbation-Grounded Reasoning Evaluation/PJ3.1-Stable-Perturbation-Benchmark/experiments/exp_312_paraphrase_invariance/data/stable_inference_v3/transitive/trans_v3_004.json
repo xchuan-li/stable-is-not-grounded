@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_004",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "sparrows_are_animals",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_004_original",
+      "type": "original",
+      "text": "All sparrows are birds. All birds are animals. Are sparrows animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_004_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of sparrows is among birds. Every member of birds is among animals. Does it follow that sparrows are animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_004_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All songbirds are avians. All avians are animals. Are songbirds animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_004_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "animals include all birds. birds include all sparrows. Therefore, are sparrows animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_004_distractor",
+      "type": "distractor",
+      "text": "All sparrows are birds. All birds are animals. A blue car is parked outside. Are sparrows animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

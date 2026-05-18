@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_017",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "it_boils_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_017_original",
+      "type": "original",
+      "text": "If the water reaches 100 degrees Celsius, then it boils. It is not the case that the water reaches 100 degrees Celsius. Does it follow that it boils?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_017_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the water reaches 100 degrees Celsius, it boils. However, in this situation it is not true that the water reaches 100 degrees Celsius. Can we conclude that it boils?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_017_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the water hits boiling point, then it starts boiling. It is not the case that the water hits boiling point. Does it follow that it starts boiling?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_017_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'it boils' is 'the water reaches 100 degrees Celsius'. That cause did not occur. Can we conclude that it boils?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_017_distractor",
+      "type": "distractor",
+      "text": "If the water reaches 100 degrees Celsius, then it boils. It is not the case that the water reaches 100 degrees Celsius. A blue car is parked outside. Does it follow that it boils?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

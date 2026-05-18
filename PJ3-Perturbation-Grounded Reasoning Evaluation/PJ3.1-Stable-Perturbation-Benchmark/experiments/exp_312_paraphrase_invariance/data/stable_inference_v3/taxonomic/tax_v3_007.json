@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_007",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "Mars_is_a_object_that_orbits_a_star",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_007_original",
+      "type": "original",
+      "text": "All planets are object that orbits a stars. A Mars is a planet. Therefore, is a Mars an object that orbits a star?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_007_paraphrase",
+      "type": "paraphrase",
+      "text": "Every planet belongs to the category of object that orbits a stars. A Mars is classified as a planet. Does this mean a Mars is an object that orbits a star?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_007_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All celestial bodys are object that orbits a stars. A the red planet is a celestial body. Therefore, is a the red planet an object that orbits a star?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_007_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A Mars belongs to the group of planets. The group of planets falls under object that orbits a stars. Based on this, is a Mars an object that orbits a star?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_007_distractor",
+      "type": "distractor",
+      "text": "All planets are object that orbits a stars. A Mars is a planet. This topic was discussed last week. Therefore, is a Mars an object that orbits a star?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

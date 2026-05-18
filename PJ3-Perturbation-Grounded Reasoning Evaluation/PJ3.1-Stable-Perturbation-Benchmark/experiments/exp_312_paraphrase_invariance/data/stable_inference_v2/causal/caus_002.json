@@ -1,0 +1,46 @@
+{
+    "group_id": "caus_002",
+    "reasoning_type": "causal",
+    "expected_answer": "no",
+    "core_inference": "broken_bulb_cannot_light_up",
+    "difficulty": "easy",
+    "semantic_risk": "low",
+    "source_type": "manual_v2",
+    "samples": [
+        {
+            "sample_id": "caus_002_original",
+            "type": "original",
+            "text": "A broken light bulb cannot produce light. This bulb is broken. Will this bulb light up?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_002_paraphrase",
+            "type": "paraphrase",
+            "text": "When a light bulb is damaged, it is unable to illuminate. The bulb in question is damaged. Can this bulb illuminate?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_002_lexical_shift",
+            "type": "lexical_shift",
+            "text": "A damaged lamp cannot emit illumination. This lamp is damaged. Will this lamp emit illumination?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_002_reasoning_path_shift",
+            "type": "reasoning_path_shift",
+            "text": "This bulb is broken. A broken bulb has a severed filament and cannot complete the electrical circuit needed for light. Will it light up?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_002_distractor",
+            "type": "distractor",
+            "text": "A broken light bulb cannot produce light. This bulb is broken. The lamp socket is functioning normally. Will this bulb light up?",
+            "answer": "no",
+            "validity_label": "valid"
+        }
+    ]
+}

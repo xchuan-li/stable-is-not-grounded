@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_009",
+  "reasoning_type": "causal",
+  "expected_answer": "yes",
+  "core_inference": "it_becomes_bread",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_009_original",
+      "type": "original",
+      "text": "If the dough is baked, then it becomes bread. The dough is baked. Does it follow that it becomes bread?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_009_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the dough is baked, it becomes bread as a result. In this case the dough is baked. Can we conclude that it becomes bread?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_009_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the dough is put in the oven, then it turns into bread. The dough is put in the oven. Does it follow that it turns into bread?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_009_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The condition for 'it becomes bread' is met because the dough is baked. Does it follow that it becomes bread?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_009_distractor",
+      "type": "distractor",
+      "text": "If the dough is baked, then it becomes bread. The dough is baked. Someone left the door open earlier. Does it follow that it becomes bread?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

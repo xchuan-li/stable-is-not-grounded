@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_020",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_020",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_020_original",
+      "type": "original",
+      "text": "A heavy rock floats on the surface of calm water. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_020_paraphrase",
+      "type": "paraphrase",
+      "text": "A heavy stone floats on top of still water. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_020_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A dense boulder floats on the surface of calm water. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_020_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Dense rock sinks in water. A heavy rock does not float. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_020_distractor",
+      "type": "distractor",
+      "text": "A heavy rock floats on the surface of calm water. The meeting started at noon. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

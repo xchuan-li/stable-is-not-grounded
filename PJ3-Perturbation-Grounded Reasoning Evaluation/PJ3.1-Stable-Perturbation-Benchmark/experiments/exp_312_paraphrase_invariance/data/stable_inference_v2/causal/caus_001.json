@@ -1,0 +1,46 @@
+{
+    "group_id": "caus_001",
+    "reasoning_type": "causal",
+    "expected_answer": "yes",
+    "core_inference": "watered_soil_enables_germination",
+    "difficulty": "easy",
+    "semantic_risk": "low",
+    "source_type": "manual_v2",
+    "samples": [
+        {
+            "sample_id": "caus_001_original",
+            "type": "original",
+            "text": "If soil is watered, seeds can germinate. The soil was watered. Can seeds germinate?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_001_paraphrase",
+            "type": "paraphrase",
+            "text": "Seeds are able to sprout when the soil receives water. Water was added to the soil. Is germination possible?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_001_lexical_shift",
+            "type": "lexical_shift",
+            "text": "If earth is irrigated, seedlings can sprout. The earth was irrigated. Can seedlings sprout?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_001_reasoning_path_shift",
+            "type": "reasoning_path_shift",
+            "text": "Germination requires moisture in the soil. The soil currently has moisture because it was watered. Can germination occur?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "caus_001_distractor",
+            "type": "distractor",
+            "text": "If soil is watered, seeds can germinate. The soil was watered. The seeds were planted last week. Can seeds germinate?",
+            "answer": "yes",
+            "validity_label": "valid"
+        }
+    ]
+}

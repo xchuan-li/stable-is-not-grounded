@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_010",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "violins_are_musical_instruments",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_010_original",
+      "type": "original",
+      "text": "All violins are string instruments. All string instruments are musical instruments. Are violins musical instruments?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_010_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of violins is among string instruments. Every member of string instruments is among musical instruments. Does it follow that violins are musical instruments?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_010_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All concert violins are bowed instruments. All bowed instruments are musical instruments. Are concert violins musical instruments?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_010_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "musical instruments include all string instruments. string instruments include all violins. Therefore, are violins musical instruments?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_010_distractor",
+      "type": "distractor",
+      "text": "All violins are string instruments. All string instruments are musical instruments. This topic was discussed last week. Are violins musical instruments?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

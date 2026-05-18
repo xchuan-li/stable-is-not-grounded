@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_018",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_018",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_018_original",
+      "type": "original",
+      "text": "A person stays completely dry while swimming in a pool. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_018_paraphrase",
+      "type": "paraphrase",
+      "text": "Someone remains fully dry while swimming in a pool. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_018_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An individual stays entirely dry while swimming in water. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_018_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Water wets whatever is submerged. A swimmer in a pool gets wet. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_018_distractor",
+      "type": "distractor",
+      "text": "A person stays completely dry while swimming in a pool. Someone left the door open earlier. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

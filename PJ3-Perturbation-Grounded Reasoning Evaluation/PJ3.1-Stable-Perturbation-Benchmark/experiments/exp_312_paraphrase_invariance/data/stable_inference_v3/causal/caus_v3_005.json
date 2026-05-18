@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_005",
+  "reasoning_type": "causal",
+  "expected_answer": "yes",
+  "core_inference": "the_room_becomes_warm",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_005_original",
+      "type": "original",
+      "text": "If the heater is switched on, then the room becomes warm. The heater is switched on. Does it follow that the room becomes warm?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_005_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the heater is switched on, the room becomes warm as a result. In this case the heater is switched on. Can we conclude that the room becomes warm?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_005_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the heater is activated, then the room heats up. The heater is activated. Does it follow that the room heats up?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_005_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The condition for 'the room becomes warm' is met because the heater is switched on. Does it follow that the room becomes warm?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_005_distractor",
+      "type": "distractor",
+      "text": "If the heater is switched on, then the room becomes warm. The heater is switched on. The weather today is cloudy. Does it follow that the room becomes warm?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_016",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_016",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_016_original",
+      "type": "original",
+      "text": "The door is fully closed and fully open at the very same instant. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_016_paraphrase",
+      "type": "paraphrase",
+      "text": "The door is entirely shut and entirely open at the same moment. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_016_lexical_shift",
+      "type": "lexical_shift",
+      "text": "The entrance is completely closed and completely open at once. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_016_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Fully closed and fully open are opposite states. They cannot coexist at one instant. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_016_distractor",
+      "type": "distractor",
+      "text": "The door is fully closed and fully open at the very same instant. The room temperature is 22 degrees Celsius. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

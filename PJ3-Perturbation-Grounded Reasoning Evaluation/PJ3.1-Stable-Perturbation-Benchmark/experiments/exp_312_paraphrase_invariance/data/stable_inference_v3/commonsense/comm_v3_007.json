@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_007",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_007",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_007_original",
+      "type": "original",
+      "text": "A hungry animal looks for food. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_007_paraphrase",
+      "type": "paraphrase",
+      "text": "An animal that is hungry searches for food. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_007_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A famished creature seeks nourishment. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_007_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Hunger drives food-seeking. The animal is hungry, so it looks for food. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_007_distractor",
+      "type": "distractor",
+      "text": "A hungry animal looks for food. Someone left the door open earlier. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

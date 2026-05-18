@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_012",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_012",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_012_original",
+      "type": "original",
+      "text": "An ice cube stays frozen inside a burning fire. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_012_paraphrase",
+      "type": "paraphrase",
+      "text": "An ice cube remains frozen in a roaring fire. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_012_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A block of ice stays solid inside an open flame. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_012_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Fire melts ice. An ice cube in fire would melt, not stay frozen. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_012_distractor",
+      "type": "distractor",
+      "text": "An ice cube stays frozen inside a burning fire. A blue car is parked outside. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

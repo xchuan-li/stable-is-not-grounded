@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_002",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "dogs_are_animals",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_002_original",
+      "type": "original",
+      "text": "All dogs are mammals. All mammals are animals. Are dogs animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_002_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of dogs is among mammals. Every member of mammals is among animals. Does it follow that dogs are animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_002_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All hounds are vertebrates. All vertebrates are animals. Are hounds animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_002_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "animals include all mammals. mammals include all dogs. Therefore, are dogs animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_002_distractor",
+      "type": "distractor",
+      "text": "All dogs are mammals. All mammals are animals. The room temperature is 22 degrees Celsius. Are dogs animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

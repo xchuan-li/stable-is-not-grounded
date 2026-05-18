@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_008",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "copper_is_a_chemical_element",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_008_original",
+      "type": "original",
+      "text": "All metals are chemical elements. A copper is a metal. Therefore, is a copper a chemical element?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_008_paraphrase",
+      "type": "paraphrase",
+      "text": "Every metal belongs to the category of chemical elements. A copper is classified as a metal. Does this mean a copper is a chemical element?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_008_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All metallic elements are chemical elements. A refined copper is a metallic element. Therefore, is a refined copper a chemical element?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_008_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A copper belongs to the group of metals. The group of metals falls under chemical elements. Based on this, is a copper a chemical element?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_008_distractor",
+      "type": "distractor",
+      "text": "All metals are chemical elements. A copper is a metal. This topic was discussed last week. Therefore, is a copper a chemical element?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_019",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_019",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_019_original",
+      "type": "original",
+      "text": "A plant grows tall in total darkness with no light at all. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_019_paraphrase",
+      "type": "paraphrase",
+      "text": "A plant grows tall in complete darkness with no light. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_019_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Vegetation grows tall in absolute darkness with no illumination. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_019_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Plants need light for photosynthesis. With no light at all a plant cannot grow tall. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_019_distractor",
+      "type": "distractor",
+      "text": "A plant grows tall in total darkness with no light at all. There are several books on the shelf. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

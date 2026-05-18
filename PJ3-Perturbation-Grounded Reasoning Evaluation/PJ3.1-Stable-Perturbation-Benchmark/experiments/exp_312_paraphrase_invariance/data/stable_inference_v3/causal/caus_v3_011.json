@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_011",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "the_seeds_germinate_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_011_original",
+      "type": "original",
+      "text": "If the soil is watered, then the seeds germinate. It is not the case that the soil is watered. Does it follow that the seeds germinate?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_011_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the soil is watered, the seeds germinate. However, in this situation it is not true that the soil is watered. Can we conclude that the seeds germinate?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_011_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the soil is irrigated, then the seeds sprout. It is not the case that the soil is irrigated. Does it follow that the seeds sprout?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_011_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'the seeds germinate' is 'the soil is watered'. That cause did not occur. Can we conclude that the seeds germinate?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_011_distractor",
+      "type": "distractor",
+      "text": "If the soil is watered, then the seeds germinate. It is not the case that the soil is watered. The meeting started at noon. Does it follow that the seeds germinate?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

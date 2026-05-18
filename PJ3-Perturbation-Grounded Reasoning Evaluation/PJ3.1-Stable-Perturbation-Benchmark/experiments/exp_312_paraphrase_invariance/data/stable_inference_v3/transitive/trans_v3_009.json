@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_009",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "cars_are_machines",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_009_original",
+      "type": "original",
+      "text": "All cars are vehicles. All vehicles are machines. Are cars machines?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_009_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of cars is among vehicles. Every member of vehicles is among machines. Does it follow that cars are machines?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_009_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All automobiles are motor vehicles. All motor vehicles are machines. Are automobiles machines?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_009_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "machines include all vehicles. vehicles include all cars. Therefore, are cars machines?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_009_distractor",
+      "type": "distractor",
+      "text": "All cars are vehicles. All vehicles are machines. This topic was discussed last week. Are cars machines?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

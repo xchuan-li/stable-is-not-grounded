@@ -1,0 +1,46 @@
+{
+    "group_id": "comm_001",
+    "reasoning_type": "commonsense",
+    "expected_answer": "yes",
+    "core_inference": "bird_with_wings_can_fly",
+    "difficulty": "easy",
+    "semantic_risk": "low",
+    "source_type": "manual_v2",
+    "samples": [
+        {
+            "sample_id": "comm_001_original",
+            "type": "original",
+            "text": "Most birds can fly because they have wings adapted for flight. A robin is a bird with wings adapted for flight. Can a robin fly?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "comm_001_paraphrase",
+            "type": "paraphrase",
+            "text": "The majority of birds are capable of flight due to their wing structure. A robin belongs to the group of birds with flight-capable wings. Is a robin able to fly?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "comm_001_lexical_shift",
+            "type": "lexical_shift",
+            "text": "The majority of avians are capable of airborne movement because they possess aerodynamic wings. A robin is an avian with aerodynamic wings. Is a robin capable of airborne movement?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "comm_001_reasoning_path_shift",
+            "type": "reasoning_path_shift",
+            "text": "A robin is classified as a typical bird. Typical birds possess wings adapted for flight and are capable of flying. Can a robin fly?",
+            "answer": "yes",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "comm_001_distractor",
+            "type": "distractor",
+            "text": "Most birds can fly because they have wings adapted for flight. A robin is a bird with wings adapted for flight. Robins are often seen in gardens. Can a robin fly?",
+            "answer": "yes",
+            "validity_label": "valid"
+        }
+    ]
+}

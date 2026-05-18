@@ -1,0 +1,49 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "n_groups": 40,
+  "direct": {
+    "n_groups": 40,
+    "SIS_acc": 0.91,
+    "SIS_consistency": 0.935,
+    "states": {
+      "stable_correct": 30,
+      "stable_wrong": 1,
+      "unstable": 9
+    },
+    "stable_correct_pct": 0.75,
+    "unstable_pct": 0.225,
+    "per_reasoning_acc": {
+      "causal": 1.0,
+      "commonsense": 0.725,
+      "contradiction": 0.875,
+      "taxonomic": 1.0,
+      "transitive": 0.95
+    }
+  },
+  "cot": {
+    "n_groups": 40,
+    "SIS_acc": 0.855,
+    "SIS_consistency": 0.88,
+    "states": {
+      "stable_correct": 23,
+      "stable_wrong": 0,
+      "unstable": 17
+    },
+    "stable_correct_pct": 0.575,
+    "unstable_pct": 0.425,
+    "per_reasoning_acc": {
+      "causal": 0.95,
+      "commonsense": 0.775,
+      "contradiction": 0.625,
+      "taxonomic": 1.0,
+      "transitive": 0.925
+    }
+  },
+  "deltas": {
+    "SIS_acc": -0.055,
+    "SIS_consistency": -0.055,
+    "stable_correct_pct": -0.175,
+    "unstable_pct": 0.2
+  },
+  "H4_supported": false
+}

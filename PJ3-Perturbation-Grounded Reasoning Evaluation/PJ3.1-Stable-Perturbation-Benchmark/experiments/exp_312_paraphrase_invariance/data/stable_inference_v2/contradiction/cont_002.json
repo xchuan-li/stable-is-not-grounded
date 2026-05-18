@@ -1,0 +1,46 @@
+{
+    "group_id": "cont_002",
+    "reasoning_type": "contradiction",
+    "expected_answer": "no",
+    "core_inference": "triangle_cannot_have_four_sides",
+    "difficulty": "easy",
+    "semantic_risk": "low",
+    "source_type": "manual_v2",
+    "samples": [
+        {
+            "sample_id": "cont_002_original",
+            "type": "original",
+            "text": "A triangle is defined as a shape with exactly three sides. The claim is that this triangle has four sides. Is this claim geometrically consistent?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "cont_002_paraphrase",
+            "type": "paraphrase",
+            "text": "By definition, a triangle must have precisely three sides. Someone claims this triangle possesses four sides. Does this claim hold up geometrically?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "cont_002_lexical_shift",
+            "type": "lexical_shift",
+            "text": "A three-sided polygon is by definition a triangle. The assertion is that this three-sided polygon has four edges. Is this assertion geometrically valid?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "cont_002_reasoning_path_shift",
+            "type": "reasoning_path_shift",
+            "text": "This shape is identified as a triangle. Triangles have three sides. The claim attributes four sides to it. Can both the identification and the claim be true simultaneously?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "cont_002_distractor",
+            "type": "distractor",
+            "text": "A triangle is defined as a shape with exactly three sides. The claim is that this triangle has four sides. The shape is drawn in red ink. Is this claim geometrically consistent?",
+            "answer": "no",
+            "validity_label": "valid"
+        }
+    ]
+}

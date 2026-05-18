@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_013",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "the_ground_becomes_wet_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_013_original",
+      "type": "original",
+      "text": "If it rains on the field, then the ground becomes wet. It is not the case that it rains on the field. Does it follow that the ground becomes wet?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_013_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever it rains on the field, the ground becomes wet. However, in this situation it is not true that it rains on the field. Can we conclude that the ground becomes wet?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_013_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If rain falls on the field, then the ground gets soaked. It is not the case that rain falls on the field. Does it follow that the ground gets soaked?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_013_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'the ground becomes wet' is 'it rains on the field'. That cause did not occur. Can we conclude that the ground becomes wet?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_013_distractor",
+      "type": "distractor",
+      "text": "If it rains on the field, then the ground becomes wet. It is not the case that it rains on the field. There are several books on the shelf. Does it follow that the ground becomes wet?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

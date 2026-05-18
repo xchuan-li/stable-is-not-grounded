@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_016",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "no",
+  "core_inference": "lamp_is_not_inferable_as_plant",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_016_original",
+      "type": "original",
+      "text": "All trees are plants. A lamp is not a tree. Therefore, is a lamp a plant?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_016_paraphrase",
+      "type": "paraphrase",
+      "text": "Every tree belongs to the category of plants. A lamp is not a tree. Does it follow that a lamp is a plant?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_016_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All woody plants are plants. A desk lamp is not a woody plant. Therefore, is a desk lamp a plant?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_016_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A lamp is not in the group of trees. Only trees are stated to be plants here. Based on this, is a lamp a plant?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_016_distractor",
+      "type": "distractor",
+      "text": "All trees are plants. A lamp is not a tree. Someone left the door open earlier. Therefore, is a lamp a plant?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

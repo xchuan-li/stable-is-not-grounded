@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_018",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "no",
+  "core_inference": "song_is_not_inferable_as_chemical_element",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_018_original",
+      "type": "original",
+      "text": "All metals are chemical elements. A song is not a metal. Therefore, is a song a chemical element?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_018_paraphrase",
+      "type": "paraphrase",
+      "text": "Every metal belongs to the category of chemical elements. A song is not a metal. Does it follow that a song is a chemical element?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_018_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All metallic elements are chemical elements. A folk song is not a metallic element. Therefore, is a folk song a chemical element?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_018_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A song is not in the group of metals. Only metals are stated to be chemical elements here. Based on this, is a song a chemical element?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_018_distractor",
+      "type": "distractor",
+      "text": "All metals are chemical elements. A song is not a metal. Someone left the door open earlier. Therefore, is a song a chemical element?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

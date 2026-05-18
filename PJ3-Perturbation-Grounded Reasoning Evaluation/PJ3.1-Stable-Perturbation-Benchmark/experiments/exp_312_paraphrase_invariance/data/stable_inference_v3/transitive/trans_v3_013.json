@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_013",
+  "reasoning_type": "transitive",
+  "expected_answer": "no",
+  "core_inference": "non-square_rectangle_is_not_inferable_as_squares",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_013_original",
+      "type": "original",
+      "text": "All squares are rectangles. A non-square rectangle is a rectangle. Is a non-square rectangle a square?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_013_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of squares is among rectangles. A non-square rectangle is a rectangle. Does it follow that a non-square rectangle is a square?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_013_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All regular quadrilaterals are four-sided shapes. A non-square rectangle is a four-sided shape. Is a non-square rectangle a regular quadrilateral?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_013_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Being a rectangle does not by itself make something a square. A non-square rectangle is a rectangle. Is a non-square rectangle a square?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_013_distractor",
+      "type": "distractor",
+      "text": "All squares are rectangles. A non-square rectangle is a rectangle. A blue car is parked outside. Is a non-square rectangle a square?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+    "group_id": "trans_002",
+    "reasoning_type": "transitive",
+    "expected_answer": "no",
+    "core_inference": "clouds_are_not_mountains",
+    "difficulty": "easy",
+    "semantic_risk": "low",
+    "source_type": "manual_v2",
+    "samples": [
+        {
+            "sample_id": "trans_002_original",
+            "type": "original",
+            "text": "All mountains are landforms. Clouds are not landforms. Are clouds mountains?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "trans_002_paraphrase",
+            "type": "paraphrase",
+            "text": "Every mountain belongs to the category of landforms. Clouds do not belong to the category of landforms. Does that make clouds mountains?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "trans_002_lexical_shift",
+            "type": "lexical_shift",
+            "text": "All elevated geological structures are terrain features. Clouds are not terrain features. Are clouds elevated geological structures?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "trans_002_reasoning_path_shift",
+            "type": "reasoning_path_shift",
+            "text": "Clouds exist in the atmosphere and are composed of water vapor. Mountains are solid landforms fixed to the ground. Are clouds mountains?",
+            "answer": "no",
+            "validity_label": "valid"
+        },
+        {
+            "sample_id": "trans_002_distractor",
+            "type": "distractor",
+            "text": "All mountains are landforms. Clouds are not landforms. Some mountains have snow on their peaks. Are clouds mountains?",
+            "answer": "no",
+            "validity_label": "valid"
+        }
+    ]
+}

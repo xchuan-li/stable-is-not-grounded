@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_003",
+  "reasoning_type": "causal",
+  "expected_answer": "yes",
+  "core_inference": "the_ground_becomes_wet",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_003_original",
+      "type": "original",
+      "text": "If it rains on the field, then the ground becomes wet. It rains on the field. Does it follow that the ground becomes wet?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_003_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever it rains on the field, the ground becomes wet as a result. In this case it rains on the field. Can we conclude that the ground becomes wet?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_003_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If rain falls on the field, then the ground gets soaked. Rain falls on the field. Does it follow that the ground gets soaked?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The condition for 'the ground becomes wet' is met because it rains on the field. Does it follow that the ground becomes wet?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_003_distractor",
+      "type": "distractor",
+      "text": "If it rains on the field, then the ground becomes wet. It rains on the field. Someone left the door open earlier. Does it follow that the ground becomes wet?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

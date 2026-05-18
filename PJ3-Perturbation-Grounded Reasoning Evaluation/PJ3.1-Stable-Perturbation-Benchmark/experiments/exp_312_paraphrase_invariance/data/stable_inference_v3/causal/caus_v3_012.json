@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_012",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "the_phone_turns_on_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_012_original",
+      "type": "original",
+      "text": "If the battery is charged, then the phone turns on. It is not the case that the battery is charged. Does it follow that the phone turns on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_012_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the battery is charged, the phone turns on. However, in this situation it is not true that the battery is charged. Can we conclude that the phone turns on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_012_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the battery is powered up, then the phone powers on. It is not the case that the battery is powered up. Does it follow that the phone powers on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_012_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'the phone turns on' is 'the battery is charged'. That cause did not occur. Can we conclude that the phone turns on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_012_distractor",
+      "type": "distractor",
+      "text": "If the battery is charged, then the phone turns on. It is not the case that the battery is charged. The report is due on Friday. Does it follow that the phone turns on?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

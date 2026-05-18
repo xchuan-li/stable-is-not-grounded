@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_003",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_003",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_003_original",
+      "type": "original",
+      "text": "A fire produces heat. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_003_paraphrase",
+      "type": "paraphrase",
+      "text": "Flames give off heat. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_003_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A blaze produces heat. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Combustion releases heat. A fire involves combustion, so it produces heat. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_003_distractor",
+      "type": "distractor",
+      "text": "A fire produces heat. The room temperature is 22 degrees Celsius. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

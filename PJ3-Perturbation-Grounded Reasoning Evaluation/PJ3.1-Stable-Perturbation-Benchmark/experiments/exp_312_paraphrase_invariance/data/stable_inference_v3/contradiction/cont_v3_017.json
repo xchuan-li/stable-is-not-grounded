@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_017",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_017",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_017_original",
+      "type": "original",
+      "text": "A statement is entirely true and entirely false at the same time in the same sense. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_017_paraphrase",
+      "type": "paraphrase",
+      "text": "A claim is wholly true and wholly false simultaneously in the same sense. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_017_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An assertion is completely true and completely false at once in the same sense. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_017_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "True and false in the same sense are mutually exclusive. A statement cannot be both. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_017_distractor",
+      "type": "distractor",
+      "text": "A statement is entirely true and entirely false at the same time in the same sense. The room temperature is 22 degrees Celsius. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

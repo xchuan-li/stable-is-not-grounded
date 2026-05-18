@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_016",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_016",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_016_original",
+      "type": "original",
+      "text": "Snow falls upward into the sky from the ground. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_016_paraphrase",
+      "type": "paraphrase",
+      "text": "Snow rises from the ground up into the sky. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_016_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Snowflakes travel upward from the ground into the air. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_016_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Gravity pulls snow downward. Snow falls down, not up. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_016_distractor",
+      "type": "distractor",
+      "text": "Snow falls upward into the sky from the ground. Someone left the door open earlier. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

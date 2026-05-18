@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_015",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "the_room_becomes_warm_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_015_original",
+      "type": "original",
+      "text": "If the heater is switched on, then the room becomes warm. It is not the case that the heater is switched on. Does it follow that the room becomes warm?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_015_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the heater is switched on, the room becomes warm. However, in this situation it is not true that the heater is switched on. Can we conclude that the room becomes warm?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_015_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the heater is activated, then the room heats up. It is not the case that the heater is activated. Does it follow that the room heats up?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_015_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'the room becomes warm' is 'the heater is switched on'. That cause did not occur. Can we conclude that the room becomes warm?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_015_distractor",
+      "type": "distractor",
+      "text": "If the heater is switched on, then the room becomes warm. It is not the case that the heater is switched on. The room temperature is 22 degrees Celsius. Does it follow that the room becomes warm?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

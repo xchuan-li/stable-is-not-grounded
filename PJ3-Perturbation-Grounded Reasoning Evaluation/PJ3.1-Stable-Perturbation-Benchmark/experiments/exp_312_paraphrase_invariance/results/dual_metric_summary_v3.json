@@ -1,0 +1,39 @@
+{
+  "n_groups": 100,
+  "SIS_acc": 0.586,
+  "SIS_consistency": 0.79,
+  "group_state_distribution": {
+    "stable_correct": 27,
+    "stable_wrong": 10,
+    "unstable": 63
+  },
+  "per_reasoning_type": {
+    "causal": {
+      "acc": 0.68,
+      "consistency": 0.78
+    },
+    "commonsense": {
+      "acc": 0.57,
+      "consistency": 0.79
+    },
+    "contradiction": {
+      "acc": 0.53,
+      "consistency": 0.77
+    },
+    "taxonomic": {
+      "acc": 0.6,
+      "consistency": 0.9
+    },
+    "transitive": {
+      "acc": 0.55,
+      "consistency": 0.71
+    }
+  },
+  "per_perturbation_type_acc": {
+    "distractor": 0.58,
+    "lexical_shift": 0.57,
+    "original": 0.6,
+    "paraphrase": 0.52,
+    "reasoning_path_shift": 0.66
+  }
+}

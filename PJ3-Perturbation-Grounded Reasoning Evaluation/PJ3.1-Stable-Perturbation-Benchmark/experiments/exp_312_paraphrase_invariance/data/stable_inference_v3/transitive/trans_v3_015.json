@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_015",
+  "reasoning_type": "transitive",
+  "expected_answer": "no",
+  "core_inference": "pine_is_not_inferable_as_oaks",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_015_original",
+      "type": "original",
+      "text": "All oaks are trees. A pine is a tree. Is a pine an oak?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_015_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of oaks is among trees. A pine is a tree. Does it follow that a pine is an oak?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_015_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All oak trees are woody plants. A pine is a woody plant. Is a pine an oak tree?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_015_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Being a tree does not by itself make something an oak. A pine is a tree. Is a pine an oak?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_015_distractor",
+      "type": "distractor",
+      "text": "All oaks are trees. A pine is a tree. The report is due on Friday. Is a pine an oak?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}
