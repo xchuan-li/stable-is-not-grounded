@@ -48,8 +48,18 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # 1. Config
 # ---------------------------------------------------------------------------
-_KAGGLE_PATH = "/kaggle/input/models/jiayite/qwen2.5-1.5b/transformers/default/V1"
-MODEL_NAME   = _KAGGLE_PATH if Path(_KAGGLE_PATH).exists() else "Qwen/Qwen2.5-1.5B"
+def _find_model_path():
+    """Walk /kaggle/input to find the directory containing config.json."""
+    import os
+    kaggle_input = Path("/kaggle/input")
+    if kaggle_input.exists():
+        for root, dirs, files in os.walk(kaggle_input):
+            if "config.json" in files:
+                print(f"Found model at: {root}")
+                return root
+    return "Qwen/Qwen2.5-1.5B"   # fallback to HF hub (requires network)
+
+MODEL_NAME = _find_model_path()
 MAX_LEN     = 96        # inputs are short; 96 is ample
 EPOCHS      = 5         # LoRA needs a few more epochs than full fine-tune
 BATCH       = 8         # conservative for T4 + 1.5B
@@ -189,6 +199,7 @@ def build_model(device):
         num_labels=2,
         torch_dtype=torch.float16 if device.type == "cuda" else torch.float32,
         trust_remote_code=True,
+        local_files_only=True,
     )
     lora_cfg = LoraConfig(
         task_type      = TaskType.SEQ_CLS,
@@ -204,7 +215,8 @@ def build_model(device):
 
 
 def get_tokenizer():
-    tok = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    tok = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True,
+                                        local_files_only=True)
     # Decoder models often lack a pad token — reuse eos_token
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
