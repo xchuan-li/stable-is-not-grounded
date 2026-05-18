@@ -1,0 +1,732 @@
+{
+  "experiment": "\u00a75.4 multi-seed variance \u2014 DistilBERT",
+  "model": "distilbert-base-uncased",
+  "n_seeds": 5,
+  "train_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "note": "Eval seeds fixed (EVAL_SEED_BASE=100); variance is over training stochasticity only.",
+  "results": {
+    "chain_required": {
+      "per_seed": [
+        {
+          "train_seed": 42,
+          "measured_|r|": {
+            "color": 0.0072,
+            "name": 0.0004
+          },
+          "class_assignment": {
+            "color": "class-2",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.4367,
+          "P2_withhold": 0.0,
+          "drop_color": 0.0,
+          "drop_name": 0.0,
+          "c1_flip_rate": 1.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.4367,
+            0.4107,
+            0.46
+          ],
+          "P2_withhold_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_color_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": false,
+          "c1_correctly_variant": true,
+          "c1_insensitive_to_chain": false
+        },
+        {
+          "train_seed": 43,
+          "measured_|r|": {
+            "color": 0.0072,
+            "name": 0.0004
+          },
+          "class_assignment": {
+            "color": "class-2",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.5133,
+          "P2_withhold": 0.0,
+          "drop_color": 0.0,
+          "drop_name": 0.0,
+          "c1_flip_rate": 1.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.5133,
+            0.488,
+            0.538
+          ],
+          "P2_withhold_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_color_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": false,
+          "c1_correctly_variant": true,
+          "c1_insensitive_to_chain": false
+        },
+        {
+          "train_seed": 44,
+          "measured_|r|": {
+            "color": 0.0072,
+            "name": 0.0004
+          },
+          "class_assignment": {
+            "color": "class-2",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.4033,
+          "P2_withhold": 0.0,
+          "drop_color": 0.0,
+          "drop_name": 0.0,
+          "c1_flip_rate": 1.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.4033,
+            0.378,
+            0.4267
+          ],
+          "P2_withhold_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_color_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": false,
+          "c1_correctly_variant": true,
+          "c1_insensitive_to_chain": false
+        },
+        {
+          "train_seed": 45,
+          "measured_|r|": {
+            "color": 0.0072,
+            "name": 0.0004
+          },
+          "class_assignment": {
+            "color": "class-2",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.638,
+          "P2_withhold": 0.1627,
+          "drop_color": 0.0,
+          "drop_name": 0.0,
+          "c1_flip_rate": 1.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.638,
+            0.6127,
+            0.6613
+          ],
+          "P2_withhold_ci": [
+            0.1627,
+            0.1453,
+            0.18
+          ],
+          "drop_color_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": false,
+          "flagged_correlational": false,
+          "c1_correctly_variant": true,
+          "c1_insensitive_to_chain": false
+        },
+        {
+          "train_seed": 46,
+          "measured_|r|": {
+            "color": 0.0072,
+            "name": 0.0004
+          },
+          "class_assignment": {
+            "color": "class-2",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.514,
+          "P2_withhold": 0.0,
+          "drop_color": 0.0,
+          "drop_name": 0.0,
+          "c1_flip_rate": 1.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.514,
+            0.4887,
+            0.538
+          ],
+          "P2_withhold_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_color_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": false,
+          "c1_correctly_variant": true,
+          "c1_insensitive_to_chain": false
+        }
+      ],
+      "aggregate": {
+        "baseline_acc": {
+          "mean": 1.0,
+          "std": 0.0,
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "P1_withhold": {
+          "mean": 0.5011,
+          "std": 0.0905,
+          "per_seed": [
+            0.4367,
+            0.5133,
+            0.4033,
+            0.638,
+            0.514
+          ]
+        },
+        "P2_withhold": {
+          "mean": 0.0325,
+          "std": 0.0728,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0,
+            0.1627,
+            0.0
+          ]
+        },
+        "drop_color": {
+          "mean": 0.0,
+          "std": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "drop_name": {
+          "mean": 0.0,
+          "std": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "c1_flip_rate": {
+          "mean": 1.0,
+          "std": 0.0,
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "nonredundancy_respected": {
+          "count_true": 0,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "nonredundancy_fails_decoupled": {
+          "count_true": 4,
+          "n_seeds": 5,
+          "all_agree": false
+        },
+        "flagged_correlational": {
+          "count_true": 0,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "c1_correctly_variant": {
+          "count_true": 5,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "c1_insensitive_to_chain": {
+          "count_true": 0,
+          "n_seeds": 5,
+          "all_agree": true
+        }
+      }
+    },
+    "shortcut_available": {
+      "per_seed": [
+        {
+          "train_seed": 42,
+          "measured_|r|": {
+            "color": 1.0,
+            "name": 0.0113
+          },
+          "class_assignment": {
+            "color": "class-3",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.518,
+          "P2_withhold": 0.492,
+          "drop_color": 0.5167,
+          "drop_name": 0.0,
+          "c1_flip_rate": 0.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.518,
+            0.4926,
+            0.5453
+          ],
+          "P2_withhold_ci": [
+            0.492,
+            0.4667,
+            0.516
+          ],
+          "drop_color_ci": [
+            0.5167,
+            0.4907,
+            0.542
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": true,
+          "c1_correctly_variant": false,
+          "c1_insensitive_to_chain": true
+        },
+        {
+          "train_seed": 43,
+          "measured_|r|": {
+            "color": 1.0,
+            "name": 0.0113
+          },
+          "class_assignment": {
+            "color": "class-3",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.518,
+          "P2_withhold": 0.492,
+          "drop_color": 0.5167,
+          "drop_name": 0.0,
+          "c1_flip_rate": 0.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.518,
+            0.4926,
+            0.5453
+          ],
+          "P2_withhold_ci": [
+            0.492,
+            0.4667,
+            0.516
+          ],
+          "drop_color_ci": [
+            0.5167,
+            0.4907,
+            0.542
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": true,
+          "c1_correctly_variant": false,
+          "c1_insensitive_to_chain": true
+        },
+        {
+          "train_seed": 44,
+          "measured_|r|": {
+            "color": 1.0,
+            "name": 0.0113
+          },
+          "class_assignment": {
+            "color": "class-3",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.518,
+          "P2_withhold": 0.492,
+          "drop_color": 0.5167,
+          "drop_name": 0.0,
+          "c1_flip_rate": 0.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.518,
+            0.4926,
+            0.5453
+          ],
+          "P2_withhold_ci": [
+            0.492,
+            0.4667,
+            0.516
+          ],
+          "drop_color_ci": [
+            0.5167,
+            0.4907,
+            0.542
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": true,
+          "c1_correctly_variant": false,
+          "c1_insensitive_to_chain": true
+        },
+        {
+          "train_seed": 45,
+          "measured_|r|": {
+            "color": 1.0,
+            "name": 0.0113
+          },
+          "class_assignment": {
+            "color": "class-3",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.518,
+          "P2_withhold": 0.492,
+          "drop_color": 0.5167,
+          "drop_name": 0.0,
+          "c1_flip_rate": 0.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.518,
+            0.4926,
+            0.5453
+          ],
+          "P2_withhold_ci": [
+            0.492,
+            0.4667,
+            0.516
+          ],
+          "drop_color_ci": [
+            0.5167,
+            0.4907,
+            0.542
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": true,
+          "c1_correctly_variant": false,
+          "c1_insensitive_to_chain": true
+        },
+        {
+          "train_seed": 46,
+          "measured_|r|": {
+            "color": 1.0,
+            "name": 0.0113
+          },
+          "class_assignment": {
+            "color": "class-3",
+            "name": "class-2"
+          },
+          "baseline_acc": 1.0,
+          "P1_withhold": 0.518,
+          "P2_withhold": 0.492,
+          "drop_color": 0.5167,
+          "drop_name": 0.0,
+          "c1_flip_rate": 0.0,
+          "baseline_acc_ci": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "P1_withhold_ci": [
+            0.518,
+            0.4926,
+            0.5453
+          ],
+          "P2_withhold_ci": [
+            0.492,
+            0.4667,
+            0.516
+          ],
+          "drop_color_ci": [
+            0.5167,
+            0.4907,
+            0.542
+          ],
+          "drop_name_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "c1_flip_rate_ci": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonredundancy_respected": false,
+          "nonredundancy_fails_decoupled": true,
+          "flagged_correlational": true,
+          "c1_correctly_variant": false,
+          "c1_insensitive_to_chain": true
+        }
+      ],
+      "aggregate": {
+        "baseline_acc": {
+          "mean": 1.0,
+          "std": 0.0,
+          "per_seed": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "P1_withhold": {
+          "mean": 0.518,
+          "std": 0.0,
+          "per_seed": [
+            0.518,
+            0.518,
+            0.518,
+            0.518,
+            0.518
+          ]
+        },
+        "P2_withhold": {
+          "mean": 0.492,
+          "std": 0.0,
+          "per_seed": [
+            0.492,
+            0.492,
+            0.492,
+            0.492,
+            0.492
+          ]
+        },
+        "drop_color": {
+          "mean": 0.5167,
+          "std": 0.0,
+          "per_seed": [
+            0.5167,
+            0.5167,
+            0.5167,
+            0.5167,
+            0.5167
+          ]
+        },
+        "drop_name": {
+          "mean": 0.0,
+          "std": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "c1_flip_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "nonredundancy_respected": {
+          "count_true": 0,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "nonredundancy_fails_decoupled": {
+          "count_true": 5,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "flagged_correlational": {
+          "count_true": 5,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "c1_correctly_variant": {
+          "count_true": 0,
+          "n_seeds": 5,
+          "all_agree": true
+        },
+        "c1_insensitive_to_chain": {
+          "count_true": 5,
+          "n_seeds": 5,
+          "all_agree": true
+        }
+      }
+    }
+  },
+  "validated_across_all_seeds": false,
+  "spec_ok": false,
+  "sens_ok": true
+}

@@ -1,0 +1,36 @@
+{
+  "n_items": 40,
+  "model": "claude-haiku-4-5-20251001",
+  "headline_accuracy_original_prompt": 0.875,
+  "headline_accuracy_ci": [
+    0.875,
+    0.775,
+    0.975
+  ],
+  "stable_correct_pct": 0.85,
+  "stable_correct_ci": [
+    0.85,
+    0.725,
+    0.95
+  ],
+  "headline_overstatement_gap": 0.025,
+  "headline_overstatement_gap_ci": [
+    0.025,
+    0.0,
+    0.075
+  ],
+  "SIS_acc": 0.8938,
+  "SIS_consistency": 0.9563,
+  "group_states": {
+    "stable_correct": 34,
+    "stable_wrong": 2,
+    "unstable": 4
+  },
+  "per_variant_accuracy": {
+    "distractor": 0.925,
+    "frame_a": 0.9,
+    "frame_b": 0.875,
+    "original": 0.875
+  },
+  "scope": "measurement-only (no causal DAG); conservative answer-preserving perturbations; zero-shot claude-haiku-4-5-20251001; n=40; single run; verdicts are bootstrap 95% CIs."
+}
