@@ -1,0 +1,166 @@
+{
+  "model": "deepseek-v4-flash",
+  "evaluation": "zero-shot, no fine-tuning",
+  "benchmark": "stable_inference_v3",
+  "n_groups": 100,
+  "n_variants": 5,
+  "overall": {
+    "n_groups": 100,
+    "headline_accuracy": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "stable_correct_pct": [
+      0.74,
+      0.65,
+      0.83
+    ],
+    "headline_overstatement_gap": [
+      0.26,
+      0.18,
+      0.35
+    ],
+    "SIS_acc": 0.948,
+    "SIS_consistency": 0.948,
+    "group_states": {
+      "stable_correct": 74,
+      "stable_wrong": 0,
+      "unstable": 26
+    },
+    "unknown_parses": 0
+  },
+  "by_reasoning_type": {
+    "causal": {
+      "n_groups": 20,
+      "headline_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stable_correct_pct": [
+        0.95,
+        0.85,
+        1.0
+      ],
+      "headline_overstatement_gap": [
+        0.05,
+        0.0,
+        0.15
+      ],
+      "SIS_acc": 0.99,
+      "SIS_consistency": 0.99,
+      "group_states": {
+        "stable_correct": 19,
+        "stable_wrong": 0,
+        "unstable": 1
+      },
+      "unknown_parses": 0
+    },
+    "commonsense": {
+      "n_groups": 20,
+      "headline_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stable_correct_pct": [
+        0.35,
+        0.15,
+        0.55
+      ],
+      "headline_overstatement_gap": [
+        0.65,
+        0.45,
+        0.85
+      ],
+      "SIS_acc": 0.87,
+      "SIS_consistency": 0.87,
+      "group_states": {
+        "stable_correct": 7,
+        "stable_wrong": 0,
+        "unstable": 13
+      },
+      "unknown_parses": 0
+    },
+    "contradiction": {
+      "n_groups": 20,
+      "headline_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stable_correct_pct": [
+        0.55,
+        0.35,
+        0.75
+      ],
+      "headline_overstatement_gap": [
+        0.45,
+        0.25,
+        0.65
+      ],
+      "SIS_acc": 0.91,
+      "SIS_consistency": 0.91,
+      "group_states": {
+        "stable_correct": 11,
+        "stable_wrong": 0,
+        "unstable": 9
+      },
+      "unknown_parses": 0
+    },
+    "taxonomic": {
+      "n_groups": 20,
+      "headline_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stable_correct_pct": [
+        0.85,
+        0.7,
+        1.0
+      ],
+      "headline_overstatement_gap": [
+        0.15,
+        0.0,
+        0.3
+      ],
+      "SIS_acc": 0.97,
+      "SIS_consistency": 0.97,
+      "group_states": {
+        "stable_correct": 17,
+        "stable_wrong": 0,
+        "unstable": 3
+      },
+      "unknown_parses": 0
+    },
+    "transitive": {
+      "n_groups": 20,
+      "headline_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "stable_correct_pct": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "headline_overstatement_gap": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "SIS_acc": 1.0,
+      "SIS_consistency": 1.0,
+      "group_states": {
+        "stable_correct": 20,
+        "stable_wrong": 0,
+        "unstable": 0
+      },
+      "unknown_parses": 0
+    }
+  },
+  "scope": "Zero-shot deepseek-v4-flash on synthetic stable_inference_v3 benchmark; no training signal; verdicts are bootstrap 95% CIs."
+}

@@ -1,0 +1,36 @@
+{
+  "n_items": 400,
+  "model": "deepseek-v4-flash",
+  "headline_accuracy_original_prompt": 0.8825,
+  "headline_accuracy_ci": [
+    0.8825,
+    0.85,
+    0.9125
+  ],
+  "stable_correct_pct": 0.8525,
+  "stable_correct_ci": [
+    0.8525,
+    0.8175,
+    0.8875
+  ],
+  "headline_overstatement_gap": 0.03,
+  "headline_overstatement_gap_ci": [
+    0.03,
+    0.015,
+    0.0475
+  ],
+  "SIS_acc": 0.8888,
+  "SIS_consistency": 0.9712,
+  "group_states": {
+    "stable_correct": 341,
+    "stable_wrong": 29,
+    "unstable": 30
+  },
+  "per_variant_accuracy": {
+    "distractor": 0.9,
+    "frame_a": 0.8925,
+    "frame_b": 0.88,
+    "original": 0.8825
+  },
+  "scope": "measurement-only (no causal DAG); conservative answer-preserving perturbations; zero-shot deepseek-v4-flash; n=400; single run; verdicts are bootstrap 95% CIs."
+}
