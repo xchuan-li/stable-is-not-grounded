@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_012",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_012",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_012_original",
+      "type": "original",
+      "text": "A person is fully asleep and fully awake at the exact same moment. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_012_paraphrase",
+      "type": "paraphrase",
+      "text": "Someone is completely asleep and completely awake at the same instant. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_012_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An individual is entirely asleep and entirely awake at the same time. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_012_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Asleep and awake are mutually exclusive states. One cannot be fully both at once. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_012_distractor",
+      "type": "distractor",
+      "text": "A person is fully asleep and fully awake at the exact same moment. There are several books on the shelf. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

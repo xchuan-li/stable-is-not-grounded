@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_010",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "violin_is_a_musical_instrument",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_010_original",
+      "type": "original",
+      "text": "All string instruments are musical instruments. A violin is a string instrument. Therefore, is a violin a musical instrument?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_010_paraphrase",
+      "type": "paraphrase",
+      "text": "Every string instrument belongs to the category of musical instruments. A violin is classified as a string instrument. Does this mean a violin is a musical instrument?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_010_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All bowed instruments are musical instruments. A concert violin is a bowed instrument. Therefore, is a concert violin a musical instrument?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_010_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A violin belongs to the group of string instruments. The group of string instruments falls under musical instruments. Based on this, is a violin a musical instrument?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_010_distractor",
+      "type": "distractor",
+      "text": "All string instruments are musical instruments. A violin is a string instrument. The weather today is cloudy. Therefore, is a violin a musical instrument?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

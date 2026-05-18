@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_004",
+  "reasoning_type": "contradiction",
+  "expected_answer": "yes",
+  "core_inference": "contradiction_consistent_004",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_004_original",
+      "type": "original",
+      "text": "A door can be open in the morning and closed in the evening. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_004_paraphrase",
+      "type": "paraphrase",
+      "text": "A door is open in the morning and shut by evening. Does this make logical sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_004_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An entrance can be open in the morning and closed at night. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_004_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Different times allow different states. Open then closed at separate times is consistent. Is the described situation logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_004_distractor",
+      "type": "distractor",
+      "text": "A door can be open in the morning and closed in the evening. The room temperature is 22 degrees Celsius. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

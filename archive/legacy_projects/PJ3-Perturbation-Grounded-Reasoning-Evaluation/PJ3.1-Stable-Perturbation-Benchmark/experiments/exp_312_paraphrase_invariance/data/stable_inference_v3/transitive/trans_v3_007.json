@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_007",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "salmon_are_animals",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_007_original",
+      "type": "original",
+      "text": "All salmon are fish. All fish are animals. Are salmon animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_007_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of salmon is among fish. Every member of fish is among animals. Does it follow that salmon are animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_007_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All Atlantic salmon are aquatic vertebrates. All aquatic vertebrates are animals. Are Atlantic salmon animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_007_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "animals include all fish. fish include all salmon. Therefore, are salmon animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_007_distractor",
+      "type": "distractor",
+      "text": "All salmon are fish. All fish are animals. Someone left the door open earlier. Are salmon animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

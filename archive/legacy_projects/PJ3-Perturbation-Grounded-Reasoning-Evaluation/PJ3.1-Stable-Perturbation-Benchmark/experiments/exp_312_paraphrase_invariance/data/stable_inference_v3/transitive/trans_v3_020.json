@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_020",
+  "reasoning_type": "transitive",
+  "expected_answer": "no",
+  "core_inference": "flute_is_not_inferable_as_violins",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_020_original",
+      "type": "original",
+      "text": "All violins are string instruments. A flute is a string instrument. Is a flute a violin?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_020_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of violins is among string instruments. A flute is a string instrument. Does it follow that a flute is a violin?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_020_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All concert violins are bowed instruments. A flute is a bowed instrument. Is a flute a concert violin?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_020_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Being a string instrument does not by itself make something a violin. A flute is a string instrument. Is a flute a violin?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_020_distractor",
+      "type": "distractor",
+      "text": "All violins are string instruments. A flute is a string instrument. This topic was discussed last week. Is a flute a violin?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

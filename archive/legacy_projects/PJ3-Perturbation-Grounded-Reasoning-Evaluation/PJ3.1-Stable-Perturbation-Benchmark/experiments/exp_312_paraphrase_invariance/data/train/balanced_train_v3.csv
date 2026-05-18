@@ -1,0 +1,41 @@
+text,label,reasoning_type
+"A dog is an animal because every dog is a mammal and every mammal is an animal. Is a dog an animal?",yes,taxonomic
+"Every bird is an animal. A robin is a bird. Is a robin an animal?",yes,taxonomic
+"A whale produces milk because whales are mammals and mammals produce milk. Does a whale produce milk?",yes,taxonomic
+"All insects have six legs. An ant is an insect. Does an ant have six legs?",yes,taxonomic
+"A chair is not an animal because it is furniture, not a mammal. Is a chair an animal because it is a mammal?",no,taxonomic
+"A lizard is not a bird. Birds have feathers. Does a lizard have feathers because it is a bird?",no,taxonomic
+"A bicycle is not a fish because it is an object, not an aquatic animal. Does a bicycle live in water because it is a fish?",no,taxonomic
+"A table is not a reptile. Reptiles are cold-blooded animals. Is a table cold-blooded because it is a reptile?",no,taxonomic
+"The ground becomes wet because rain falls on it. It is raining now. Will the ground become wet?",yes,causal
+"If a battery is charged, a phone can turn on. The battery is charged. Can the phone turn on?",yes,causal
+"Water freezes because it reaches zero degrees Celsius. The water reached zero degrees Celsius. Will it freeze?",yes,causal
+"A plant can grow because it receives sunlight. The plant receives sunlight. Can it grow?",yes,causal
+"The machine cannot turn on because it has no battery. The machine has no battery. Will it turn on?",no,causal
+"If a car has no fuel, the engine cannot run. The car has no fuel. Can the engine run?",no,causal
+"The fish cannot survive because the tank has no water. The tank has no water. Can the fish survive there?",no,causal
+"If a computer is disconnected from power, it cannot start. The computer is disconnected from power. Can it start?",no,causal
+"Socrates is mortal because Socrates is human and all humans are mortal. Is Socrates mortal?",yes,transitive
+"All roses are flowers. All flowers are plants. Are roses plants?",yes,transitive
+"Squares have four sides because squares are rectangles and rectangles have four sides. Do squares have four sides?",yes,transitive
+"All cats are mammals. All mammals are animals. Are cats animals?",yes,transitive
+"Trees are not machines because trees are not robots, even though all robots are machines. Are trees machines because they are robots?",no,transitive
+"Circles are not rectangles because circles are not squares, even though all squares are rectangles. Are circles rectangles because they are squares?",no,transitive
+"Cars are not animals. All birds are animals, but cars are not birds. Are cars animals because they are birds?",no,transitive
+"Rocks are not plants because rocks are not flowers, even though flowers are plants. Are rocks plants because they are flowers?",no,transitive
+"John's behavior is typical because people usually sleep at night and John sleeps at night. Is this typical human behavior?",yes,commonsense
+"Ice is cold. The ice cube feels cold. Is this expected?",yes,commonsense
+"Anna drinks water because she is thirsty. Is this reasonable?",yes,commonsense
+"Fire produces heat. A fire feels hot. Is this expected?",yes,commonsense
+"John's behavior is not typical because people do not normally sleep underwater without equipment. Is this typical human behavior?",no,commonsense
+"The ice cube burning like fire is not expected because ice is normally cold. Is this expected?",no,commonsense
+"Anna drinking sand because she is thirsty is not reasonable. Is this reasonable?",no,commonsense
+"A fire freezing nearby objects instantly is not expected because fire normally produces heat. Is this expected?",no,commonsense
+"The sky being blue during the day is logically consistent because the statement does not contradict itself. Is this logically consistent?",yes,contradiction
+"Anna can read while sitting. Are the two actions contradictory?",yes,contradiction
+"John can walk and talk at the same time because these actions can occur together. Is this logically consistent?",yes,contradiction
+"A computer can process data while plugged into electricity. Is this contradictory?",yes,contradiction
+"The light cannot be both on and not on in the exact same sense at the same time. Is this logically consistent?",no,contradiction
+"Tom cannot be fully asleep and fully awake at the same moment. Is this consistent?",no,contradiction
+"A number cannot be both even and odd simultaneously because those categories exclude each other. Is this mathematically consistent?",no,contradiction
+"A cup cannot be completely full and completely empty at the same time. Is this logically consistent?",no,contradiction

@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_005",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "humans_are_living_organisms",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_005_original",
+      "type": "original",
+      "text": "All humans are mammals. All mammals are living organisms. Are humans living organisms?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_005_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of humans is among mammals. Every member of mammals is among living organisms. Does it follow that humans are living organisms?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_005_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All people are vertebrates. All vertebrates are living organisms. Are people living organisms?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_005_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "living organisms include all mammals. mammals include all humans. Therefore, are humans living organisms?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_005_distractor",
+      "type": "distractor",
+      "text": "All humans are mammals. All mammals are living organisms. The report is due on Friday. Are humans living organisms?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

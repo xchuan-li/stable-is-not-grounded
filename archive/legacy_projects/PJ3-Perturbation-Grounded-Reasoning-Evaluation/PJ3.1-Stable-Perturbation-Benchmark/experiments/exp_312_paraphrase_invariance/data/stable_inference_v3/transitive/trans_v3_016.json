@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_016",
+  "reasoning_type": "transitive",
+  "expected_answer": "no",
+  "core_inference": "shark_is_not_inferable_as_salmon",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_016_original",
+      "type": "original",
+      "text": "All salmon are fish. A shark is a fish. Is a shark a salmon?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_016_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of salmon is among fish. A shark is a fish. Does it follow that a shark is a salmon?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_016_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All Atlantic salmon are aquatic vertebrates. A shark is an aquatic vertebrate. Is a shark an Atlantic salmon?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_016_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Being a fish does not by itself make something a salmon. A shark is a fish. Is a shark a salmon?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_016_distractor",
+      "type": "distractor",
+      "text": "All salmon are fish. A shark is a fish. The weather today is cloudy. Is a shark a salmon?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

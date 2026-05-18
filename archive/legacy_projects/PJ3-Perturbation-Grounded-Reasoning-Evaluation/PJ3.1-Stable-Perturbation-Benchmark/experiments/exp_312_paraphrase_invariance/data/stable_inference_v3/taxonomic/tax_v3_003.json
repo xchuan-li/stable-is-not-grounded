@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_003",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "rose_is_a_plant",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_003_original",
+      "type": "original",
+      "text": "All flowers are plants. A rose is a flower. Therefore, is a rose a plant?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_003_paraphrase",
+      "type": "paraphrase",
+      "text": "Every flower belongs to the category of plants. A rose is classified as a flower. Does this mean a rose is a plant?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_003_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All blossoms are plants. A garden rose is a blossom. Therefore, is a garden rose a plant?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A rose belongs to the group of flowers. The group of flowers falls under plants. Based on this, is a rose a plant?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_003_distractor",
+      "type": "distractor",
+      "text": "All flowers are plants. A rose is a flower. The report is due on Friday. Therefore, is a rose a plant?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

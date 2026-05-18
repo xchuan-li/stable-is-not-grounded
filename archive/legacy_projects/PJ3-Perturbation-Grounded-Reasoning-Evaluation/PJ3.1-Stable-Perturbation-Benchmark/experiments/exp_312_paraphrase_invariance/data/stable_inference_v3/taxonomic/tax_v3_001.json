@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_001",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "sparrow_is_a_animal",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_001_original",
+      "type": "original",
+      "text": "All birds are animals. A sparrow is a bird. Therefore, is a sparrow an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_001_paraphrase",
+      "type": "paraphrase",
+      "text": "Every bird belongs to the category of animals. A sparrow is classified as a bird. Does this mean a sparrow is an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_001_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All avians are animals. A songbird is an avian. Therefore, is a songbird an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_001_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A sparrow belongs to the group of birds. The group of birds falls under animals. Based on this, is a sparrow an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_001_distractor",
+      "type": "distractor",
+      "text": "All birds are animals. A sparrow is a bird. This topic was discussed last week. Therefore, is a sparrow an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

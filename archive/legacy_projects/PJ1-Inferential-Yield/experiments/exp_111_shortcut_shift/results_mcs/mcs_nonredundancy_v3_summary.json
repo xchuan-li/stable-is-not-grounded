@@ -1,0 +1,81 @@
+{
+  "design": "two-premise transitive M (binding B==B2). Relative-learnability lever: shortcut_available corrupts ~12% of training labels off the binding while color tracks the label at s=1.0, so the shortcut is STRICTLY more reliable than the chain. Eval gold = true binding answer; verdicts are bootstrap-95%-CI based, no hard thresholds.",
+  "regime_chain_required": {
+    "measured_|r|": {
+      "color": 0.0072,
+      "name": 0.0004
+    },
+    "class_assignment": {
+      "color": "class-2",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc_ci": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "P1_ablate_withhold_ci": [
+      0.8,
+      0.7793,
+      0.8213
+    ],
+    "P2_ablate_withhold_ci": [
+      0.8347,
+      0.8153,
+      0.8533
+    ],
+    "drop_do(color)_class3_ci": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drop_do(name)_class2_ci": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nonredundancy_respected": true,
+    "nonredundancy_fails_decoupled": false,
+    "flagged_correlational": false
+  },
+  "regime_shortcut_available": {
+    "measured_|r|": {
+      "color": 1.0,
+      "name": 0.0113
+    },
+    "class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc_ci": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "P1_ablate_withhold_ci": [
+      0.4907,
+      0.4653,
+      0.5167
+    ],
+    "P2_ablate_withhold_ci": [
+      0.518,
+      0.4933,
+      0.5427
+    ],
+    "drop_do(color)_class3_ci": [
+      0.5013,
+      0.4753,
+      0.5267
+    ],
+    "drop_do(name)_class2_ci": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nonredundancy_respected": false,
+    "nonredundancy_fails_decoupled": true,
+    "flagged_correlational": true
+  },
+  "validated_specific_and_sensitive": true,
+  "scope": "synthetic, single seed-set fine-tune per regime; multi-seed variance is the documented extension."
+}

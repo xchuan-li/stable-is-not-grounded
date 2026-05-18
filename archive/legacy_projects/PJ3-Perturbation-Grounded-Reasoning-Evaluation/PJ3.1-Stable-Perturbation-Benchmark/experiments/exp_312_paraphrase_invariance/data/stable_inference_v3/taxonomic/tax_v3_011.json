@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_011",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "no",
+  "core_inference": "bicycle_is_not_inferable_as_animal",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_011_original",
+      "type": "original",
+      "text": "All fish are animals. A bicycle is not a fish. Therefore, is a bicycle an animal?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_011_paraphrase",
+      "type": "paraphrase",
+      "text": "Every fish belongs to the category of animals. A bicycle is not a fish. Does it follow that a bicycle is an animal?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_011_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All aquatic animals are animals. A mountain bike is not an aquatic animal. Therefore, is a mountain bike an animal?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_011_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A bicycle is not in the group of fish. Only fish are stated to be animals here. Based on this, is a bicycle an animal?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_011_distractor",
+      "type": "distractor",
+      "text": "All fish are animals. A bicycle is not a fish. The weather today is cloudy. Therefore, is a bicycle an animal?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_016",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "it_rings_in_the_morning_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_016_original",
+      "type": "original",
+      "text": "If the alarm is set, then it rings in the morning. It is not the case that the alarm is set. Does it follow that it rings in the morning?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_016_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the alarm is set, it rings in the morning. However, in this situation it is not true that the alarm is set. Can we conclude that it rings in the morning?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_016_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the alarm is configured, then it sounds in the morning. It is not the case that the alarm is configured. Does it follow that it sounds in the morning?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_016_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'it rings in the morning' is 'the alarm is set'. That cause did not occur. Can we conclude that it rings in the morning?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_016_distractor",
+      "type": "distractor",
+      "text": "If the alarm is set, then it rings in the morning. It is not the case that the alarm is set. A blue car is parked outside. Does it follow that it rings in the morning?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

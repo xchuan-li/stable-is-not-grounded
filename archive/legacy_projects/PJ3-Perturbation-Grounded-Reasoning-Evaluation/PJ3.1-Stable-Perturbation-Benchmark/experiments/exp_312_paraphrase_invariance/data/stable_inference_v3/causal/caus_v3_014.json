@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_014",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "the_plant_grows_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_014_original",
+      "type": "original",
+      "text": "If the plant receives sunlight, then the plant grows. It is not the case that the plant receives sunlight. Does it follow that the plant grows?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_014_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the plant receives sunlight, the plant grows. However, in this situation it is not true that the plant receives sunlight. Can we conclude that the plant grows?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_014_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the plant gets sunshine, then the plant develops. It is not the case that the plant gets sunshine. Does it follow that the plant develops?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_014_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'the plant grows' is 'the plant receives sunlight'. That cause did not occur. Can we conclude that the plant grows?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_014_distractor",
+      "type": "distractor",
+      "text": "If the plant receives sunlight, then the plant grows. It is not the case that the plant receives sunlight. A blue car is parked outside. Does it follow that the plant grows?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

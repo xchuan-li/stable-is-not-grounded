@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_002",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "dog_is_a_animal",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_002_original",
+      "type": "original",
+      "text": "All mammals are animals. A dog is a mammal. Therefore, is a dog an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_002_paraphrase",
+      "type": "paraphrase",
+      "text": "Every mammal belongs to the category of animals. A dog is classified as a mammal. Does this mean a dog is an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_002_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All warm-blooded vertebrates are animals. A hound is a warm-blooded vertebrate. Therefore, is a hound an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_002_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "A dog belongs to the group of mammals. The group of mammals falls under animals. Based on this, is a dog an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_002_distractor",
+      "type": "distractor",
+      "text": "All mammals are animals. A dog is a mammal. The weather today is cloudy. Therefore, is a dog an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_014",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_014",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_014_original",
+      "type": "original",
+      "text": "A fish breathes air comfortably for days on dry land. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_014_paraphrase",
+      "type": "paraphrase",
+      "text": "A fish breathes air easily for days out of water. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_014_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A fish respires air comfortably for days on dry ground. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_014_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Fish breathe through gills that need water. On land for days a fish cannot breathe. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_014_distractor",
+      "type": "distractor",
+      "text": "A fish breathes air comfortably for days on dry land. The report is due on Friday. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

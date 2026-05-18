@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_003",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "squares_are_polygons",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_003_original",
+      "type": "original",
+      "text": "All squares are rectangles. All rectangles are polygons. Are squares polygons?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_003_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of squares is among rectangles. Every member of rectangles is among polygons. Does it follow that squares are polygons?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_003_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All regular quadrilaterals are right-angled quadrilaterals. All right-angled quadrilaterals are polygons. Are regular quadrilaterals polygons?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_003_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "polygons include all rectangles. rectangles include all squares. Therefore, are squares polygons?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_003_distractor",
+      "type": "distractor",
+      "text": "All squares are rectangles. All rectangles are polygons. The meeting started at noon. Are squares polygons?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

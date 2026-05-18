@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_019",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_019",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_019_original",
+      "type": "original",
+      "text": "A box is inside itself completely. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_019_paraphrase",
+      "type": "paraphrase",
+      "text": "A box is fully contained within its own self. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_019_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A container is entirely inside itself. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_019_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "An object cannot completely contain itself. This is impossible. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_019_distractor",
+      "type": "distractor",
+      "text": "A box is inside itself completely. This topic was discussed last week. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_005",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_005",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_005_original",
+      "type": "original",
+      "text": "People sleep at night to rest. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_005_paraphrase",
+      "type": "paraphrase",
+      "text": "Humans sleep during the night to recover. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_005_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Individuals slumber at night to rest. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_005_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Rest requires sleep. People sleep at night to obtain that rest. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_005_distractor",
+      "type": "distractor",
+      "text": "People sleep at night to rest. The meeting started at noon. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

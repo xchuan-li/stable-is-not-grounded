@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_010",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_010",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_010_original",
+      "type": "original",
+      "text": "A knife is used to cut food. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_010_paraphrase",
+      "type": "paraphrase",
+      "text": "People use a knife to cut food. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_010_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A blade is used to slice food. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_010_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Cutting needs a sharp edge. A knife has a sharp edge, so it cuts food. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_010_distractor",
+      "type": "distractor",
+      "text": "A knife is used to cut food. Someone left the door open earlier. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

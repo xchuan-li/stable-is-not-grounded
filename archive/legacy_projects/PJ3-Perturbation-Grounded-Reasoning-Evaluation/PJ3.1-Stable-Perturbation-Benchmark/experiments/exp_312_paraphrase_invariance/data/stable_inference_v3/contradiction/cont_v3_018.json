@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_018",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_018",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_018_original",
+      "type": "original",
+      "text": "A person is taller than themselves. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_018_paraphrase",
+      "type": "paraphrase",
+      "text": "Someone is taller than their own height. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_018_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An individual exceeds their own height. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_018_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Nothing can be taller than itself. This is self-contradictory. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_018_distractor",
+      "type": "distractor",
+      "text": "A person is taller than themselves. The meeting started at noon. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

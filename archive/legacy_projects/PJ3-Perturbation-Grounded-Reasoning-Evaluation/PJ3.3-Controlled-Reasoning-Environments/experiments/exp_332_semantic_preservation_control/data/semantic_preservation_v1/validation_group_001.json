@@ -1,0 +1,131 @@
+
+
+{
+  "group_id": "validation_001",
+
+  "core_inference": "birds_can_fly",
+
+  "expected_reasoning": "taxonomic_inheritance",
+
+  "original_text": "All birds can fly. A sparrow is a bird. Can the sparrow fly?",
+
+  "original_answer": "yes",
+
+  "samples": [
+
+    {
+      "sample_id": "001_original",
+      "type": "original",
+
+      "text": "All birds can fly. A sparrow is a bird. Can the sparrow fly?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "none",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "Original sample. No semantic transformation is applied."
+    },
+
+    {
+      "sample_id": "001_paraphrase_valid",
+      "type": "paraphrase",
+
+      "text": "Every bird is capable of flight. A sparrow belongs to the bird category. Is the sparrow able to fly?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "surface_reformulation",
+
+      "validity_risk": "low",
+
+      "validity_label": "valid",
+
+      "notes": "The wording changes, but the universal rule and taxonomic relation remain unchanged."
+    },
+
+    {
+      "sample_id": "001_lexical_valid",
+      "type": "lexical_shift",
+
+      "text": "All avians can fly. A sparrow is an avian. Can the sparrow fly?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "lexical_substitution",
+
+      "validity_risk": "low",
+
+      "validity_label": "lexical_valid",
+
+      "notes": "The word 'bird' is replaced by 'avian' while preserving the same taxonomic inference."
+    },
+
+    {
+      "sample_id": "001_distractor_valid",
+      "type": "distractor",
+
+      "text": "All birds can fly. Apples are usually red. A sparrow is a bird. Can the sparrow fly?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": true,
+
+      "semantic_change_type": "irrelevant_information_insertion",
+
+      "validity_risk": "low",
+
+      "validity_label": "distractor_valid",
+
+      "notes": "The distractor sentence is irrelevant and does not change the inference structure."
+    },
+
+    {
+      "sample_id": "001_quantifier_shift_invalid",
+      "type": "invalid_perturbation",
+
+      "text": "Most birds can fly. A sparrow is a bird. Can the sparrow fly?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": false,
+
+      "semantic_change_type": "quantifier_shift",
+
+      "validity_risk": "high",
+
+      "validity_label": "invalid",
+
+      "notes": "Changing 'all' to 'most' weakens the universal rule and no longer guarantees the conclusion."
+    },
+
+    {
+      "sample_id": "001_category_shift_invalid",
+      "type": "invalid_perturbation",
+
+      "text": "All birds can fly. A bat is a mammal. Can the bat fly?",
+
+      "answer": "yes",
+
+      "preserves_core_inference": false,
+
+      "semantic_change_type": "entity_category_shift",
+
+      "validity_risk": "high",
+
+      "validity_label": "invalid",
+
+      "notes": "The entity changes from a bird to a mammal, so the original taxonomic inference no longer applies."
+    }
+
+  ]
+}

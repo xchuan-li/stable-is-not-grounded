@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_008",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "ants_are_animals",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_008_original",
+      "type": "original",
+      "text": "All ants are insects. All insects are animals. Are ants animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_008_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of ants is among insects. Every member of insects is among animals. Does it follow that ants are animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_008_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All worker ants are arthropods. All arthropods are animals. Are worker ants animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_008_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "animals include all insects. insects include all ants. Therefore, are ants animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_008_distractor",
+      "type": "distractor",
+      "text": "All ants are insects. All insects are animals. A blue car is parked outside. Are ants animals?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

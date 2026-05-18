@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_019",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "it_becomes_bread_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_019_original",
+      "type": "original",
+      "text": "If the dough is baked, then it becomes bread. It is not the case that the dough is baked. Does it follow that it becomes bread?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_019_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the dough is baked, it becomes bread. However, in this situation it is not true that the dough is baked. Can we conclude that it becomes bread?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_019_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the dough is put in the oven, then it turns into bread. It is not the case that the dough is put in the oven. Does it follow that it turns into bread?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_019_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'it becomes bread' is 'the dough is baked'. That cause did not occur. Can we conclude that it becomes bread?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_019_distractor",
+      "type": "distractor",
+      "text": "If the dough is baked, then it becomes bread. It is not the case that the dough is baked. The report is due on Friday. Does it follow that it becomes bread?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

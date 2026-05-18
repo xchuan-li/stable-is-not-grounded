@@ -1,0 +1,63 @@
+text,label,reasoning_type
+"All mammals are animals. A dog is a mammal. Is a dog an animal?",yes,taxonomic
+"All reptiles are cold-blooded. A snake is a reptile. Is a snake cold-blooded?",yes,taxonomic
+"All birds have feathers. A robin is a bird. Does a robin have feathers?",yes,taxonomic
+"All fish live in water. A tuna is a fish. Does a tuna live in water?",yes,taxonomic
+"All insects have six legs. An ant is an insect. Does an ant have six legs?",yes,taxonomic
+"All mammals produce milk. A whale is a mammal. Does a whale produce milk?",yes,taxonomic
+"All planets orbit stars. Earth is a planet. Does Earth orbit a star?",yes,taxonomic
+"All triangles have three sides. Shape A is a triangle. Does Shape A have three sides?",yes,taxonomic
+"All mammals are animals. A chair is not a mammal. Is a chair an animal because it is a mammal?",no,taxonomic
+"All birds have feathers. A lizard is not a bird. Does a lizard have feathers because it is a bird?",no,taxonomic
+"All fish live in water. A bicycle is not a fish. Does a bicycle live in water because it is a fish?",no,taxonomic
+"All reptiles are cold-blooded. A table is not a reptile. Is a table cold-blooded because it is a reptile?",no,taxonomic
+"All insects have six legs. A mushroom is not an insect. Does a mushroom have six legs because it is an insect?",no,taxonomic
+"All planets orbit stars. A sandwich is not a planet. Does a sandwich orbit a star because it is a planet?",no,taxonomic
+"If it rains, the ground becomes wet. It is raining. Will the ground become wet?",yes,causal
+"If a battery is charged, the phone can turn on. The battery is charged. Can the phone turn on?",yes,causal
+"If water reaches zero degrees Celsius, it freezes. The water reached zero degrees Celsius. Will it freeze?",yes,causal
+"If a car has fuel, the engine can run. The car has fuel. Can the engine run?",yes,causal
+"If a student studies consistently, they may improve their grades. The student studied consistently. Might the grades improve?",yes,causal
+"If a plant receives sunlight, it can grow. The plant receives sunlight. Can it grow?",yes,causal
+"If a machine has no battery, it cannot turn on. The machine has no battery. Will it turn on?",no,causal
+"If water is removed from a fish tank, fish cannot survive there. The tank has no water. Can the fish survive there?",no,causal
+"If a car has no fuel, the engine cannot run. The car has no fuel. Can the engine run?",no,causal
+"If a computer is disconnected from power, it cannot start. The computer is disconnected from power. Can it start?",no,causal
+"If a plant receives no sunlight, it cannot grow properly. The plant receives no sunlight. Can it grow properly?",no,causal
+"If a bridge is broken, cars cannot safely cross it. The bridge is broken. Can cars safely cross it?",no,causal
+"All humans are mortal. Socrates is a human. Is Socrates mortal?",yes,transitive
+"If all books are objects and all objects have weight, do books have weight?",yes,transitive
+"All roses are flowers. All flowers are plants. Are roses plants?",yes,transitive
+"All cats are mammals. All mammals are animals. Are cats animals?",yes,transitive
+"All squares are rectangles. All rectangles have four sides. Do squares have four sides?",yes,transitive
+"All apples are fruits. All fruits contain nutrients. Do apples contain nutrients?",yes,transitive
+"All robots are machines. Trees are not robots. Are trees machines because they are robots?",no,transitive
+"All squares are rectangles. Circles are not squares. Are circles rectangles because they are squares?",no,transitive
+"All birds are animals. Cars are not birds. Are cars animals because they are birds?",no,transitive
+"All flowers are plants. Rocks are not flowers. Are rocks plants because they are flowers?",no,transitive
+"All apples are fruits. Shoes are not apples. Are shoes fruits because they are apples?",no,transitive
+"All cats are mammals. Lamps are not cats. Are lamps mammals because they are cats?",no,transitive
+"People usually sleep at night. John sleeps at night. Is this typical human behavior?",yes,commonsense
+"Ice is cold. The ice cube feels cold. Is this expected?",yes,commonsense
+"People drink water when thirsty. Anna is thirsty and drinks water. Is this reasonable?",yes,commonsense
+"Birds often build nests. A bird builds a nest in spring. Is this normal bird behavior?",yes,commonsense
+"Cars use wheels to move. A car has wheels. Can it move normally?",yes,commonsense
+"Fire produces heat. A fire feels hot. Is this expected?",yes,commonsense
+"People usually sleep at night. John sleeps underwater without equipment every night. Is this typical human behavior?",no,commonsense
+"Ice is cold. The ice cube burns like fire. Is this expected?",no,commonsense
+"People drink water when thirsty. Anna drinks sand because she is thirsty. Is this reasonable?",no,commonsense
+"Birds often build nests. A bird builds a computer instead of a nest. Is this normal bird behavior?",no,commonsense
+"Cars use wheels to move. A car has no wheels but moves normally on roads. Is this expected for ordinary cars?",no,commonsense
+"Fire produces heat. A fire freezes nearby objects instantly. Is this expected?",no,commonsense
+"A statement and its direct negation cannot both be true. The light is on and not on at the same time. Is this logically consistent?",no,contradiction
+"A person cannot be both fully asleep and fully awake simultaneously. Tom is fully asleep and fully awake at the same moment. Is this consistent?",no,contradiction
+"An object cannot be entirely red and entirely blue in the exact same place simultaneously. The wall is fully red and fully blue at once. Is this logically consistent?",no,contradiction
+"A door cannot be both completely open and completely closed at the same time. The door is fully open and fully closed simultaneously. Is this consistent?",no,contradiction
+"A number cannot be both even and odd simultaneously. The number is even and odd at the same time. Is this mathematically consistent?",no,contradiction
+"A cup cannot be completely full and completely empty simultaneously. The cup is entirely full and entirely empty at the same time. Is this logically consistent?",no,contradiction
+"A statement that does not contradict itself is logically consistent. The sky is blue during the day. Is this logically consistent?",yes,contradiction
+"If two claims can both hold simultaneously, there is no contradiction. Anna is reading while sitting. Is this contradictory?",yes,contradiction
+"A person can walk and talk simultaneously. John walks while talking. Is this logically consistent?",yes,contradiction
+"A computer can process data while connected to electricity. The computer processes data while plugged in. Is this contradictory?",yes,contradiction
+"A bird can fly while moving through the air. The bird flies through the sky. Is this contradictory?",yes,contradiction
+"A student can study while listening to quiet music. The student studies while listening to music. Is this logically consistent?",yes,contradiction

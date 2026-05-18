@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_006",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_006",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_006_original",
+      "type": "original",
+      "text": "Rain makes the ground wet. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_006_paraphrase",
+      "type": "paraphrase",
+      "text": "Rainfall leaves the ground wet. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_006_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Precipitation makes the soil wet. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_006_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Water wets surfaces. Rain is water falling, so it wets the ground. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_006_distractor",
+      "type": "distractor",
+      "text": "Rain makes the ground wet. The report is due on Friday. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

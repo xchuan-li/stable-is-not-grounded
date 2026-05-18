@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_018",
+  "reasoning_type": "causal",
+  "expected_answer": "no",
+  "core_inference": "the_light_comes_on_not_inferable_without_cause",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_018_original",
+      "type": "original",
+      "text": "If the switch is flipped, then the light comes on. It is not the case that the switch is flipped. Does it follow that the light comes on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_018_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the switch is flipped, the light comes on. However, in this situation it is not true that the switch is flipped. Can we conclude that the light comes on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_018_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the switch is toggled, then the light illuminates. It is not the case that the switch is toggled. Does it follow that the light illuminates?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_018_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The only stated cause of 'the light comes on' is 'the switch is flipped'. That cause did not occur. Can we conclude that the light comes on?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_018_distractor",
+      "type": "distractor",
+      "text": "If the switch is flipped, then the light comes on. It is not the case that the switch is flipped. Someone left the door open earlier. Does it follow that the light comes on?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

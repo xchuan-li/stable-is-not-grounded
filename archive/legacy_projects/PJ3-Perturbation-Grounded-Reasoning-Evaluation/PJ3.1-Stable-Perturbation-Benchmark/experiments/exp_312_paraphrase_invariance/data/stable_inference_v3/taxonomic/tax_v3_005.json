@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_005",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "ant_is_a_animal",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_005_original",
+      "type": "original",
+      "text": "All insects are animals. An ant is an insect. Therefore, is an ant an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_005_paraphrase",
+      "type": "paraphrase",
+      "text": "Every insect belongs to the category of animals. An ant is classified as an insect. Does this mean an ant is an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_005_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All arthropods are animals. A worker ant is an arthropod. Therefore, is a worker ant an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_005_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "An ant belongs to the group of insects. The group of insects falls under animals. Based on this, is an ant an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_005_distractor",
+      "type": "distractor",
+      "text": "All insects are animals. An ant is an insect. Someone left the door open earlier. Therefore, is an ant an animal?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

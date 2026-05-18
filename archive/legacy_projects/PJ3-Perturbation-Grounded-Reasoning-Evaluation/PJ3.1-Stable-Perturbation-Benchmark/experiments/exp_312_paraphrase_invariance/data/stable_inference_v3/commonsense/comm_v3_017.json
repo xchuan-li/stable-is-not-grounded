@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_017",
+  "reasoning_type": "commonsense",
+  "expected_answer": "no",
+  "core_inference": "commonsense_violation_017",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_017_original",
+      "type": "original",
+      "text": "A car runs normally for hours with an empty fuel tank. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_017_paraphrase",
+      "type": "paraphrase",
+      "text": "A car drives normally for hours on an empty tank. Does this match everyday common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_017_lexical_shift",
+      "type": "lexical_shift",
+      "text": "An automobile operates for hours with no fuel in the tank. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_017_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Engines need fuel to run. With an empty tank a car cannot run for hours. Is the described situation expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_017_distractor",
+      "type": "distractor",
+      "text": "A car runs normally for hours with an empty fuel tank. A blue car is parked outside. Is this expected based on common sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

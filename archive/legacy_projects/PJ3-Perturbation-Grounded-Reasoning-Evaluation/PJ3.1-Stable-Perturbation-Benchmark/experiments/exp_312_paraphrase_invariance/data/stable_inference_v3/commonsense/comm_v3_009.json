@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_009",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_009",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_009_original",
+      "type": "original",
+      "text": "Plants need light to grow. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_009_paraphrase",
+      "type": "paraphrase",
+      "text": "Plants require light in order to grow. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_009_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Vegetation needs illumination to develop. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_009_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Growth needs energy from light. Plants use light, so they need it to grow. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_009_distractor",
+      "type": "distractor",
+      "text": "Plants need light to grow. The weather today is cloudy. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

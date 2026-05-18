@@ -1,0 +1,46 @@
+{
+  "group_id": "tax_v3_009",
+  "reasoning_type": "taxonomic",
+  "expected_answer": "yes",
+  "core_inference": "apple_is_a_food",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "tax_v3_009_original",
+      "type": "original",
+      "text": "All fruits are foods. An apple is a fruit. Therefore, is an apple a food?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_009_paraphrase",
+      "type": "paraphrase",
+      "text": "Every fruit belongs to the category of foods. An apple is classified as a fruit. Does this mean an apple is a food?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_009_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All edible fruits are foods. A red apple is an edible fruit. Therefore, is a red apple a food?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_009_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "An apple belongs to the group of fruits. The group of fruits falls under foods. Based on this, is an apple a food?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "tax_v3_009_distractor",
+      "type": "distractor",
+      "text": "All fruits are foods. An apple is a fruit. The meeting started at noon. Therefore, is an apple a food?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

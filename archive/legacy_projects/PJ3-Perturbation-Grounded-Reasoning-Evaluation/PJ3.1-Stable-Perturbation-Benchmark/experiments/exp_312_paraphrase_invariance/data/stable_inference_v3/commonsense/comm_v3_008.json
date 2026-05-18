@@ -1,0 +1,46 @@
+{
+  "group_id": "comm_v3_008",
+  "reasoning_type": "commonsense",
+  "expected_answer": "yes",
+  "core_inference": "commonsense_expected_008",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "comm_v3_008_original",
+      "type": "original",
+      "text": "Wearing a coat keeps you warm in winter. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_008_paraphrase",
+      "type": "paraphrase",
+      "text": "A coat keeps a person warm during winter. Does this match everyday common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_008_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Donning a jacket keeps you warm in the cold season. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_008_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Insulation retains body heat. A coat insulates, so it keeps you warm. Is the described situation expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "comm_v3_008_distractor",
+      "type": "distractor",
+      "text": "Wearing a coat keeps you warm in winter. A blue car is parked outside. Is this expected based on common sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

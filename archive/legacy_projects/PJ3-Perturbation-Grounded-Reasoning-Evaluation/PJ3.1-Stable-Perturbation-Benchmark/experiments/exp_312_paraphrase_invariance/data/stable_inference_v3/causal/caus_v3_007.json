@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_007",
+  "reasoning_type": "causal",
+  "expected_answer": "yes",
+  "core_inference": "it_boils",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_007_original",
+      "type": "original",
+      "text": "If the water reaches 100 degrees Celsius, then it boils. The water reaches 100 degrees celsius. Does it follow that it boils?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_007_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the water reaches 100 degrees Celsius, it boils as a result. In this case the water reaches 100 degrees Celsius. Can we conclude that it boils?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_007_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the water hits boiling point, then it starts boiling. The water hits boiling point. Does it follow that it starts boiling?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_007_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The condition for 'it boils' is met because the water reaches 100 degrees Celsius. Does it follow that it boils?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_007_distractor",
+      "type": "distractor",
+      "text": "If the water reaches 100 degrees Celsius, then it boils. The water reaches 100 degrees celsius. The report is due on Friday. Does it follow that it boils?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

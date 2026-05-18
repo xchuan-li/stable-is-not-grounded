@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_008",
+  "reasoning_type": "causal",
+  "expected_answer": "yes",
+  "core_inference": "the_light_comes_on",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_008_original",
+      "type": "original",
+      "text": "If the switch is flipped, then the light comes on. The switch is flipped. Does it follow that the light comes on?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_008_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the switch is flipped, the light comes on as a result. In this case the switch is flipped. Can we conclude that the light comes on?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_008_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the switch is toggled, then the light illuminates. The switch is toggled. Does it follow that the light illuminates?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_008_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The condition for 'the light comes on' is met because the switch is flipped. Does it follow that the light comes on?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_008_distractor",
+      "type": "distractor",
+      "text": "If the switch is flipped, then the light comes on. The switch is flipped. This topic was discussed last week. Does it follow that the light comes on?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

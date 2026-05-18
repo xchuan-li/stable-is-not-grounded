@@ -1,0 +1,46 @@
+{
+  "group_id": "caus_v3_010",
+  "reasoning_type": "causal",
+  "expected_answer": "yes",
+  "core_inference": "a_sprout_appears",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "caus_v3_010_original",
+      "type": "original",
+      "text": "If the seed is planted and watered, then a sprout appears. The seed is planted and watered. Does it follow that a sprout appears?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_010_paraphrase",
+      "type": "paraphrase",
+      "text": "Whenever the seed is planted and watered, a sprout appears as a result. In this case the seed is planted and watered. Can we conclude that a sprout appears?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_010_lexical_shift",
+      "type": "lexical_shift",
+      "text": "If the seed is sown and irrigated, then a shoot emerges. The seed is sown and irrigated. Does it follow that a shoot emerges?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_010_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The condition for 'a sprout appears' is met because the seed is planted and watered. Does it follow that a sprout appears?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "caus_v3_010_distractor",
+      "type": "distractor",
+      "text": "If the seed is planted and watered, then a sprout appears. The seed is planted and watered. This topic was discussed last week. Does it follow that a sprout appears?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

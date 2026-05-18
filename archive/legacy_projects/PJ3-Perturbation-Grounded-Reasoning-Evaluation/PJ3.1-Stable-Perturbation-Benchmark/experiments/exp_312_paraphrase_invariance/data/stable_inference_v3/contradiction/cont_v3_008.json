@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_008",
+  "reasoning_type": "contradiction",
+  "expected_answer": "yes",
+  "core_inference": "contradiction_consistent_008",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_008_original",
+      "type": "original",
+      "text": "A number can be both greater than two and less than ten. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_008_paraphrase",
+      "type": "paraphrase",
+      "text": "A number is simultaneously larger than two and smaller than ten. Does this make logical sense?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_008_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A value can be both above two and below ten. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_008_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "The ranges overlap between two and ten. A number like five satisfies both, so this is consistent. Is the described situation logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_008_distractor",
+      "type": "distractor",
+      "text": "A number can be both greater than two and less than ten. The meeting started at noon. Is this logically consistent?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

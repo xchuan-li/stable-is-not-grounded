@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_020",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_020",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_020_original",
+      "type": "original",
+      "text": "It is raining everywhere and raining nowhere at the same time. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_020_paraphrase",
+      "type": "paraphrase",
+      "text": "It rains in all places and in no places simultaneously. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_020_lexical_shift",
+      "type": "lexical_shift",
+      "text": "Rain falls everywhere and nowhere at the same moment. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_020_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Everywhere and nowhere are complete opposites. Both cannot be true at once. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_020_distractor",
+      "type": "distractor",
+      "text": "It is raining everywhere and raining nowhere at the same time. The meeting started at noon. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

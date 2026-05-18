@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_001",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "roses_are_plants",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_001_original",
+      "type": "original",
+      "text": "All roses are flowers. All flowers are plants. Are roses plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_001_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of roses is among flowers. Every member of flowers is among plants. Does it follow that roses are plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_001_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All garden roses are blossoms. All blossoms are plants. Are garden roses plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_001_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "plants include all flowers. flowers include all roses. Therefore, are roses plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_001_distractor",
+      "type": "distractor",
+      "text": "All roses are flowers. All flowers are plants. The weather today is cloudy. Are roses plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_014",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_014",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_014_original",
+      "type": "original",
+      "text": "A cup is completely full and completely empty at the same time. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_014_paraphrase",
+      "type": "paraphrase",
+      "text": "A cup is entirely full and entirely empty simultaneously. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_014_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A glass is totally full and totally empty at once. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_014_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Completely full and completely empty exclude each other. Both cannot hold at once. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_014_distractor",
+      "type": "distractor",
+      "text": "A cup is completely full and completely empty at the same time. The weather today is cloudy. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

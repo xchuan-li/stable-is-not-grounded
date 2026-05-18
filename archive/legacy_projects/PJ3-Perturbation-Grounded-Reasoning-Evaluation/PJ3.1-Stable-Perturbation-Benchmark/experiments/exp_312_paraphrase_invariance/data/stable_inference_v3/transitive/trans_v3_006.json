@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_006",
+  "reasoning_type": "transitive",
+  "expected_answer": "yes",
+  "core_inference": "oaks_are_plants",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_006_original",
+      "type": "original",
+      "text": "All oaks are trees. All trees are plants. Are oaks plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_006_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of oaks is among trees. Every member of trees is among plants. Does it follow that oaks are plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_006_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All oak trees are woody plants. All woody plants are plants. Are oak trees plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_006_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "plants include all trees. trees include all oaks. Therefore, are oaks plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_006_distractor",
+      "type": "distractor",
+      "text": "All oaks are trees. All trees are plants. The room temperature is 22 degrees Celsius. Are oaks plants?",
+      "answer": "yes",
+      "validity_label": "valid"
+    }
+  ]
+}

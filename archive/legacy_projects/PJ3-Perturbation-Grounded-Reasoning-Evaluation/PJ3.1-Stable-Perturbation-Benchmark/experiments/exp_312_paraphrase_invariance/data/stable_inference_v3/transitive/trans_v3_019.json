@@ -1,0 +1,46 @@
+{
+  "group_id": "trans_v3_019",
+  "reasoning_type": "transitive",
+  "expected_answer": "no",
+  "core_inference": "carrot_is_not_inferable_as_apples",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "trans_v3_019_original",
+      "type": "original",
+      "text": "All apples are fruits. A carrot is a fruit. Is a carrot an apple?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_019_paraphrase",
+      "type": "paraphrase",
+      "text": "Every member of apples is among fruits. A carrot is a fruit. Does it follow that a carrot is an apple?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_019_lexical_shift",
+      "type": "lexical_shift",
+      "text": "All red apples are edible fruits. A carrot is an edible fruit. Is a carrot a red apple?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_019_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "Being a fruit does not by itself make something an apple. A carrot is a fruit. Is a carrot an apple?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "trans_v3_019_distractor",
+      "type": "distractor",
+      "text": "All apples are fruits. A carrot is a fruit. The meeting started at noon. Is a carrot an apple?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}

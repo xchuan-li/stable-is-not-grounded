@@ -1,0 +1,46 @@
+{
+  "group_id": "cont_v3_011",
+  "reasoning_type": "contradiction",
+  "expected_answer": "no",
+  "core_inference": "contradiction_inconsistent_011",
+  "difficulty": "easy",
+  "semantic_risk": "low",
+  "source_type": "auto_v3_template",
+  "samples": [
+    {
+      "sample_id": "cont_v3_011_original",
+      "type": "original",
+      "text": "A light is completely on and completely off at the same moment in the same way. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_011_paraphrase",
+      "type": "paraphrase",
+      "text": "A light is fully on and fully off at the same instant in the same sense. Does this make logical sense?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_011_lexical_shift",
+      "type": "lexical_shift",
+      "text": "A lamp is entirely on and entirely off at once in the same way. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_011_reasoning_path_shift",
+      "type": "reasoning_path_shift",
+      "text": "On and off in the same sense at the same instant are mutually exclusive. They cannot both hold. Is the described situation logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    },
+    {
+      "sample_id": "cont_v3_011_distractor",
+      "type": "distractor",
+      "text": "A light is completely on and completely off at the same moment in the same way. The room temperature is 22 degrees Celsius. Is this logically consistent?",
+      "answer": "no",
+      "validity_label": "valid"
+    }
+  ]
+}
