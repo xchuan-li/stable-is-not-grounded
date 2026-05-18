@@ -201,6 +201,10 @@ def build_model(device):
         trust_remote_code=True,
         local_files_only=True,
     )
+    # Qwen2.5 has no pad_token_id by default; reuse eos_token_id
+    if base.config.pad_token_id is None:
+        base.config.pad_token_id = base.config.eos_token_id
+
     lora_cfg = LoraConfig(
         task_type      = TaskType.SEQ_CLS,
         r              = LORA_R,
