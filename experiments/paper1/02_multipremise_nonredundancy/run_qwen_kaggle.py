@@ -63,7 +63,7 @@ MODEL_NAME = _find_model_path()
 MAX_LEN     = 96        # inputs are short; 96 is ample
 EPOCHS      = 5         # LoRA needs a few more epochs than full fine-tune
 BATCH       = 8         # conservative for T4 + 1.5B
-LR          = 1e-4      # standard LoRA learning rate
+LR          = 2e-5      # conservative for fp16 + 1.5B LoRA
 LORA_R      = 8
 LORA_ALPHA  = 16
 LORA_DROPOUT = 0.05
@@ -241,6 +241,7 @@ def train_model(df, tok, device):
             opt.zero_grad()
             out = model(**enc, labels=y)
             out.loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
             opt.step()
             tot += out.loss.item()
         print(f"    epoch {ep+1}/{EPOCHS}  loss={tot/len(dl):.4f}", flush=True)
