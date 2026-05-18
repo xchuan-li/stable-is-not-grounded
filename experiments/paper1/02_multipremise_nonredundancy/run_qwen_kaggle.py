@@ -197,7 +197,7 @@ def build_model(device):
     base = AutoModelForSequenceClassification.from_pretrained(
         MODEL_NAME,
         num_labels=2,
-        torch_dtype=torch.float16 if device.type == "cuda" else torch.float32,
+        torch_dtype=torch.float32,
         trust_remote_code=True,
         local_files_only=True,
     )
