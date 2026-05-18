@@ -87,6 +87,41 @@ def make_text(p1, p2, a, b, b2, c, name, color):
     return " ".join(parts)
 
 
+def gen_class1_intervention(n, s, seed, names, color_mode):
+    """
+    Class-1 intervention: take would-be-YES items and break the chain at P2
+    by replacing the middle term b with b_prime (b_prime != b).
+
+    Surface form: P1 intact ("All a are b"), P2 broken ("All b_prime are c").
+    Gold = 0 (NO — chain no longer licenses C).
+
+    Color is set to tempt YES (color_target=1) so that in shortcut_available
+    a color-rider is actively pushed toward the wrong answer.  In
+    chain_required color is random (color_mode="severed") so it plays no role.
+
+    flip_rate = fraction of items model answers 0 (NO) = correctly-variant.
+    Expected:
+      chain_required    : CI lower bound > 0.5  (model tracks chain, flips ✓)
+      shortcut_available: CI upper bound < 0.5  (model rides red color, stays YES ✗)
+    """
+    rng = random.Random(seed)
+    rows = []
+    for _ in range(n):
+        a, b, c = rng.choice(CHAINS)
+        name = rng.choice(names)
+        b_prime = rng.choice([x for x in ALL_B if x != b])
+        label = 0  # chain broken → NO is correct
+        # color tempts the pre-intervention YES answer
+        if color_mode == "correlated":
+            color = "red" if rng.random() < s else "blue"
+        else:
+            color = rng.choice(COLORS)
+        # P1: All a are b (intact)  |  P2: All b_prime are c (broken)
+        text = make_text(True, True, a, b, b_prime, c, name, color)
+        rows.append({"text": text, "label": label, "color": color, "name": name})
+    return pd.DataFrame(rows)
+
+
 def gen(n, s, seed, names, regime, color_mode, ablate=None, noise=0.0):
     """
     true_y = the genuine reasoning answer (binding: b2==b licenses C).
@@ -227,6 +262,7 @@ def run_regime(regime, color_mode, s, thresh, noise, device):
     do_color = gen(1500, s, 46, NAMES, regime, "severed", ablate=None, noise=0.0)
     do_name = gen(1500, s, 47, HELDOUT_NAMES, regime, color_mode, ablate=None,
                   noise=0.0)
+    c1_int = gen_class1_intervention(1500, s, 48, NAMES, color_mode)
 
     def correct_arr(df):
         return (preds_of(df, tok, model, device) == df["label"].values).astype(int)
@@ -246,6 +282,8 @@ def run_regime(regime, color_mode, s, thresh, noise, device):
                   round(base[2] - dc_lo, 4))   # (point, lo, hi) of the drop
     drop_name = (round(base[0] - dn_pt, 4), round(base[1] - dn_hi, 4),
                  round(base[2] - dn_lo, 4))
+    # class-1 flip rate: fraction of broken-chain items model answers NO (correct)
+    c1_flip = bootstrap_ci(correct_arr(c1_int), np.mean, seed=6)
 
     # CI-based verdicts (no hard thresholds; chance withhold = 0.5).
     #
@@ -269,6 +307,13 @@ def run_regime(regime, color_mode, s, thresh, noise, device):
     respects = p1w[1] > 0.5 and p2w[1] > 0.5
     fails_nonredundancy = (p1w[1] <= 0.5) and (p2w[1] <= 0.5)
     flagged = drop_color[1] > 0.0 and abs(drop_name[0]) < 0.05
+    # class-1 verdicts:
+    #   correctly_variant: CI lower > 0.5 → model reliably flips answer
+    #                      when chain breaks (expected in chain_required)
+    #   insensitive_to_chain: CI upper < 0.5 → model ignores chain break,
+    #                         stays on shortcut (expected in shortcut_available)
+    c1_correctly_variant = c1_flip[1] > 0.5
+    c1_insensitive = c1_flip[2] < 0.5
     return {
         "measured_|r|": {k: round(v, 4) for k, v in measured.items()},
         "class_assignment": klass,
@@ -277,9 +322,12 @@ def run_regime(regime, color_mode, s, thresh, noise, device):
         "P2_ablate_withhold_ci": p2w,
         "drop_do(color)_class3_ci": drop_color,
         "drop_do(name)_class2_ci": drop_name,
+        "class1_flip_rate_ci": c1_flip,
         "nonredundancy_respected": bool(respects),
         "nonredundancy_fails_decoupled": bool(fails_nonredundancy),
         "flagged_correlational": bool(flagged),
+        "class1_correctly_variant": bool(c1_correctly_variant),
+        "class1_insensitive_to_chain": bool(c1_insensitive),
     }
 
 
@@ -298,11 +346,17 @@ def main():
     SA = run_regime("shortcut_available", "correlated", s=1.0, thresh=thresh,
                     noise=0.12, device=device)
 
-    # specificity arm: genuine M-user reliably withholds, NOT flagged.
+    # specificity arm: genuine M-user reliably withholds, NOT flagged,
+    #                  AND correctly varies under class-1 intervention.
     # sensitivity arm: shortcut-rider's withholding decoupled (~chance) AND
-    #                  independently flagged correlational.
-    spec_ok = CR["nonredundancy_respected"] and not CR["flagged_correlational"]
-    sens_ok = SA["nonredundancy_fails_decoupled"] and SA["flagged_correlational"]
+    #                  independently flagged correlational, AND insensitive
+    #                  to class-1 chain-break (rides shortcut past the flip).
+    spec_ok = (CR["nonredundancy_respected"]
+               and not CR["flagged_correlational"]
+               and CR["class1_correctly_variant"])
+    sens_ok = (SA["nonredundancy_fails_decoupled"]
+               and SA["flagged_correlational"]
+               and SA["class1_insensitive_to_chain"])
     validated = spec_ok and sens_ok
 
     summary = {
@@ -311,7 +365,10 @@ def main():
                   "training labels off the binding while color tracks the "
                   "label at s=1.0, so the shortcut is STRICTLY more reliable "
                   "than the chain. Eval gold = true binding answer; verdicts "
-                  "are bootstrap-95%-CI based, no hard thresholds.",
+                  "are bootstrap-95%-CI based, no hard thresholds. "
+                  "Class-1 arm: P2 middle-term broken (b_prime != b) while "
+                  "color tempts YES; gold=NO; flip_rate measures correctly-"
+                  "variant response to a causally relevant change.",
         "regime_chain_required": CR,
         "regime_shortcut_available": SA,
         "validated_specific_and_sensitive": bool(validated),
@@ -331,11 +388,15 @@ def main():
         print(f"  drop do(color)[c3] CI={R['drop_do(color)_class3_ci']}  "
               f"drop do(name)[c2] CI={R['drop_do(name)_class2_ci']}  "
               f"flagged={R['flagged_correlational']}")
+        print(f"  class-1 flip_rate CI={R['class1_flip_rate_ci']}  "
+              f"correctly_variant={R['class1_correctly_variant']}  "
+              f"insensitive={R['class1_insensitive_to_chain']}")
 
     print("\n=== MCS non-redundancy v3 (relative-learnability + CI verdicts) ===")
     show("Regime chain_required (specificity arm)", CR)
     show("Regime shortcut_available (sensitivity arm)", SA)
-    print(f"\nvalidated (CR: respects & not flagged ; SA: violates & flagged), "
+    print(f"\nvalidated (CR: respects & not flagged & class1_variant ; "
+          f"SA: violates & flagged & class1_insensitive), "
           f"all by 95% CI: {validated}")
     print(f"\nSaved: {SUMMARY_FILE}")
 

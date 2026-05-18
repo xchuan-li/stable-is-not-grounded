@@ -1,5 +1,5 @@
 {
-  "design": "two-premise transitive M (binding B==B2). Relative-learnability lever: shortcut_available corrupts ~12% of training labels off the binding while color tracks the label at s=1.0, so the shortcut is STRICTLY more reliable than the chain. Eval gold = true binding answer; verdicts are bootstrap-95%-CI based, no hard thresholds.",
+  "design": "two-premise transitive M (binding B==B2). Relative-learnability lever: shortcut_available corrupts ~12% of training labels off the binding while color tracks the label at s=1.0, so the shortcut is STRICTLY more reliable than the chain. Eval gold = true binding answer; verdicts are bootstrap-95%-CI based, no hard thresholds. Class-1 arm: P2 middle-term broken (b_prime != b) while color tempts YES; gold=NO; flip_rate measures correctly-variant response to a causally relevant change.",
   "regime_chain_required": {
     "measured_|r|": {
       "color": 0.0072,
@@ -34,9 +34,16 @@
       0.0,
       0.0
     ],
+    "class1_flip_rate_ci": [
+      1.0,
+      1.0,
+      1.0
+    ],
     "nonredundancy_respected": true,
     "nonredundancy_fails_decoupled": false,
-    "flagged_correlational": false
+    "flagged_correlational": false,
+    "class1_correctly_variant": true,
+    "class1_insensitive_to_chain": false
   },
   "regime_shortcut_available": {
     "measured_|r|": {
@@ -72,9 +79,16 @@
       0.0,
       0.0
     ],
+    "class1_flip_rate_ci": [
+      0.0,
+      0.0,
+      0.0
+    ],
     "nonredundancy_respected": false,
     "nonredundancy_fails_decoupled": true,
-    "flagged_correlational": true
+    "flagged_correlational": true,
+    "class1_correctly_variant": false,
+    "class1_insensitive_to_chain": true
   },
   "validated_specific_and_sensitive": true,
   "scope": "synthetic, single seed-set fine-tune per regime; multi-seed variance is the documented extension."
