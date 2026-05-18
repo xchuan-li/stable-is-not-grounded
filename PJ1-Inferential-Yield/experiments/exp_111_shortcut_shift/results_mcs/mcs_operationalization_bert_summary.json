@@ -1,0 +1,43 @@
+{
+  "model": "distilbert-base-uncased fine-tuned (distributed representations; training set auditable -> 3.5(b) valid)",
+  "shortcut_strength_s": 0.9,
+  "class_assignment_threshold": 0.1,
+  "regime_A_M_available": {
+    "measured_|r|": {
+      "color": 0.8013,
+      "name": 0.0094
+    },
+    "class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "accuracy": {
+      "baseline_iid": 1.0,
+      "do(color)_class3": 1.0,
+      "do(name)_class2_control": 1.0
+    },
+    "drop_do(color)_class3": 0.0,
+    "drop_do(name)_class2_control": 0.0,
+    "flagged_correlational": false
+  },
+  "regime_B_M_suppressed": {
+    "measured_|r|": {
+      "color": 0.8013,
+      "name": 0.0094
+    },
+    "class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "accuracy": {
+      "baseline_iid": 0.9137,
+      "do(color)_class3": 0.485,
+      "do(name)_class2_control": 0.8975
+    },
+    "drop_do(color)_class3": 0.4287,
+    "drop_do(name)_class2_control": 0.0162,
+    "flagged_correlational": true
+  },
+  "operationalization_validated": true,
+  "note": "Class assignment is data-derived, identical to the TF-IDF run (3.5b non-circular). Single fine-tune per regime, seed-set; seed variance is the documented extension."
+}

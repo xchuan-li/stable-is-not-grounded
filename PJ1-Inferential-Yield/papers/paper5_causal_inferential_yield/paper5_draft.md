@@ -172,37 +172,38 @@ A reproducible recipe for applying the framework:
 
 ---
 
-# 5. Demonstration: The Distinctions Are Non-Vacuous
+# 5. Demonstrating the Operationalization
 
-The empirical content here is intentionally modest. Its sole purpose is to show that **ignoring the framework's distinctions leads to measurably wrong conclusions** — the minimum bar for a measurement methodology.
+This section demonstrates the paper's central methodological claim (Section 3.5): that a model's *correlational* sufficiency can be detected **non-circularly**, **specifically**, and **non-vacuously**. The empirical scope is intentionally controlled — the claim is about the *procedure*, not about model capability — and the honest limits are stated in Section 7.
 
-**5.1 A benign aggregate hides systematic instability.** On a balanced 100-group, five-category synthetic benchmark, a fine-tuned DistilBERT yields `SIS_acc = 0.586` and `SIS_consistency = 0.790`. Read alone, the consistency figure looks acceptable. The framework's group-state decomposition shows otherwise:
+## 5.1 The construction
 
-| Group state | Share |
-|---|---|
-| stable-correct | 27% |
-| stable-wrong | 10% |
-| **unstable** | **63%** |
+We construct a synthetic task where the answer to "can X fly?" is causally determined by animal type (M = the minimal causal structure), with two non-M variables: `color` (made spuriously label-correlated in training) and `name` (assigned independently of the label). Per Section 3.5, the irrelevance of `color` and `name` is fixed **by construction** (3.5a — we author the items, so this is not a discovered causal fact); their entanglement is **measured** on the training set (3.5b): |r(color, label)| = 0.81 → class-3, |r(name, label)| = 0.005 → class-2, by a fixed threshold (0.10), not investigator discretion. We then compare `do(color)` (the class-3 intervention: sever the training correlation, M intact) against `do(name)` (the mandatory class-2 control), in two regimes — A: M present in the input; B: M suppressed so only the shortcut carries label information.
 
-63% of groups change their answer under semantics-preserving perturbation. A single aggregate number conceals this; the framework's distinction surfaces it.
+## 5.2 The result: specific and sensitive
 
-**5.2 A small-sample conclusion is reversed.** On a 4-group taxonomic-only evaluation, `reasoning_path_shift` appeared to be the most damaging perturbation (accuracy 0.000) — a tempting headline finding. Applying the framework's protocol at scale (100 balanced groups) **reverses** this: `reasoning_path_shift` is the *least* damaging (0.660). The earlier conclusion was small-sample noise; the framework's scaling discipline catches it.
+| regime | baseline | do(color) [class-3] | do(name) [class-2 control] | flagged? |
+|---|---|---|---|---|
+| A — M available | 1.000 | 1.000 (Δ +.000) | 1.000 (Δ +.000) | **No** |
+| B — M suppressed | 0.912 | 0.504 (**Δ +.408**) | 0.891 (Δ +.021) | **Yes** |
 
-**5.3 Shortcut-reversal is a clause-(iii) test.** A TF-IDF + LR baseline reaches 0.910 IID accuracy and collapses monotonically to 0.000 as a class-3 variable's correlation is reversed. In the framework's language this is a direct measurement that the model's apparent sufficiency is not robust under a class-3 `do()` — its `M` was correlational, not causal. The experiment was already a clause-(iii) test; the framework makes that explicit and distinguishes it from the rung-1 distractor cousin.
+The operationalization is **specific** — it does not false-alarm when the model genuinely grounds in M (regime A is not flagged). This directly answers the "you built the failure in" objection: in A the failure is *not* built in and the procedure correctly stays silent. It is **sensitive** — it catches the shortcut-rider (regime B flagged). And it is **non-vacuous** — the class-2 control `do(name)` stays robust in *both* regimes (Δ +.000, +.021), ruling out the trivial reading "any intervention breaks it": only the class-3 intervention breaks sufficiency, and only when the model actually rode the shortcut. Detection is non-circular because (3.5a) is by construction and (3.5b) is measured. (Regime B, viewed alone, is the classical shortcut-reversal collapse — but now properly instrumented: with the measured class assignment and the class-2 control, it is an explicit clause-(iii) test, distinguished from its rung-1 distractor cousin, rather than an unexplained accuracy drop.)
 
-**5.4 A headline-friendly effect that was mostly an artifact.** We probed whether chain-of-thought (CoT) prompting trades accuracy for stability on a balanced 40-group subset (Qwen2.5-1.5B, greedy decoding, DIRECT vs. CoT). A first run produced a striking result:
+## 5.3 Model-class robustness
 
-| metric | DIRECT | CoT (run 1) | CoT (run 2) |
-|---|---|---|---|
-| SIS_acc | 0.910 | 0.855 (−0.055) | 0.915 (+0.005) |
-| stable-correct | 75.0% | 57.5% (**−17.5pt**) | 72.5% (−2.5pt) |
-| unstable | 22.5% | 42.5% (**+20pt**) | 27.5% (+5pt) |
+To check this is not an artifact of a linear bag-of-words model, the identical protocol was rerun with a fine-tuned DistilBERT (distributed representations; the training set is still self-controlled, so 3.5(b) remains valid — the framework's own boundary forbids a frontier model whose pretraining is unauditable). The verdict is near-identical: regime A not flagged (do(color) Δ +.000, do(name) Δ +.000); regime B flagged (do(color) 0.914 → 0.485, Δ +.429; class-2 control do(name) Δ +.016). The measured class assignment is, as expected, the same — it is data-derived, not model-dependent. The procedure's verdict is thus stable across model classes (TF-IDF + logistic regression and a fine-tuned transformer).
 
-Run 1 appears to show CoT nearly halving stable reasoning — a publishable headline. Inspection of raw outputs showed the small model frequently emits a leading `Answer: X` and then reasons toward the opposite (often truncated before a final answer line); a first-match answer extractor locked onto the premature token, systematically and *directionally* mis-scoring the CoT condition. After fixing the extractor (take the model's final committed answer) and the prompt/length, run 2 shows the true picture: roughly **85–90% of the apparent CoT destabilization was an answer-extraction artifact**; the residual effect is at noise level (Δ`SIS_acc` = +0.005 ≈ one sample; ±1–2 groups at n = 40).
+This establishes the central claim in a controlled setting, which is its purpose. It makes no claim about real models or benchmarks (Section 6), and the causal structure used here is deliberately minimal — the consequences of that, and the partial multi-premise extension, are stated honestly in Section 7.
 
-Two methodological points follow, both on-thesis for an evaluation methodology paper. First, the framework's group-state decomposition plus an explicit instrumentation check is what exposed the artifact — naive aggregate scoring would have reported the run-1 headline. Second, the experiment's binary "supported / not supported" verdict flips (NOT supported → SUPPORTED) on noise-level differences, which argues against binary verdicts and for effect-size-with-variance reporting — exactly what the group-state metric, run with seeds, supports. (Caveats: single small model, single run, synthetic benchmark, prompt-induced CoT; this is a cautionary pilot, not a CoT result.)
+---
 
-**5.5 The instrument, turned on a trusted benchmark, finds hidden instability.** The preceding subsections use synthetic or own-task data. We now turn the *measurement-only* half of the framework on BoolQ, a widely used public benchmark. This deliberately uses **no causal structure**: BoolQ items carry no stipulated ground-truth graph, so applying the full clause-(iii) operationalization here would reintroduce the very circularity the framework removes. The causal operationalization is therefore confined to the by-construction synthetic setting; what is legitimate on a real benchmark is the dual-metric, three-state decomposition, which needs only gold labels and answer-preserving perturbations. On a balanced 40-item BoolQ sample, zero-shot Qwen2.5-1.5B was evaluated under four presentations that *cannot* change the correct answer by construction (original; an irrelevant appended sentence; two task-framing rephrasings with the question verbatim):
+# 6. Application to a Trusted Benchmark
+
+The operationalization above is controlled and synthetic. We now show the *measurement-only* half of the framework has bite on a benchmark the community already trusts: **BoolQ**.
+
+This use is deliberately **non-causal**. BoolQ items carry no stipulated ground-truth graph, so applying the full clause-(iii) operationalization to them would reintroduce the very circularity the framework removes. The causal operationalization is therefore confined to the by-construction synthetic setting (Section 5); what is legitimate on a real benchmark is only the dual-metric, three-state decomposition, which needs nothing but gold labels and answer-preserving perturbations. Respecting that boundary is itself part of the contribution.
+
+On a balanced 40-item BoolQ sample, zero-shot Qwen2.5-1.5B was evaluated under four presentations that *cannot* change the correct answer by construction (original; an irrelevant appended sentence; two task-framing rephrasings with the question verbatim):
 
 | quantity | value |
 |---|---|
@@ -212,36 +213,39 @@ Two methodological points follow, both on-thesis for an evaluation methodology p
 | group states (of 40) | stable-correct 27 / stable-wrong 3 / **unstable 10** |
 | per-variant accuracy | original .800 / distractor .825 / frame_a .800 / frame_b .775 |
 
-The standard headline number (0.800) conceals that only 67.5% of items are *stably* correct: 25% flip their yes/no answer under edits that provably preserve the answer, while a separate 3 items are *stably wrong* (confidently, invariantly incorrect). The decomposition thus separates two failure modes — fragility vs. confident error — that a single accuracy figure merges. An instrumentation check confirmed the effect is genuine, not an extraction artifact: 0/160 parse failures, and all 10 unstable items are true yes↔no flips. Scope (stated, not hedged): single small model, single run, n = 40, and intentionally *conservative* perturbations — so 0.125 is a **lower bound** on instability, not an effect-size estimate; validated paraphrase/lexical perturbations with the semantic-preservation layer (Section 3.7) are the publication-version extension, not claimed here.
+The trusted headline number (0.800) conceals that only 67.5% of items are *stably* correct: 25% flip their yes/no answer under edits that provably preserve it, while a separate 3 items are *stably wrong* (confidently, invariantly incorrect). The decomposition separates two failure modes — fragility vs. confident error — that a single accuracy figure merges. An instrumentation check confirms the effect is genuine, not an extraction artifact: 0/160 parse failures, all 10 unstable items true yes↔no flips. The same pattern appears on synthetic data at larger scale (a fine-tuned DistilBERT on 100 balanced groups: SIS_acc 0.586 but 63% of groups *unstable* under semantics-preserving perturbation), so the BoolQ result is not an idiosyncrasy of one sample.
 
-Together: the distinctions are not idle bookkeeping — discarding them yields a falsely reassuring number (5.1), a wrong empirical conclusion (5.2), a causal test mislabeled as a robustness test (5.3), a near-fully artifactual headline absent instrumentation discipline (5.4), and — on a benchmark the community trusts — a headline accuracy that overstates stable correctness while masking the fragile-vs-confidently-wrong distinction (5.5).
+Scope, stated not hedged: single small model, single run, n = 40, and intentionally *conservative* perturbations — so +0.125 is a **lower bound** on instability, not an effect-size estimate. Validated paraphrase/lexical perturbations with the semantic-preservation layer (Section 3.7) are the publication-version extension, not claimed here.
 
 ---
 
-# 6. What We Do *Not* Claim
+# 7. Limits and What We Do *Not* Claim
 
-- We do **not** claim a novel theory of causation; the causal-minimality core is borrowed and cited (Section 2).
-- We do **not** claim the empirical results validate the framework on capable models. The baselines are weak by design; Section 5 demonstrates non-vacuity, not model quality.
-- We do **not** claim coverage of natural reasoning: the benchmark is synthetic and template-generated; perturbations are more regular than human-written ones.
+- We do **not** claim a novel theory of causation; the causal-minimality core is borrowed and cited (Section 2). The contribution is the non-circular *operationalization*, not the causal concepts, and not the *problem* of shortcut-vs-causal evaluation (which the benchmark-critique literature already articulates — Section 2).
+- We do **not** claim validation on capable models. Baselines are weak by design; Section 5 demonstrates the *procedure*, not model quality, and the causal structure used is a single-premise M — so the non-redundancy clause (3.2-ii) is exercised only trivially and no class-1 (genuinely relevant) variable is tested, leaving the three-way taxonomy two-thirds demonstrated.
+- We do **not** claim coverage of natural reasoning: the synthetic benchmark is template-generated; perturbations are more regular than human-written ones.
 - We do **not** claim the operationalization extends to systems with unauditable training data; for frontier LLMs, 3.5(b) is an open estimation problem (stated in 3.5).
-- We do **not** claim CIY is fully formalized; CIY-2 (withholding) is specified but not yet empirically instrumented here.
 
-These are scope statements, not hedges: each marks a concrete boundary that the subsequent program is designed to push.
+**A multi-premise non-redundancy probe — partial.** We built and ran a two-premise binding task (DistilBERT) so that non-redundancy becomes a *real* testable property. The probe works *as an instrument*: it cleanly measures which premises are counterfactually necessary *to the model*, and it surfaced a genuine phenomenon — under an available shortcut the model converged on a *sub-minimal* sufficient set, omitting one premise (P2 withhold-rate 0.000). However, a clean *specific-and-sensitive* demonstration did not materialize: the injected class-3 shortcut was not competitive once the binding was learnable, and a brittle binary threshold (withhold 0.800 not > 0.800) spuriously flipped the verdict. We therefore report this as a working probe with a finding, not as a validated specific/sensitive result; the clean version is Section 8.
+
+**An instrumentation-discipline note.** A CoT-vs-stability pilot first appeared to show chain-of-thought nearly halving stable reasoning (stable-correct 75% → 57.5%). An instrumentation check traced ~85–90% of that to an answer-extraction artifact (a first-match parser locking onto a premature `Answer:` token); after fixing it the effect was at noise level. The lesson is methodological and on-thesis: the group-state decomposition plus an explicit instrumentation check is what caught a false headline, and binary "supported/not" verdicts flip on noise — argue for effect-size-with-variance reporting, not for the CoT claim (which we do not make).
+
+These are scope statements, not hedges: each marks a concrete boundary that Section 8 is designed to push.
 
 ---
 
-# 7. Future Work (Research Program)
+# 8. Future Work (Research Program)
 
-This paper is the framework leg of a two-paper program; the companion empirical paper validates it. Planned extensions:
+This paper is the framework leg of a two-paper program; the companion empirical paper validates it. Planned extensions, ordered by what most strengthens the contribution:
 
-1. **Strong-model validation.** Apply CIY to instruction-tuned and frontier models; the present demonstration only establishes non-vacuity on weak baselines.
-2. **Intervention-level prompting and the CoT question.** Test whether chain-of-thought raises accuracy while lowering clause-(iii) stability (the "CoT improves correctness but degrades causal robustness" hypothesis) — a clean A/B with the reasoning mode as the only varied factor.
-3. **Scaling the benchmark** beyond templated synthesis, including human-written perturbations, with inter-annotator validation of semantic preservation.
+1. **A clean multi-premise non-redundancy demonstration.** Make the class-3 shortcut competitive against a learnable binding, replace binary verdicts with effect-size-and-variance, so the working probe (Section 7) becomes a specific-and-sensitive result; add a **class-1 arm** so the full three-way taxonomy is demonstrated, not two-thirds of it.
+2. **Strong-model validation** of CIY on instruction-tuned models, within the auditable-training-set boundary.
+3. **Scaling the benchmark** beyond templated synthesis, including human-written perturbations with inter-annotator validation of semantic preservation.
 4. **Frontier-LLM training-correlation estimation** to push 3.5(b) from measurement toward principled estimation where pretraining is unobservable.
-5. **CIY-2 instrumentation** (withholding under partial premises) as a first-class metric.
+5. **Sharper differentiation** from adjacent shortcut-vs-causal-reasoning work, treating the non-circular by-construction/measured split as the distinguishing contribution.
 
 ---
 
-# 8. Conclusion
+# 9. Conclusion
 
-The contribution is a measurement methodology: a causal anchor for stability, a non-circular procedure for deciding what counts as an irrelevant variable, and a single quantity (CIY) that unifies several previously ad hoc reasoning-stability probes. The empirical section does not claim strong models reason causally or fail to; it shows only — but conclusively at this scale — that the framework's distinctions are non-vacuous, since discarding them produces a falsely reassuring aggregate and a reversed empirical conclusion. The validation of the framework on capable systems is deliberately left as the program this paper sets up.
+The contribution is a measurement methodology: a causal anchor for stability, a non-circular procedure for deciding what counts as an irrelevant variable, and a single quantity (CIY) that unifies several previously ad hoc reasoning-stability probes. Section 5 demonstrates the central claim in a controlled setting — correlational sufficiency is detected non-circularly, specifically (no false alarm when the model genuinely uses M), and non-vacuously (the class-2 control rules out "any intervention breaks it"), with the verdict stable across model classes. Section 6 shows the measurement-only half has bite on a trusted public benchmark, while respecting the non-circularity boundary that forbids importing the causal machinery onto data without a stipulated graph. We do not claim strong models reason causally or fail to, nor that the framework is validated at scale; those, and a clean multi-premise non-redundancy result, are the program this paper sets up.

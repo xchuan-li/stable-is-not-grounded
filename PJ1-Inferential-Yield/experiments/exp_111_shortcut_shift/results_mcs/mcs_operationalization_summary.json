@@ -1,0 +1,47 @@
+{
+  "stipulated_DAG_(3.5a_by_construction)": {
+    "M": "animal_type -> can_fly (only causal parent)",
+    "color": "no edge to can_fly (irrelevant by construction)",
+    "name": "no edge to can_fly (irrelevant by construction)"
+  },
+  "class_assignment_threshold": 0.1,
+  "shortcut_strength_s": 0.9,
+  "regime_A_M_available": {
+    "measured_|r|": {
+      "color": 0.8065,
+      "name": 0.0046
+    },
+    "class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "accuracy": {
+      "baseline_iid": 1.0,
+      "do(color)_class3": 1.0,
+      "do(name)_class2_control": 1.0
+    },
+    "drop_do(color)_class3": 0.0,
+    "drop_do(name)_class2_control": 0.0,
+    "flagged_correlational": false
+  },
+  "regime_B_M_suppressed": {
+    "measured_|r|": {
+      "color": 0.8065,
+      "name": 0.0046
+    },
+    "class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "accuracy": {
+      "baseline_iid": 0.912,
+      "do(color)_class3": 0.504,
+      "do(name)_class2_control": 0.8907
+    },
+    "drop_do(color)_class3": 0.408,
+    "drop_do(name)_class2_control": 0.0213,
+    "flagged_correlational": true
+  },
+  "operationalization_validated": true,
+  "reading": "Same measured class assignment in both regimes (color=class-3, name=class-2). The procedure does NOT false-alarm when the model genuinely uses M (regime A not flagged) and DOES catch the shortcut rider (regime B flagged), with the class-2 control ruling out 'any perturbation breaks it'. Detection is non-circular: irrelevance is by construction (3.5a), entanglement is measured (3.5b)."
+}

@@ -1,0 +1,40 @@
+{
+  "design": "two-premise transitive M; YES vs NO differ only in middle-term binding (B vs B2); no single-token cue. DistilBERT (relational model required; training set self-controlled so 3.5b valid).",
+  "shortcut_strength_s": 0.9,
+  "regime_chain_required": {
+    "measured_|r|": {
+      "color": 0.0072,
+      "name": 0.0004
+    },
+    "class_assignment": {
+      "color": "class-2",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc": 1.0,
+    "P1_ablated_withhold_rate": 0.8,
+    "P2_ablated_withhold_rate": 0.8347,
+    "nonredundancy_respected": false,
+    "drop_do(color)_class3": 0.0,
+    "drop_do(name)_class2_control": 0.0,
+    "flagged_correlational": false
+  },
+  "regime_shortcut_available": {
+    "measured_|r|": {
+      "color": 0.8116,
+      "name": 0.0148
+    },
+    "class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc": 1.0,
+    "P1_ablated_withhold_rate": 0.4367,
+    "P2_ablated_withhold_rate": 0.0,
+    "nonredundancy_respected": false,
+    "drop_do(color)_class3": 0.0,
+    "drop_do(name)_class2_control": 0.0,
+    "flagged_correlational": false
+  },
+  "validated_specific_and_sensitive": false,
+  "scope": "synthetic, single seed-set fine-tune per regime; seed variance and graded chain depth are documented extensions."
+}

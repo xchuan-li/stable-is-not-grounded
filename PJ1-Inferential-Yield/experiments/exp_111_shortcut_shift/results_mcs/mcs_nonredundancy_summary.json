@@ -1,0 +1,34 @@
+{
+  "structure": "two-premise transitive M = {P1, P2, instance}",
+  "stipulated_DAG_3.5a": {
+    "M": "{P1: all A are B; P2: all B are C; instance} -> answer",
+    "color": "no edge (irrelevant by construction)",
+    "name": "no edge (irrelevant by construction)"
+  },
+  "measured_|r|_3.5b": {
+    "color": 0.82,
+    "name": 0.0015
+  },
+  "class_assignment": {
+    "color": "class-3",
+    "name": "class-2"
+  },
+  "accuracy": {
+    "baseline_fullM": 1.0,
+    "P1_ablated": 0.48,
+    "P2_ablated": 0.498,
+    "do(color)_class3": 1.0,
+    "do(name)_class2_control": 1.0
+  },
+  "non_redundancy_CIY2": {
+    "P1_ablated_correct_withhold_rate": 0.48,
+    "P2_ablated_correct_withhold_rate": 0.498,
+    "both_premises_counterfactually_necessary_to_model": false,
+    "reading": "each premise, when ablated, forces the model to withdraw the conclusion -> 3.2-ii non-redundancy is satisfied non-trivially (multi-premise M) and CIY-2 (withhold under strict subset of M) is instrumented."
+  },
+  "section_3.5_on_richer_structure": {
+    "drop_do(color)_class3": 0.0,
+    "drop_do(name)_class2_control": 0.0,
+    "class3_specific_breakage": false
+  }
+}
