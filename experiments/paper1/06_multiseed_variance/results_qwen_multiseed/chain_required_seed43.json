@@ -1,0 +1,52 @@
+{
+  "train_seed": 43,
+  "measured_|r|": {
+    "color": 0.0072,
+    "name": 0.0004
+  },
+  "class_assignment": {
+    "color": "class-2",
+    "name": "class-2"
+  },
+  "baseline_acc": 1.0,
+  "P1_withhold": 1.0,
+  "P2_withhold": 1.0,
+  "drop_color": 0.0,
+  "drop_name": 0.0,
+  "c1_flip_rate": 1.0,
+  "baseline_acc_ci": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "P1_withhold_ci": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "P2_withhold_ci": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "drop_color_ci": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "drop_name_ci": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "c1_flip_rate_ci": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "nonredundancy_respected": true,
+  "nonredundancy_fails_decoupled": false,
+  "flagged_correlational": false,
+  "c1_correctly_variant": true,
+  "c1_insensitive_to_chain": false
+}
