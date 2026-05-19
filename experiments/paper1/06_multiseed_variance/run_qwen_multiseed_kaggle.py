@@ -18,7 +18,7 @@ same evaluation items are used across all training seeds.
 3. First code cell:  !pip install peft -q
 4. Paste or upload this file and run.
 
-Expected runtime: ~4-5 hours for N_SEEDS=5 on T4 (2 regimes × 5 seeds × ~25 min/run)
+Expected runtime: ~1 hour for N_SEEDS=3 on T4 (2 regimes × 3 seeds × 2 epochs × ~10 min/run)
 """
 
 import json
@@ -40,12 +40,12 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
-N_SEEDS     = 5
-TRAIN_SEEDS = [42, 43, 44, 45, 46]   # training stochasticity seeds
+N_SEEDS     = 3
+TRAIN_SEEDS = [42, 43, 44]            # training stochasticity seeds
 EVAL_SEED_BASE = 100                  # eval data seeds fixed across training seeds
 
 MAX_LEN      = 96
-EPOCHS       = 5
+EPOCHS       = 2
 BATCH        = 8
 LR           = 2e-5
 LORA_R       = 8
