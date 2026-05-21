@@ -1,5 +1,5 @@
 # Stable Is Not Grounded
-## A Strict Accuracy–Stability–Grounding Hierarchy, Observable Only as Deep as Its Instrument Is Licensed
+## A Strict Accuracy–Stability–Grounding Hierarchy, Observable Only as Deep as Both Sides Are Transparent
 
 ---
 
@@ -62,7 +62,7 @@ SW and U     U; keeps       SC-spurious;
 
 When both sides are open the cut is decidable; when either goes dark it is **non-identifiable from the available observations** (in the standard causal-inference sense). The boundary is not a limitation of our instrument but a structural property of the question — and the demonstration confirms both halves: in the licensed regime, where both sides are open, the cut splits two models matched on accuracy *and* stability into opposite grounding verdicts (§6.1–6.3); on a natural benchmark, where both sides are dark, the same cut is undecidable and we report it as such (§6.4).
 
-To be clear about what is and isn't ours: the accuracy-vs-stability level is established prior work, and the do-intervention / negative-control machinery is borrowed. What is new is the *nested-insufficiency structure*, the *two-sided observability* property, and the controlled evidence that each containment is non-empty. The same cut recurses into the other strata, decidable only as far as a licensed instrument reaches (§4); the next section credits the borrowed pieces inline, and §7 states the scope.
+The same cut recurses into the other strata, decidable only as far as a licensed instrument reaches (§4); §7 states the scope.
 
 ---
 
@@ -106,7 +106,7 @@ SC-grounded : invariance survives a do-intervention that severs
 SC-spurious : invariance does NOT survive that intervention
 ```
 
-To make `SC-spurious` an investigator-independent label and not a judgement call, the candidate variable must be (a) **causally irrelevant by construction** (we author the item; its ground-truth graph is stipulated, so this is not a causal fact discovered from the model) and (b) **training-correlated by measurement** (a label correlation on the auditable training set, fixed by a threshold). A variable satisfying (a)+(b) is the legitimate target of the severing intervention; a variable satisfying (a) but training-*independent* is the **mandatory negative control** (a "pure-noise" variable) — without it, a drop under the target intervention is uninterpretable (it is consistent with "any change breaks the model"). This control logic is borrowed (Hewitt & Liang, 2019; Lipsitch et al., 2010); the use here is to make the `SC` cut non-vacuous.
+To make `SC-spurious` an investigator-independent label and not a judgement call, the candidate variable must be (a) **causally irrelevant by construction** (benchmark-side — we author the item; its ground-truth graph is stipulated, so this is not a causal fact discovered from the model) and (b) **training-correlated by measurement** (model-side — a label correlation on the auditable training set, fixed by a threshold). A variable satisfying (a)+(b) is the legitimate target of the severing intervention; a variable satisfying (a) but training-*independent* is the **mandatory negative control** (a "pure-noise" variable) — without it, a drop under the target intervention is uninterpretable (it is consistent with "any change breaks the model"). This control logic is borrowed (Hewitt & Liang, 2019; Lipsitch et al., 2010); the use here is to make the `SC` cut non-vacuous.
 
 **The construction is the source of ground truth, not a confound.** Causal irrelevance is *stipulated* rather than inferred from the model; training entanglement is *measured* on an auditable corpus; both are open to inspection and independent of investigator judgement. The setting is by-construction *because that is the only setting in which the cut is well-posed* — the observability boundary in §4 is the formal statement of why.
 
@@ -188,7 +188,7 @@ A reproducible recipe for the full hierarchy in the licensed (by-construction) r
 2. **Measure and threshold.** On the auditable training set, compute each non-target variable's label correlation; assign `class-3` (target) above a fixed threshold, `class-2` (negative control) if causally irrelevant and below it. No investigator discretion.
 3. **Presentations for levels 1–2.** Build answer-preserving presentations; compute `U`/`SW`/`SC` and the overstatement gap with bootstrap 95% CIs.
 4. **Sever-intervention for level 3.** On `SC` items, apply `do(class-3)` (sever the training correlation, `M` intact) and the mandatory `do(class-2)` negative control; an `SC` item is `SC-spurious` iff correctness collapses under `do(class-3)` while the `do(class-2)` control is intact.
-5. **Boundary check.** On any non-constructed benchmark, run steps 3 only; report levels 1–2 and *explicitly decline* level 3 as undecidable there (this is a result, not an omission).
+5. **Boundary check.** On any non-constructed benchmark, run step 3 only — steps 1–2 and the sever-intervention (4) are not licensed there; report levels 1–2 and *explicitly decline* level 3 as undecidable (this is a result, not an omission).
 
 Semantic-preservation validation gates step 3 (quantifier/modal/causal-direction shifts excluded). A consistency-only score is rejected: it rewards `SW`.
 
@@ -196,7 +196,7 @@ Semantic-preservation validation gates step 3 (quantifier/modal/causal-direction
 
 # 6. Demonstration: The Levels Are Non-Empty and the Boundary Bites
 
-This section provides controlled evidence for the main claim: **the hierarchy accuracy ⊋ stability ⊋ grounding has every containment non-empty, and the depth at which it is observable is a property of construction and auditability**. §6.1–6.3 are the **both-sides-open** half of the §1 principle — graph stipulated, training auditable — where the cut is decidable and every containment is strictly non-empty; §6.4 is the **both-sides-dark** half, where the same cut is undecidable and we report it as such. Together they are the empirical confirmation of two-sided observability. All numbers are from the existing experiment logs (see the evidence map); this section reorganizes the controlled results around the hierarchy and adds no claims beyond non-emptiness and the boundary.
+This section provides controlled evidence for the main claim: **the hierarchy accuracy ⊋ stability ⊋ grounding has every containment non-empty, and how deep it is observable is governed by two-sided observability**. §6.1–6.3 are the **both-sides-open** half of the §1 principle — graph stipulated, training auditable — where the cut is decidable and every containment is strictly non-empty; §6.4 is the **both-sides-dark** half, where the same cut is undecidable and we report it as such. Together they are the empirical confirmation of two-sided observability. All numbers are from the existing experiment logs (see the evidence map); this section reorganizes the controlled results around the hierarchy and adds no claims beyond non-emptiness and the boundary.
 
 ## 6.1 Stability ⊋ grounding: matched accuracy, opposite grounding
 
