@@ -3,17 +3,17 @@
 
 ---
 
-> **Positioning (read first).** This paper contributes **one structural claim**: a strict three-level decomposition of "correct" answers — accuracy ⊋ stability ⊋ causal grounding — with every containment non-empty in a controlled setting, and with the *depth at which the hierarchy is observable* being a property of construction and auditability rather than a separate result. The first level (accuracy vs. stability) is known and cited; the causal instrument is borrowed and cited. What is ours is the *nested-insufficiency structure*, the *observability-depth* property, and the controlled demonstration that each containment is non-empty. §2 (Related Work) places the prior and borrowed pieces inline; §7 states the scope.
+> **Thesis.** "Correct" answers decompose strictly — accuracy ⊋ stability ⊋ causal grounding — with every containment non-empty, and how deep the decomposition can be *observed* is governed by **two-sided observability**: the benchmark's causal graph must be stipulated and the model's training must be auditable. Where both hold, the full hierarchy is decidable; where either fails, the deepest cut (`SC → {grounded, spurious}`) is non-identifiable. We build on established accuracy-vs-stability work and a borrowed causal instrument — both credited in §2 — and add the reflexive nested-insufficiency structure, the two-sided observability property, and a controlled demonstration that each containment is non-empty. §7 states the scope.
 
 ---
 
 # Abstract
 
-The hierarchy **accuracy ⊋ stability ⊋ grounding** has every containment non-empty, and the depth at which it is observable is a property of construction and auditability rather than a tool limitation. Headline accuracy on a reasoning benchmark merges three behaviours that come apart under answer-preserving perturbation — **unstable** (the answer flips), **stable-wrong** (consistent and confidently incorrect), **stable-correct** — and the standard fix of checking stability separates only the first. The residual ambiguity is itself reflexive: a stable-correct answer can hold because the model tracks the structure that licenses the conclusion, or because it stably rides a shortcut also correlated with the answer at evaluation. Stability is therefore **necessary but not sufficient** for causal grounding.
+The hierarchy **accuracy ⊋ stability ⊋ grounding** has every containment non-empty, and how deep it can be observed is governed by **two-sided observability** — whether the benchmark's causal graph is stipulated and the model's training is auditable — not by any tool limitation. Headline accuracy on a reasoning benchmark merges three behaviours that come apart under answer-preserving perturbation — **unstable** (the answer flips), **stable-wrong** (consistent and confidently incorrect), **stable-correct** — and the standard fix of checking stability separates only the first. The residual ambiguity is itself reflexive: a stable-correct answer can hold because the model tracks the structure that licenses the conclusion, or because it stably rides a shortcut also correlated with the answer at evaluation. Stability is therefore **necessary but not sufficient** for causal grounding.
 
-We resolve the residual ambiguity with a borrowed causal instrument — a do-intervention on a *measured* shortcut-correlated variable, paired with a mandatory negative ("pure-noise") control — but only where it is licensed: items whose ground-truth graph is stipulated by construction and whose training correlation is auditable. The contribution is the resulting strict hierarchy **accuracy ⊋ stability ⊋ grounding**, the demonstration that each containment is non-empty, and a structural consequence we make explicit: the depth to which the hierarchy is *observable* is a function of construction and auditability. On a real benchmark one can decide unstable / stable-wrong / stable-correct and stop; the stable-correct → {grounded, spurious} cut requires the construction and cannot be made in the wild without reintroducing the circularity it was meant to remove. The same reflexive cut recurses into the unstable and stable-wrong strata; one consequence is sharp: a stably-correct-but-spurious model and a stably-wrong-by-shortcut model are the *same mechanism*, split only by evaluation luck — so even the stable-correct / stable-wrong boundary is eval-contingent until the deepest cut is made.
+We resolve the residual ambiguity with a borrowed causal instrument — a do-intervention on a *measured* shortcut-correlated variable, paired with a mandatory negative ("pure-noise") control — but only where it is licensed: items whose ground-truth graph is stipulated by construction and whose training correlation is auditable. The contribution is the resulting strict hierarchy **accuracy ⊋ stability ⊋ grounding**, the demonstration that each containment is non-empty, and a structural consequence we make explicit: the depth to which the hierarchy is *observable* is governed by two-sided observability — construction on the benchmark side, auditability on the model side. On a real benchmark one can decide unstable / stable-wrong / stable-correct and stop; the stable-correct → {grounded, spurious} cut requires the construction and cannot be made in the wild without reintroducing the circularity it was meant to remove. The same reflexive cut recurses into the unstable and stable-wrong strata; one consequence is sharp: a stably-correct-but-spurious model and a stably-wrong-by-shortcut model are the *same mechanism*, split only by evaluation luck — so even the stable-correct / stable-wrong boundary is eval-contingent until the deepest cut is made.
 
-We are explicit that the accuracy-vs-stability level is established prior work and that the causal machinery is not ours (§2). On three model classes the same headline accuracy and near-identical stability are shown to decompose into opposite grounding verdicts; on a real benchmark across three zero-shot models, the decomposition is computed exactly as deep as it is decidable, and no deeper. The full formal treatment of in-the-wild undecidability is deferred to a companion paper (§8).
+The accuracy-vs-stability level is established prior work and the causal machinery is borrowed (§2); the reflexive structure, the two-sided observability property, and the controlled separation are ours. On three model classes the same headline accuracy and near-identical stability are shown to decompose into opposite grounding verdicts; on a real benchmark across three zero-shot models, the decomposition is computed exactly as deep as it is decidable, and no deeper. The full formal treatment of in-the-wild undecidability is deferred to a companion paper (§8).
 
 ---
 
@@ -141,24 +141,25 @@ The hierarchy is not only a diagnosis; it changes what a result should report.
 
 This is the conceptual core and the part the companion paper formalizes.
 
-## 4.1 Depth is a property of construction and auditability
+## 4.1 Two-sided observability: why the depth is what it is
 
 **Level two is decidable anywhere.** `U`/`SW`/`SC` need only answer-preserving presentations and gold labels. Any benchmark qualifies.
 
-**Level three is decidable only under construction-and-auditability.** The `SC → {grounded, spurious}` cut requires conditions (a) and (b) of §3.2. Their status differs by epistemic kind:
+**Level three is decidable only when both sides are observable** — the principle stated in §1. The `SC → {grounded, spurious}` cut requires conditions (a) and (b) of §3.2, one per side, and the two sides fail in different ways:
 
 ```text
-(a) causal irrelevance  : fixed BY CONSTRUCTION. We are not
-                          inferring a causal fact from the model;
-                          we authored the item. Non-circular by
-                          kind, not by cleverness.
-(b) training correlation: fixed BY MEASUREMENT on an auditable
-                          training set. No causal assumption.
+(a) benchmark-side : causal irrelevance is fixed BY CONSTRUCTION.
+                     We do not infer a causal fact from the model;
+                     we authored the item. Non-circular by kind,
+                     not by cleverness.
+(b) model-side     : training correlation is fixed BY MEASUREMENT
+                     on an auditable training set. No causal
+                     assumption.
 ```
 
 Remove either and the cut is **non-identifiable from the available observations**, in the standard causal-inference sense (Pearl, 2009; Pearl & Bareinboim, 2014): the quantity that would distinguish `SC-grounded` from `SC-spurious` is not a function of the data the setting provides. Without (a), the choice of which variable is "irrelevant" requires the very causal structure whose use by the model is in question — the original circularity returns. Without (b) — a model with unauditable pretraining — the correlation that defines `SC-spurious` cannot be measured and can only be estimated under assumptions the setting was meant to avoid. Therefore:
 
-> **The depth to which the hierarchy is observable is a function of construction and auditability.** On a real benchmark with an opaque-pretrained model, the honest decomposition *stops at* `U`/`SW`/`SC`. Reporting a "causally grounded" fraction there is not a stronger result; it is an underdetermined one — and the formal "ill-posed" treatment of this regime is the companion paper's job.
+> **The depth to which the hierarchy is observable is exactly what two-sided observability buys.** On a real benchmark with an opaque-pretrained model, the honest decomposition *stops at* `U`/`SW`/`SC`. Reporting a "causally grounded" fraction there is not a stronger result; it is an underdetermined one — and the formal "ill-posed" treatment of this regime is the companion paper's job.
 
 This reframes what is usually written as a tool's limitation into a property of the question. It also explains a recurring pattern in evaluation debates: claims about "genuine reasoning" on natural benchmarks are contested not because the measurement is noisy but because, past level two, there is no identifiable quantity to measure without the construction.
 
@@ -195,7 +196,7 @@ Semantic-preservation validation gates step 3 (quantifier/modal/causal-direction
 
 # 6. Demonstration: The Levels Are Non-Empty and the Boundary Bites
 
-This section provides controlled evidence for the main claim: **the hierarchy accuracy ⊋ stability ⊋ grounding has every containment non-empty, and the depth at which it is observable is a property of construction and auditability**. §6.1–6.3 demonstrate strict containment in the licensed regime; §6.4 demonstrates the boundary on a real benchmark. All numbers are from the existing experiment logs (see the evidence map); this section reorganizes the controlled results around the hierarchy and adds no claims beyond non-emptiness and the boundary.
+This section provides controlled evidence for the main claim: **the hierarchy accuracy ⊋ stability ⊋ grounding has every containment non-empty, and the depth at which it is observable is a property of construction and auditability**. §6.1–6.3 are the **both-sides-open** half of the §1 principle — graph stipulated, training auditable — where the cut is decidable and every containment is strictly non-empty; §6.4 is the **both-sides-dark** half, where the same cut is undecidable and we report it as such. Together they are the empirical confirmation of two-sided observability. All numbers are from the existing experiment logs (see the evidence map); this section reorganizes the controlled results around the hierarchy and adds no claims beyond non-emptiness and the boundary.
 
 ## 6.1 Stability ⊋ grounding: matched accuracy, opposite grounding
 
@@ -237,7 +238,7 @@ This is the **boundary-bites demonstration**: on a real benchmark, level two is 
 | **overstatement gap** | **+0.153 [0.118, 0.188]** | **+0.030 [0.015, 0.048]** | **+0.043 [0.023, 0.065]** |
 | `SC → {grounded, spurious}` | **undecidable here** | **undecidable here** | **undecidable here** |
 
-We compute levels one and two and *stop*. The empty deepest cell is the point: the gap excludes zero for all three and shrinks but does not vanish with capability, yet *no* assumption-free procedure can say how much of each `SC` is `SC-spurious` without the construction. Reporting a grounded fraction here would not be a stronger result — it would be the underdetermined one §4 describes.
+We compute levels one and two and *stop*. The empty deepest cell is the point: the gap excludes zero for all three and shrinks but does not vanish with capability, yet *no* assumption-free procedure can say how much of each `SC` is `SC-spurious` without the construction. Reporting a grounded fraction here would not be a stronger result — it would be the underdetermined one §4 describes. This is the other half of two-sided observability: with both sides dark, the deepest cut does not get *hard*, it gets *undecidable*, and the empty cell is the confirmation — not a gap in the method.
 
 ---
 
@@ -255,7 +256,7 @@ These are scope statements. Each marks a boundary the companion paper is designe
 
 # 8. Conclusion and the Two-Paper Split
 
-The main claim is a strict hierarchy — **accuracy ⊋ stability ⊋ grounding** — with every containment non-empty, whose *depth of observability* is itself a structural property rather than a separate result: the hierarchy is observable to level two on any benchmark and to level three only where the graph is stipulated and the training auditable; deeper in the wild it is non-identifiable from standard observational instruments — ill-posed under the companion paper's stronger formal treatment, not merely hard. Level one is credited as prior work; the causal instrument is credited as borrowed; what is ours is the reflexive structure, the observability-depth property, and the controlled evidence that the levels separate (a model can be matched on accuracy *and* stability yet opposite in grounding).
+The main claim is a strict hierarchy — **accuracy ⊋ stability ⊋ grounding** — with every containment non-empty, whose *depth of observability* is itself a structural property rather than a separate result: the hierarchy is observable to level two on any benchmark and to level three only where the graph is stipulated and the training auditable; deeper in the wild it is non-identifiable from standard observational instruments — ill-posed under the companion paper's stronger formal treatment, not merely hard. Level one is credited as prior work; the causal instrument is credited as borrowed; what is ours is the reflexive structure, the two-sided observability property, and the controlled evidence that the levels separate (a model can be matched on accuracy *and* stability yet opposite in grounding).
 
 This deliberately splits into two papers:
 
