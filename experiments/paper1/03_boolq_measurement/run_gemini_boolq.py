@@ -147,6 +147,14 @@ def main():
     done_count = len(done_keys)
     t0 = time.time()
 
+    fieldnames = ["id", "gold", "variant", "pred", "correct", "question"]
+
+    def _flush_csv():
+        with open(raw_file, "w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=fieldnames)
+            w.writeheader()
+            w.writerows(all_rows)
+
     for it in items:
         variants = build_variants(it)
         for vname, prompt in variants.items():
@@ -165,18 +173,15 @@ def main():
             all_rows.append(row)
             done_count += 1
             if done_count % 40 == 0:
+                _flush_csv()  # checkpoint so an interrupted run is resumable
                 el   = time.time() - t0
                 left = n_gen - done_count
                 print(f"  {done_count}/{n_gen} ({el:.0f}s, ~{el/done_count*left:.0f}s left)",
                       flush=True)
             time.sleep(0.05)
 
-    # Write raw CSV
-    fieldnames = ["id", "gold", "variant", "pred", "correct", "question"]
-    with open(raw_file, "w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fieldnames)
-        w.writeheader()
-        w.writerows(all_rows)
+    # Write raw CSV (final)
+    _flush_csv()
 
     # Aggregate
     by_item: dict = defaultdict(dict)
@@ -246,7 +251,7 @@ def main():
 
     json.dump(summary, open(summary_file, "w"), indent=2)
 
-    print(f"\n========  BoolQ (DeepSeek, n={n_items}, 95% CI)  ========")
+    print(f"\n========  BoolQ (Gemini, n={n_items}, 95% CI)  ========")
     print(f"Headline accuracy          : {summary['headline_accuracy_ci']}")
     print(f"Stable-correct fraction    : {summary['stable_correct_ci']}")
     print(f"Headline overstatement gap : {summary['headline_overstatement_gap_ci']}")

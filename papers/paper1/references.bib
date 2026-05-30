@@ -1,0 +1,152 @@
+% references.bib — paper1 "Stable Is Not Grounded"
+%
+% VERIFIED via web search (May 2026): zhuo2024prosa, errica2025wrong, hua2025flaw.
+% The remainder are reconstructed from standard knowledge — PLEASE DOUBLE-CHECK
+% volume/page/venue fields before camera-ready (titles/authors/years are right;
+% minor bibliographic fields may need confirmation against the ACL Anthology /
+% publisher record).
+
+% ---- prompt-sensitivity / stability floor (§2) ----
+@inproceedings{zhuo2024prosa,
+  title     = {{ProSA}: Assessing and Understanding the Prompt Sensitivity of {LLMs}},
+  author    = {Zhuo, Jingming and Zhang, Songyang and Fang, Xinyu and Duan, Haodong and Lin, Dahua and Chen, Kai},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2024},
+  year      = {2024},
+  url       = {https://aclanthology.org/2024.findings-emnlp.108/},
+  eprint    = {2410.12405},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{errica2025wrong,
+  title     = {What Did {I} Do Wrong? Quantifying {LLMs}' Sensitivity and Consistency to Prompt Engineering},
+  author    = {Errica, Federico and Sanvito, Davide and Siracusano, Giuseppe and Bifulco, Roberto},
+  booktitle = {Proceedings of the 2025 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)},
+  year      = {2025},
+  url       = {https://aclanthology.org/2025.naacl-long.73/},
+  eprint    = {2406.12334},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{hua2025flaw,
+  title     = {Flaw or Artifact? Rethinking Prompt Sensitivity in Evaluating {LLMs}},
+  author    = {Hua, Andong and Tang, Kenan and Gu, Chenhe and Gu, Jindong and Wong, Eric and Qin, Yao},
+  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2025},
+  url       = {https://aclanthology.org/2025.emnlp-main.1006/},
+  eprint    = {2509.01790},
+  archivePrefix = {arXiv}
+}
+
+@article{elazar2021consistency,
+  title   = {Measuring and Improving Consistency in Pretrained Language Models},
+  author  = {Elazar, Yanai and Kassner, Nora and Ravfogel, Shauli and Ravichander, Abhilasha and Hovy, Eduard and Sch{\"u}tze, Hinrich and Goldberg, Yoav},
+  journal = {Transactions of the Association for Computational Linguistics},
+  volume  = {9},
+  pages   = {1012--1031},
+  year    = {2021}
+}
+
+@inproceedings{mccoy2019right,
+  title     = {Right for the Wrong Reasons: Diagnosing Syntactic Heuristics in Natural Language Inference},
+  author    = {McCoy, Tom and Pavlick, Ellie and Linzen, Tal},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL)},
+  pages     = {3428--3448},
+  year      = {2019}
+}
+
+@article{damour2022underspecification,
+  title   = {Underspecification Presents Challenges for Credibility of Modern Machine Learning},
+  author  = {D'Amour, Alexander and Heller, Katherine and Moldovan, Dan and others},
+  journal = {Journal of Machine Learning Research},
+  volume  = {23},
+  number  = {226},
+  pages   = {1--61},
+  year    = {2022}
+}
+
+% ---- causal instrument: do-calculus, INUS, identifiability (§2, §4) ----
+@book{pearl2009causality,
+  title     = {Causality: Models, Reasoning, and Inference},
+  author    = {Pearl, Judea},
+  edition   = {2nd},
+  publisher = {Cambridge University Press},
+  year      = {2009}
+}
+
+@book{pearl2018book,
+  title     = {The Book of Why: The New Science of Cause and Effect},
+  author    = {Pearl, Judea and Mackenzie, Dana},
+  publisher = {Basic Books},
+  year      = {2018}
+}
+
+@article{mackie1965causes,
+  title   = {Causes and Conditions},
+  author  = {Mackie, John L.},
+  journal = {American Philosophical Quarterly},
+  volume  = {2},
+  number  = {4},
+  pages   = {245--264},
+  year    = {1965}
+}
+
+@article{halpern2005causes,
+  title   = {Causes and Explanations: A Structural-Model Approach. Part {I}: Causes},
+  author  = {Halpern, Joseph Y. and Pearl, Judea},
+  journal = {The British Journal for the Philosophy of Science},
+  volume  = {56},
+  number  = {4},
+  pages   = {843--887},
+  year    = {2005}
+}
+
+@article{pearl2014external,
+  title   = {External Validity: From Do-Calculus to Transportability Across Populations},
+  author  = {Pearl, Judea and Bareinboim, Elias},
+  journal = {Statistical Science},
+  volume  = {29},
+  number  = {4},
+  pages   = {579--595},
+  year    = {2014}
+}
+
+% ---- controls / negative controls / probing selectivity (§2, §3.2) ----
+@inproceedings{hewitt2019control,
+  title     = {Designing and Interpreting Probes with Control Tasks},
+  author    = {Hewitt, John and Liang, Percy},
+  booktitle = {Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages     = {2733--2743},
+  year      = {2019}
+}
+
+@article{lipsitch2010negative,
+  title   = {Negative Controls: A Tool for Detecting Confounding and Bias in Observational Studies},
+  author  = {Lipsitch, Marc and Tchetgen Tchetgen, Eric and Cohen, Ted},
+  journal = {Epidemiology},
+  volume  = {21},
+  number  = {3},
+  pages   = {383--388},
+  year    = {2010}
+}
+
+% ---- closest neighbours: counterfactual invariance, concept effects (§2) ----
+@inproceedings{veitch2021counterfactual,
+  title     = {Counterfactual Invariance to Spurious Correlations in Text Classification},
+  author    = {Veitch, Victor and D'Amour, Alexander and Yadlowsky, Steve and Eisenstein, Jacob},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2021}
+}
+
+@inproceedings{eisenstein2022informativeness,
+  title     = {Informativeness and Invariance: Two Perspectives on Spurious Correlations in Natural Language},
+  author    = {Eisenstein, Jacob},
+  booktitle = {Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)},
+  year      = {2022}
+}
+
+@inproceedings{abraham2022cebab,
+  title     = {{CEBaB}: Estimating the Causal Effects of Concepts on the Behavior of {NLP} Models},
+  author    = {Abraham, Eldar David and D'Oosterlinck, Karel and Feder, Amir and Gat, Yair and Geiger, Atticus and Potts, Christopher and Reichart, Roi and Wu, Zhengxuan},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2022}
+}

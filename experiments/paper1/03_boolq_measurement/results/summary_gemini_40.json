@@ -1,0 +1,36 @@
+{
+  "n_items": 40,
+  "model": "gemini-2.5-flash",
+  "headline_accuracy_original_prompt": 0.875,
+  "headline_accuracy_ci": [
+    0.875,
+    0.775,
+    0.975
+  ],
+  "stable_correct_pct": 0.8,
+  "stable_correct_ci": [
+    0.8,
+    0.675,
+    0.925
+  ],
+  "headline_overstatement_gap": 0.075,
+  "headline_overstatement_gap_ci": [
+    0.075,
+    0.0,
+    0.175
+  ],
+  "SIS_acc": 0.875,
+  "SIS_consistency": 0.9625,
+  "group_states": {
+    "stable_correct": 32,
+    "stable_wrong": 4,
+    "unstable": 4
+  },
+  "per_variant_accuracy": {
+    "distractor": 0.9,
+    "frame_a": 0.85,
+    "frame_b": 0.875,
+    "original": 0.875
+  },
+  "scope": "measurement-only (no causal DAG); conservative answer-preserving perturbations; zero-shot gemini-2.5-flash; n=40; single run; verdicts are bootstrap 95% CIs."
+}

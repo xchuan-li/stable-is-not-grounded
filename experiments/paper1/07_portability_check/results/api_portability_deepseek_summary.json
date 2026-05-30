@@ -1,0 +1,99 @@
+{
+  "experiment": "\u00a78 procedure-portability check \u2014 competent non-fine-tuned model (API)",
+  "model": "deepseek-v4-flash",
+  "provider": "deepseek",
+  "evaluation": "zero-shot frontier model; verdict structure under an IMPORTED class assignment (b NOT re-measured on pretraining; \u00a73.4)",
+  "design": "Identical \u00a75.4 two-premise ladder (imported verbatim from run_zeroshot_portability.py). Class label imported from the construction's own statistics. Competent witness for the open item left by the weak local run: does a capable, premise-respecting model ride a perfect (r=1.0) in-context color cue? No expected outcome is hard-coded \u2014 both directions inform.",
+  "n_per_condition": 200,
+  "regime_chain_required": {
+    "imported_|r|": {
+      "color": 0.0072,
+      "name": 0.0004
+    },
+    "imported_class_assignment": {
+      "color": "class-2",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc_ci": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "P1_ablate_withhold_ci": [
+      0.42,
+      0.355,
+      0.485
+    ],
+    "P2_ablate_withhold_ci": [
+      0.35,
+      0.2899,
+      0.4151
+    ],
+    "drop_do(color)_class3_ci": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drop_do(name)_class2_ci": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "class1_flip_rate_ci": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "nonredundancy_respected": false,
+    "nonredundancy_fails_decoupled": true,
+    "flagged_correlational": false,
+    "class1_correctly_variant": true,
+    "class1_insensitive_to_chain": false
+  },
+  "regime_shortcut_available": {
+    "imported_|r|": {
+      "color": 1.0,
+      "name": 0.0148
+    },
+    "imported_class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc_ci": [
+      0.995,
+      0.985,
+      1.0
+    ],
+    "P1_ablate_withhold_ci": [
+      0.43,
+      0.365,
+      0.5001
+    ],
+    "P2_ablate_withhold_ci": [
+      0.36,
+      0.29,
+      0.43
+    ],
+    "drop_do(color)_class3_ci": [
+      -0.005,
+      -0.015,
+      0.0
+    ],
+    "drop_do(name)_class2_ci": [
+      0.0,
+      -0.015,
+      0.015
+    ],
+    "class1_flip_rate_ci": [
+      0.995,
+      0.985,
+      1.0
+    ],
+    "nonredundancy_respected": false,
+    "nonredundancy_fails_decoupled": true,
+    "flagged_correlational": false,
+    "class1_correctly_variant": true,
+    "class1_insensitive_to_chain": false
+  },
+  "scope": "Portability check under imported class assignment; not a re-measured (b), not a capability claim."
+}

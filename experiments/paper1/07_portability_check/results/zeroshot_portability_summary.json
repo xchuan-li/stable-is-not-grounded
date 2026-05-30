@@ -1,0 +1,97 @@
+{
+  "experiment": "\u00a78 procedure-portability check \u2014 zero-shot, no fine-tune",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "evaluation": "zero-shot; verdict structure under an IMPORTED class assignment (b NOT re-measured on pretraining; \u00a73.4)",
+  "design": "Identical \u00a75.4 two-premise ladder. Class label imported from the construction's own data statistics. No expected outcome is hard-coded; a non-reproduced flag in shortcut_available is itself informative (it would show the \u00a75 positive verdict is specific to models trained on the entanglement).",
+  "regime_chain_required": {
+    "imported_|r|": {
+      "color": 0.0072,
+      "name": 0.0004
+    },
+    "imported_class_assignment": {
+      "color": "class-2",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc_ci": [
+      0.645,
+      0.6067,
+      0.6817
+    ],
+    "P1_ablate_withhold_ci": [
+      0.3617,
+      0.3233,
+      0.3983
+    ],
+    "P2_ablate_withhold_ci": [
+      0.0117,
+      0.0033,
+      0.02
+    ],
+    "drop_do(color)_class3_ci": [
+      0.01,
+      -0.0683,
+      0.085
+    ],
+    "drop_do(name)_class2_ci": [
+      -0.0433,
+      -0.1167,
+      0.0317
+    ],
+    "class1_flip_rate_ci": [
+      0.2917,
+      0.255,
+      0.325
+    ],
+    "nonredundancy_respected": false,
+    "nonredundancy_fails_decoupled": true,
+    "flagged_correlational": false,
+    "class1_correctly_variant": false,
+    "class1_insensitive_to_chain": true
+  },
+  "regime_shortcut_available": {
+    "imported_|r|": {
+      "color": 1.0,
+      "name": 0.0148
+    },
+    "imported_class_assignment": {
+      "color": "class-3",
+      "name": "class-2"
+    },
+    "baseline_fullM_acc_ci": [
+      0.6833,
+      0.6483,
+      0.7183
+    ],
+    "P1_ablate_withhold_ci": [
+      0.3017,
+      0.265,
+      0.3367
+    ],
+    "P2_ablate_withhold_ci": [
+      0.0083,
+      0.0017,
+      0.0167
+    ],
+    "drop_do(color)_class3_ci": [
+      0.0483,
+      -0.0267,
+      0.1216
+    ],
+    "drop_do(name)_class2_ci": [
+      0.0166,
+      -0.0567,
+      0.09
+    ],
+    "class1_flip_rate_ci": [
+      0.2967,
+      0.26,
+      0.3333
+    ],
+    "nonredundancy_respected": false,
+    "nonredundancy_fails_decoupled": true,
+    "flagged_correlational": false,
+    "class1_correctly_variant": false,
+    "class1_insensitive_to_chain": true
+  },
+  "scope": "Portability check under imported class assignment; not a re-measured (b), not a capability claim."
+}

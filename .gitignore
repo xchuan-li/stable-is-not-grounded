@@ -15,6 +15,8 @@ __pycache__/
 # Models / artifacts
 *.joblib
 *.pkl
+*.safetensors
+**/results/model/
 
 # VSCode
 .vscode/*.safetensors
@@ -22,3 +24,13 @@ __pycache__/
 models/
 checkpoints/
 .claude/
+
+# Obsidian
+.obsidian/
+
+# Run logs
+*.log
+
+# Build artifacts (PDFs); keep paper figures
+*.pdf
+!papers/paper1/figures/*.pdf
