@@ -1,0 +1,6 @@
+{"lang": "de", "condition": "simple_agrmt", "slice": "aligned", "good": "Der Autor lacht .", "bad": "Der Autor lachen ."}
+{"lang": "de", "condition": "simple_agrmt", "slice": "aligned", "good": "Die Autoren lachen .", "bad": "Die Autoren lacht ."}
+{"lang": "de", "condition": "obj_rel_match", "slice": "control", "good": "Der Autor, den der Wächter mag, lacht .", "bad": "Der Autor, den der Wächter mag, lachen ."}
+{"lang": "de", "condition": "obj_rel_match", "slice": "control", "good": "Die Autoren, die die Wächter mögen, lachen .", "bad": "Die Autoren, die die Wächter mögen, lacht ."}
+{"lang": "de", "condition": "obj_rel_mismatch", "slice": "attractor", "good": "Der Autor, den die Wächter mögen, lacht .", "bad": "Der Autor, den die Wächter mögen, lachen ."}
+{"lang": "de", "condition": "obj_rel_mismatch", "slice": "attractor", "good": "Die Autoren, die der Wächter mag, lachen .", "bad": "Die Autoren, die der Wächter mag, lacht ."}

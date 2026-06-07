@@ -1,0 +1,6 @@
+{"lang": "en", "condition": "simple_agrmt", "slice": "aligned", "good": "The author laughs .", "bad": "The author laugh ."}
+{"lang": "en", "condition": "simple_agrmt", "slice": "aligned", "good": "The authors laugh .", "bad": "The authors laughs ."}
+{"lang": "en", "condition": "obj_rel_match", "slice": "control", "good": "The author that the guard likes laughs .", "bad": "The author that the guard likes laugh ."}
+{"lang": "en", "condition": "obj_rel_match", "slice": "control", "good": "The authors that the guards like laugh .", "bad": "The authors that the guards like laughs ."}
+{"lang": "en", "condition": "obj_rel_mismatch", "slice": "attractor", "good": "The author that the guards like laughs .", "bad": "The author that the guards like laugh ."}
+{"lang": "en", "condition": "obj_rel_mismatch", "slice": "attractor", "good": "The authors that the guard likes laugh .", "bad": "The authors that the guard likes laughs ."}
