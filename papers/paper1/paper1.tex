@@ -13,8 +13,10 @@
 % For the official ACL look at camera-ready: start a project from the "ACL
 % Proceedings" Overleaf template (it ships acl.sty + acl_natbib.bst), then
 % replace this preamble with \documentclass[11pt]{article}\usepackage{acl}.
-% NOT compiled locally (no TeX here). ~5200 words will likely exceed 8 pages —
-% trim §4.2 / §4.3 first.
+% NOT compiled locally (no TeX here). ~5200 words will likely exceed 8 pages.
+% Reframed around linguistic structure (structure vs surface); the gate-shaped
+% §4.2 was removed for budget; the §6 agreement subsection is DESIGNED — its
+% results are forthcoming (experiment 09); fill its numbers before camera-ready.
 % =====================================================================
 \begin{filecontents*}[overwrite]{references.bib}
 @inproceedings{zhuo2024prosa,
@@ -49,6 +51,10 @@
 @inproceedings{veitch2021counterfactual, title={Counterfactual Invariance to Spurious Correlations in Text Classification}, author={Veitch, Victor and D'Amour, Alexander and Yadlowsky, Steve and Eisenstein, Jacob}, booktitle={NeurIPS}, year={2021}}
 @inproceedings{eisenstein2022informativeness, title={Informativeness and Invariance: Two Perspectives on Spurious Correlations in Natural Language}, author={Eisenstein, Jacob}, booktitle={Proc. NAACL}, year={2022}}
 @inproceedings{abraham2022cebab, title={{CEBaB}: Estimating the Causal Effects of Concepts on the Behavior of {NLP} Models}, author={Abraham, Eldar David and D'Oosterlinck, Karel and Feder, Amir and Gat, Yair and Geiger, Atticus and Potts, Christopher and Reichart, Roi and Wu, Zhengxuan}, booktitle={NeurIPS}, year={2022}}
+@article{linzen2016assessing, title={Assessing the Ability of {LSTM}s to Learn Syntax-Sensitive Dependencies}, author={Linzen, Tal and Dupoux, Emmanuel and Goldberg, Yoav}, journal={TACL}, volume={4}, pages={521--535}, year={2016}}
+@inproceedings{gulordava2018colorless, title={Colorless Green Recurrent Networks Dream Hierarchically}, author={Gulordava, Kristina and Bojanowski, Piotr and Grave, Edouard and Linzen, Tal and Baroni, Marco}, booktitle={Proc. NAACL}, pages={1195--1205}, year={2018}}
+@inproceedings{marvin2018targeted, title={Targeted Syntactic Evaluation of Language Models}, author={Marvin, Rebecca and Linzen, Tal}, booktitle={Proc. EMNLP}, pages={1192--1202}, year={2018}}
+@inproceedings{mueller2020crosslinguistic, title={Cross-Linguistic Syntactic Evaluation of Word Prediction Models}, author={Mueller, Aaron and Nicolai, Garrett and Petrova, Panayiota and Linzen, Tal}, booktitle={Proc. ACL}, pages={5523--5539}, year={2020}}
 \end{filecontents*}
 
 \documentclass[11pt,twocolumn]{article}
@@ -80,8 +86,8 @@
 \newcommand{\subsetstrict}{\supsetneq}  % accuracy ⊋ stability ⊋ grounding
 
 \title{Stable Is Not Grounded\\[2pt]
-\large Non-Circular Detection of Shortcut Reliance, by Separating\\
-Stipulated Irrelevance from Measured Entanglement}
+\large Structure or Surface: Certifying Grounding with\\
+Linguistic Structure as a Non-Circular Stipulated Graph}
 
 \author{Xiaochuan Li \\
   University of Technology Nuremberg (UTN) \\
@@ -116,8 +122,13 @@ open. On two model classes a comparably-high headline accuracy and
 ports to a competent never-fine-tuned reasoner that ignores even a perfect
 in-context shortcut. On a real benchmark across three zero-shot models the
 decomposition is computed exactly as deep as it is licensed---and no
-deeper. The formal underdetermination treatment is deferred to a companion
-paper.
+deeper. Because grammar stipulates which structure licenses an inference and
+which surface cue is irrelevant, the cut runs natively on \textbf{linguistic
+structure}: we read HANS as a syntactic-heuristic instance and instantiate the
+same cut on subject--verb agreement across languages, where linear proximity is
+irrelevant by grammar rather than by investigator---the natural \scg{} witness a
+single-language shortcut benchmark cannot supply (results forthcoming). The
+formal underdetermination treatment is deferred to a companion paper.
 \end{abstract}
 
 \section{Introduction}
@@ -141,6 +152,22 @@ whether the answer tracks the material or the cue. That models can be ``right
 for the wrong reasons'' is an old observation \citep{mccoy2019right}; what is new
 here is pushing the same cut one level deeper---into answers that are already
 stable \emph{and} correct.
+
+The cleanest place to make this cut is \textbf{language}, because there the
+irrelevant cue and the licensing structure are named in advance by grammar. In
+subject--verb agreement the verb agrees with its syntactic \emph{subject} (the
+head), not with whatever noun sits closest to it; a model that has internalised
+``agree with the nearest noun'' is consistent, usually correct, and robust to
+rephrasing, yet fails on the \emph{attractor} sentences where an intervening noun
+of the opposite number stands between subject and verb. Grammar---not the
+investigator---stipulates that linear proximity is irrelevant here, so the
+by-construction half of the cut (\S\ref{sec:cut}(a)) is supplied for free; and
+typology turns it into a natural experiment, since the same dependency severs
+proximity from the subject at different rates across languages, so a
+proximity-rider passes in one language and fails in another with neither model
+nor task touched (\S\ref{sec:agreement}). \emph{Structure or surface?}---language
+is where it is decidable. This paper is the Certification leg of a three-part
+program (Certification / Localization / Quantification).
 
 Decompose each item's behaviour under conservative, answer-preserving
 presentations into \U{} (unstable: the answer changes across presentations),
@@ -209,7 +236,9 @@ goes dark the cut is underdetermined. This is a scope condition, not a
 tuning knob (\S\ref{sec:licensed}). The demonstration shows both halves: in the
 licensed regime the cut splits two models comparably high on accuracy
 \emph{and} on the stable-correct fraction into opposite grounding verdicts
-(\S\ref{sec:demo}), and the verdict
+(\S\ref{sec:demo}); it instantiates on \textbf{linguistic structure}---subject--verb
+agreement across languages, where grammar supplies the stipulated graph and the
+natural \scg{} witness (\S\ref{sec:agreement}, results forthcoming); and the verdict
 ports to a competent never-fine-tuned reasoner that ignores even a perfect
 in-context shortcut (\S\ref{sec:limits}); on a natural benchmark, where both
 sides are dark, the procedure declines, and we report that as a result.
@@ -226,6 +255,16 @@ a pipeline yields many equally-accurate predictors whose shortcut reliance
 varies with seed \citep{damour2022underspecification}. Our \U{}/\SW{}/\SC{}
 split is a clean restatement of this line, taken as the floor on which the rest
 is built rather than as a contribution.
+
+A second line we build on probes whether models track \emph{syntactic
+structure} rather than surface order: targeted subject--verb agreement
+evaluation \citep{linzen2016assessing,gulordava2018colorless,marvin2018targeted}
+and its cross-lingual extension \citep{mueller2020crosslinguistic} use attractor
+constructions as severing tests, and HANS \citep{mccoy2019right} is itself a
+diagnosis of \emph{syntactic} heuristics. We read these as naturally-occurring
+instances of the by-construction graph of \S\ref{sec:cut}(a)---grammar supplies
+the stipulated irrelevance---rather than as brittleness probes alone; the
+reframing into the certification procedure is ours, the constructions are theirs.
 
 Our causal instrument is borrowed, and we use it as such. The do/see distinction
 and intervention semantics are Pearl's \citep{pearl2009causality,pearl2018book};
@@ -412,29 +451,21 @@ non-identifiability \citep{pearl2009causality,pearl2014external}. The
 companion paper formalises this and gives the full proof; we use it here
 as the licensing condition for level three.
 
-\subsection{The boundary is gate-shaped, not line-shaped}
-The move that splits \SC{} is not special to it: every behavioural bucket is
-silent on the reason, and the reason is always the same causal-vs-shortcut axis.
-\U{} splits two ways: severing the shortcut either removes the instability
-(shortcut-sourced) or leaves it (not-shortcut-explained), and because
-presentations are answer-preserving with \Mstr{} fixed, a flip cannot be
-``\Mstr{} changed.'' \SW{} splits into \swsc{} (decidable by the same \doc{}
-test), \texttt{SW-misrule} (a stable wrong structural rule, needing the
-\texttt{class-1} correctly-variant arm), and \texttt{SW-degenerate} (a
-near-constant predictor). There is thus a small set of \emph{licensed
-instruments}, and the causal-vs-shortcut question recurses into every stratum,
-decidable exactly as far as a licensed instrument reaches and underdetermined
-past it. We deliberately do not multiply buckets beyond what an instrument can
-decide.
-
 \subsection{One recursive consequence}\label{sec:recursive}
-\scs{} and \swsc{} are \emph{the same mechanism}---a model riding the same
-\texttt{class-3} shortcut---partitioned only by whether the shortcut happens to
-agree with the gold label on the evaluation slice. The same model, on a
-different slice, moves between the ``good'' and ``bad'' bucket without changing
-at all. So the \SC{}/\SW{} boundary is, at the mechanism level, an artefact of
-the evaluation distribution; it inherits the same construction-and-auditability
-requirement and is decidable only where the deepest cut is.
+The cut is not special to \SC{}: every behavioural bucket is silent on the
+\emph{reason}, and the reason is always the same causal-vs-shortcut axis. The
+full recursion---that \U{} and \SW{} split the same way, each gate opened only by
+a licensed instrument and underdetermined past it---is the companion paper's. One
+consequence is sharp enough to keep here: \scs{} and \swsc{} are \emph{the same
+mechanism}---a model riding the same \texttt{class-3} shortcut---partitioned only
+by whether the shortcut happens to agree with the gold label on the evaluation
+slice. The same model, on a different slice, moves between the ``good'' and
+``bad'' bucket without changing at all. So the \SC{}/\SW{} boundary is, at the
+mechanism level, an artefact of the evaluation distribution; cross-lingual
+agreement (\S\ref{sec:agreement}) makes this concrete---a proximity-rider's
+ranking inverts across languages with neither model nor task touched. The
+corollary inherits the construction-and-auditability requirement and is decidable
+only where the deepest cut is.
 
 \section{Instantiation Protocol}\label{sec:protocol}
 A reproducible recipe for the full hierarchy in the licensed regime:
@@ -469,9 +500,14 @@ This section provides controlled evidence for the contribution: the non-circular
 procedure decides $\SC \rightarrow \{\text{grounded},\text{spurious},\text{unresolved}\}$,
 the levels are non-empty, and the cut is licensed where both sides are open.
 \S\ref{sec:demo}.1--.3 are the both-sides-open half on synthetic items;
-\S\ref{sec:hans} is both-sides-open on \emph{naturalistic} data, where the graph
-is given; \S\ref{sec:boundary} is the both-sides-dark half, where it is not. All
-numbers are from the existing experiment logs.
+\S\ref{sec:agreement} lifts the cut onto \emph{linguistic structure}---subject--verb
+agreement across languages, where grammar gives the stipulated graph and the
+natural \scg{} witness (results forthcoming); \S\ref{sec:hans} carries it onto
+\emph{naturalistic} NLI (HANS), where the graph is given and the \scs{} flag
+fires; \S\ref{sec:boundary} is the both-sides-dark half, where it is not.
+Synthetic and HANS numbers are from the existing experiment logs;
+\S\ref{sec:agreement} is a designed instantiation whose cross-lingual results are
+forthcoming.
 
 \subsection{Comparable accuracy, opposite grounding}
 A synthetic task (``can X fly?'') with licensing structure \Mstr{} = animal type,
@@ -530,11 +566,43 @@ collapse $0.517\,[0.491,0.542]$ flagged 3/3, \texttt{class-1} flip $0.00$,
 control intact (\scs{}). The same P1/P2 ablation asymmetry surfaces under
 the Qwen-LoRA seeds as under DistilBERT.
 
-\subsection{A naturalistic instance, where the graph is given}\label{sec:hans}
+\subsection{Linguistic structure: subject--verb agreement across
+languages}\label{sec:agreement}
+The construction need not be ours, nor even a benchmark's: \textbf{grammar is a
+naturally-occurring stipulated graph.} In subject--verb agreement the verb agrees
+with its syntactic \emph{subject} (the head), not with a linearly closer noun;
+that proximity is irrelevant is fixed by the grammar of the language---%
+\S\ref{sec:cut}(a) holds \emph{by construction, non-circular by kind}---and
+$\mathrm{corr}(\text{proximity-cue},\text{agreement-label})$ on the training
+corpus is auditable (\S\ref{sec:cut}(b)). The instrument maps exactly: the
+\doc{} sever is an \emph{attractor} item (an intervening noun of the opposite
+number between subject and verb); the \dctwo{} control is a number-neutral
+intervening word; an item is \scg{} when correctness is high on \emph{both} the
+aligned \emph{and} the attractor slice (the subject is tracked), and \scs{} when
+it holds on the aligned slice but collapses on the attractor slice (proximity is
+ridden). Typology gives the eval-contingency of \S\ref{sec:recursive} a concrete
+form: the same model's verdict flips \emph{across languages}, since proximity is
+severed from the subject at different rates, so a proximity-rider ranks
+differently in (e.g.)\ English and German with neither model nor task changed.
+This is the witness a single-language shortcut benchmark cannot supply: HANS
+(\S\ref{sec:hans}) fires \scs{} only, whereas agreement yields \emph{both}
+directions---the paper's first naturalistic \scg{} certificate.
+
+\paragraph{Results forthcoming (experiment 09).} This subsection is a
+\emph{designed} instantiation: the protocol is fixed above and the data and
+models are named---targeted agreement suites \citep{marvin2018targeted} and the
+cross-lingual set \citep{mueller2020crosslinguistic}, English and German as the
+primary claim, multi-seed across $\geq 2$ architectures with bootstrap 95\% CIs,
+exactly as \S\ref{sec:demo}.1--.3---but no numbers are reported until the run
+completes. It is included to fix the framing and the analysis plan; the table is
+filled by experiment \texttt{09\_crosslingual\_agreement}.
+
+\subsection{A naturalistic NLI instance: HANS as a syntactic heuristic}\label{sec:hans}
 The construction supplies the two-sided observability of \S\ref{sec:cut}, but it
 need not be \emph{ours}: any benchmark that stipulates an irrelevance \emph{and}
 exposes an auditable training set licenses the cut. HANS
-\citep{mccoy2019right} is one such naturalistic instance. Its
+\citep{mccoy2019right}---itself a diagnosis of \emph{syntactic} heuristics---is
+one such naturalistic instance. Its
 non-entailment cases carry high lexical overlap yet gold non-entailment---%
 overlap-irrelevance fixed \emph{by construction} (\S\ref{sec:cut}(a))---and we
 fine-tune our own DistilBERT on an MNLI subset, so the training set, and the
@@ -585,8 +653,11 @@ and a constructed shortcut-competition regime; it shows the levels are non-empty
 and the boundary bites, not that any deployed model is \scs{} in the wild. The
 naturalistic case (\S\ref{sec:hans}, HANS) lifts the cut off our own templates
 onto independently-authored NLI text, but only in the \scs{} direction and on a
-single architecture; a naturalistic \scg{} witness---a model high on \emph{both}
-HANS slices---remains open.
+single architecture. The natural \scg{} witness this leaves open is the target of
+\S\ref{sec:agreement}---cross-lingual subject--verb agreement, where a
+subject-tracker is high on \emph{both} the aligned and the attractor slice; those
+results are forthcoming, and broader language-family coverage and larger models
+remain open beyond English and German.
 
 \paragraph{Portability to never-fine-tuned models.}
 Every primary-claim model in \S\ref{sec:demo} is fine-tuned on the distribution
@@ -639,7 +710,9 @@ on a never-fine-tuned reasoner.
 The companion paper takes up the formal argument that level three is
 underdetermined without construction-and-auditability, and the consequence that
 ``causal-reasoning evaluation'' claims on natural benchmarks are not well-posed
-past level two.
+past level two. This paper is the \textbf{Certification} leg of a three-part
+program (Certification / Localization / Quantification), and runs the cut
+natively on linguistic structure (\S\ref{sec:agreement}).
 
 \bibliographystyle{plainnat}
 \bibliography{references}
