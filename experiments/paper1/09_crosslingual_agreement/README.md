@@ -1,8 +1,42 @@
 # Experiment 09: Cross-Lingual Subject–Verb Agreement — the natural `SC-grounded` witness
 
-**Status:** scaffold + pipeline smoke-tested (gpt2 on the demo set runs end-to-end).
-**Real suites + runs are PENDING** — this fills the *results-forthcoming* table in
-paper §6.4 (`\label{sec:agreement}`).
+**Status:** EN + DE done (zero-shot / portability regime). Licensed
+(train-our-own) variant still pending. Combined numbers in
+`results/summary_crosslingual.json`.
+
+Real CLAMS runs, capped & balanced (2000/slice, seed 42). EN uses prep_anim +
+obj_rel_across_anim; DE uses obj_rel_across_anim (number read from the agreeing
+verb, since German nouns are number-invariant).
+
+| lang | model | aligned | attractor | control | ctl−att | ctl gap | control intact | verdict |
+|---|---|---|---|---|---|---|---|---|
+| en | gpt2 | 0.904 | 0.813 | 0.867 | 0.054 | 0.038 | yes | SC-grounded (borderline; attractor CI dips < .80) |
+| en | distilgpt2 | 0.905 | 0.686 | 0.879 | 0.193 | 0.026 | yes | **SC-spurious** (rides proximity) |
+| en | xglm-564M | 0.975 | 0.692 | 0.898 | 0.207 | 0.076 | yes | **SC-spurious** |
+| en | pythia-160m | 0.911 | 0.532 | 0.750 | 0.218 | 0.161 | **no** | mixed (class-2 control vetoes) |
+| de | german-gpt2 | 0.985 | 0.821 | 0.943 | 0.122 | 0.042 | yes | SC-grounded |
+| de | xglm-564M | 0.987 | 0.889 | 0.986 | 0.097 | 0.001 | yes | SC-grounded |
+
+**The cross-lingual flip (the §4.3 witness):** the *same* model, `xglm-564M`,
+is **SC-spurious on English** but **SC-grounded on German** — with neither model
+nor task touched, only the language. Construction-matched (obj_rel_across_anim in
+both languages, the clean comparison): **en ctl−att 0.262 vs de ctl−att 0.097**
+(the pooled-en 0.207 above is diluted by the easier prep_anim; matched is
+stronger). German's richer agreement morphology severs proximity from the subject
+more saliently, so the cut's verdict is eval-contingent across typology. This is
+the naturalistic `SC-grounded` witness §7 listed as open.
+
+Two more findings worth keeping: the class-2 control actively **vetoes**
+pythia-160m (collapses even on same-number interveners → "any intervener hurts",
+not a clean proximity rider); and the verdict varies across English models
+(gpt2 grounded-ish, distilgpt2/xglm spurious).
+
+**Caveats:** zero-shot = PORTABILITY (§3.2b dark — read labels in that sense).
+The cleaner shortcut contrast is **ctl−att** (control and attractor share
+structure; aligned does not), not the engine's current aligned−att `drop`.
+
+> Data prep: `python prepare_clams.py --clams_dir /path/to/clams --lang en|de --cap 2000 --seed 42 --out data/<lang>.jsonl`
+> (clone github.com/aaronmueller/clams; the `--clams_dir` mode slices by subject/intervener number — EN by noun morphology, DE by the agreeing verb).
 
 Paper section:
 - §6.4 — lifts the `SC → {grounded, spurious}` cut onto **linguistic structure**;

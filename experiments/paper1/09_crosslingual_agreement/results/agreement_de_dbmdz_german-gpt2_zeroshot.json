@@ -1,0 +1,82 @@
+{
+  "experiment": "cross-lingual subject-verb agreement: SC-grounded/SC-spurious cut",
+  "lang": "de",
+  "model": "dbmdz/german-gpt2",
+  "tag": "zeroshot",
+  "n_pairs": 5620,
+  "n_by_slice": {
+    "aligned": 1620,
+    "attractor": 2000,
+    "control": 2000
+  },
+  "framework": {
+    "shortcut": "agree with the linearly nearest noun (proximity cue)",
+    "by_construction_(3.2a)": "attractor = intervening noun of opposite number; grammar stipulates proximity irrelevant",
+    "do(class-3)_analog": "attractor (number-mismatch) slice",
+    "class-2_control": "number-match intervener slice (no opposing cue)"
+  },
+  "accuracy_by_slice": {
+    "aligned": [
+      0.9846,
+      0.9784,
+      0.9901
+    ],
+    "attractor": [
+      0.8205,
+      0.804,
+      0.8355
+    ],
+    "control": [
+      0.9425,
+      0.933,
+      0.952
+    ]
+  },
+  "do(class-3)_drop_aligned_minus_attractor": 0.1641,
+  "class-2_control_gap_aligned_minus_control": 0.0421,
+  "control_intact": true,
+  "thresholds": {
+    "grounded_thr": 0.8,
+    "drop_thr": 0.2,
+    "control_eps": 0.1
+  },
+  "accuracy_by_condition": {
+    "long_vp_coord": {
+      "aligned": [
+        0.966,
+        0.948,
+        0.98
+      ]
+    },
+    "obj_rel_across_anim_match": {
+      "control": [
+        0.9425,
+        0.933,
+        0.952
+      ]
+    },
+    "obj_rel_across_anim_mismatch": {
+      "attractor": [
+        0.8205,
+        0.804,
+        0.8355
+      ]
+    },
+    "simple_agrmt": {
+      "aligned": [
+        0.9929,
+        0.9786,
+        1.0
+      ]
+    },
+    "vp_coord": {
+      "aligned": [
+        0.9929,
+        0.9867,
+        0.998
+      ]
+    }
+  },
+  "verdict": "SC-grounded (tracks the subject on both slices)",
+  "seconds": 39.9
+}

@@ -1,0 +1,68 @@
+{
+  "experiment": "cross-lingual subject-verb agreement: SC-grounded/SC-spurious cut",
+  "lang": "en",
+  "model": "gpt2",
+  "tag": "smoketest",
+  "n_pairs": 6,
+  "n_by_slice": {
+    "aligned": 2,
+    "attractor": 2,
+    "control": 2
+  },
+  "framework": {
+    "shortcut": "agree with the linearly nearest noun (proximity cue)",
+    "by_construction_(3.2a)": "attractor = intervening noun of opposite number; grammar stipulates proximity irrelevant",
+    "do(class-3)_analog": "attractor (number-mismatch) slice",
+    "class-2_control": "number-match intervener slice (no opposing cue)"
+  },
+  "accuracy_by_slice": {
+    "aligned": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "attractor": [
+      0.5,
+      0.0,
+      1.0
+    ],
+    "control": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "do(class-3)_drop_aligned_minus_attractor": 0.5,
+  "class-2_control_gap_aligned_minus_control": 0.0,
+  "control_intact": true,
+  "thresholds": {
+    "grounded_thr": 0.8,
+    "drop_thr": 0.2,
+    "control_eps": 0.1
+  },
+  "accuracy_by_condition": {
+    "obj_rel_match": {
+      "control": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "obj_rel_mismatch": {
+      "attractor": [
+        0.5,
+        0.0,
+        1.0
+      ]
+    },
+    "simple_agrmt": {
+      "aligned": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "verdict": "SC-spurious (rides linear proximity)",
+  "seconds": 6.2
+}

@@ -1,0 +1,158 @@
+{
+  "experiment": "09 cross-lingual subject-verb agreement (zero-shot / portability regime)",
+  "regime": "zero-shot pretrained LMs; §3.2(b) training-entanglement DARK -> PORTABILITY, not the fully-licensed cut",
+  "data": "CLAMS (Mueller et al. 2020), obj_rel_across_anim (+prep_anim for en); slices by subject/intervener number; cap 2000/slice seed 42",
+  "metric_note": "ctl_minus_att (control - attractor) isolates the proximity cue holding sentence structure constant; aligned differs structurally",
+  "cross_lingual_flip": {
+    "claim": "same model, language changed, verdict flips (paper §4.3 eval-contingency made empirical)",
+    "model": "facebook/xglm-564M",
+    "en": "SC-spurious (ctl-att 0.207, rides linear proximity)",
+    "de": "SC-grounded (ctl-att 0.097, tracks subject)"
+  },
+  "runs": [
+    {
+      "lang": "de",
+      "model": "dbmdz/german-gpt2",
+      "aligned": [
+        0.9846,
+        0.9784,
+        0.9901
+      ],
+      "attractor": [
+        0.8205,
+        0.804,
+        0.8355
+      ],
+      "control": [
+        0.9425,
+        0.933,
+        0.952
+      ],
+      "ctl_minus_att": 0.122,
+      "aligned_minus_att_drop": 0.1641,
+      "control_gap": 0.0421,
+      "control_intact": true,
+      "verdict": "SC-grounded (tracks the subject on both slices)"
+    },
+    {
+      "lang": "de",
+      "model": "facebook/xglm-564M",
+      "aligned": [
+        0.987,
+        0.9809,
+        0.992
+      ],
+      "attractor": [
+        0.8895,
+        0.8755,
+        0.902
+      ],
+      "control": [
+        0.986,
+        0.9805,
+        0.991
+      ],
+      "ctl_minus_att": 0.0965,
+      "aligned_minus_att_drop": 0.0975,
+      "control_gap": 0.001,
+      "control_intact": true,
+      "verdict": "SC-grounded (tracks the subject on both slices)"
+    },
+    {
+      "lang": "en",
+      "model": "EleutherAI/pythia-160m",
+      "aligned": [
+        0.9109,
+        0.8957,
+        0.9254
+      ],
+      "attractor": [
+        0.532,
+        0.5115,
+        0.5535
+      ],
+      "control": [
+        0.75,
+        0.731,
+        0.7685
+      ],
+      "ctl_minus_att": 0.218,
+      "aligned_minus_att_drop": 0.3789,
+      "control_gap": 0.1609,
+      "control_intact": false,
+      "verdict": "mixed / inconclusive"
+    },
+    {
+      "lang": "en",
+      "model": "facebook/xglm-564M",
+      "aligned": [
+        0.9746,
+        0.9659,
+        0.9826
+      ],
+      "attractor": [
+        0.6915,
+        0.671,
+        0.711
+      ],
+      "control": [
+        0.8985,
+        0.8855,
+        0.9115
+      ],
+      "ctl_minus_att": 0.207,
+      "aligned_minus_att_drop": 0.2831,
+      "control_gap": 0.0761,
+      "control_intact": true,
+      "verdict": "SC-spurious (rides linear proximity)"
+    },
+    {
+      "lang": "en",
+      "model": "distilgpt2",
+      "aligned": [
+        0.9051,
+        0.8884,
+        0.9203
+      ],
+      "attractor": [
+        0.686,
+        0.666,
+        0.707
+      ],
+      "control": [
+        0.879,
+        0.8645,
+        0.8935
+      ],
+      "ctl_minus_att": 0.193,
+      "aligned_minus_att_drop": 0.2191,
+      "control_gap": 0.0261,
+      "control_intact": true,
+      "verdict": "SC-spurious (rides linear proximity)"
+    },
+    {
+      "lang": "en",
+      "model": "gpt2",
+      "aligned": [
+        0.9043,
+        0.8891,
+        0.921
+      ],
+      "attractor": [
+        0.813,
+        0.7955,
+        0.8295
+      ],
+      "control": [
+        0.8665,
+        0.851,
+        0.8815
+      ],
+      "ctl_minus_att": 0.0535,
+      "aligned_minus_att_drop": 0.0913,
+      "control_gap": 0.0378,
+      "control_intact": true,
+      "verdict": "SC-grounded (tracks the subject on both slices)"
+    }
+  ]
+}
